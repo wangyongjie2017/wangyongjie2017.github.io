@@ -1,0 +1,406 @@
+<!DOCTYPE HTML>
+<html lang="">
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="王永杰">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://wangyongjie2017.github.com">
+    <!--SEO-->
+
+<meta name="description" content="前端美男子王永杰个人博客 | 程序员 | 前端知识"/>
+
+
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>使用vue路由做出一个可以切换的demo | 王永杰</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="王永杰" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.png">
+
+    
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css?rev=3.3.4">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?f42ffe5fed856accbf91820f137dab46";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+
+    
+</head>
+
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header"  style="background-image:url(http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner2.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="">
+            <img src="/img/avatar.jpg" alt="logo头像">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> 因为折腾,所有有趣 </h2>
+             
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                    </span>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation"><a href="/"><i class="fa fa-fw "></i>Home</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/前端/"><i class="fa fa-fw "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/后端/"><i class="fa fa-fw "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/工具/"><i class="fa fa-fw "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/资源/"><i class="fa fa-fw "></i>资源</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="使用vue路由做出一个可以切换的demo">
+            
+	            使用vue路由做出一个可以切换的demo
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/ ">
+             
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a href="/tags/Vue.js">
+               Vue.js
+            </a>
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/08/05</span>
+    </span>
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h2 id="Vue-js小demo"><a href="#Vue-js小demo" class="headerlink" title="Vue.js小demo"></a>Vue.js小demo</h2><blockquote>
+<p>使用Vue.js做出的小demo<br><a id="more"></a></p>
+</blockquote>
+<h3 id="一、需要达到的效果"><a href="#一、需要达到的效果" class="headerlink" title="一、需要达到的效果"></a><strong>一、需要达到的效果</strong></h3><h5 id="原图效果："><a href="#原图效果：" class="headerlink" title="原图效果："></a><strong>原图效果：</strong></h5><p><img src="http://img.blog.csdn.net/20170722220830987?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2FuZ3lvbmdqaWUyMDE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="原效果"></p>
+<h5 id="仿写效果："><a href="#仿写效果：" class="headerlink" title="仿写效果："></a><strong>仿写效果：</strong></h5><p><img src="http://img.blog.csdn.net/20170722221013047?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd2FuZ3lvbmdqaWUyMDE3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="仿写效果"></p>
+<h3 id="二、需要用到的知识"><a href="#二、需要用到的知识" class="headerlink" title="二、需要用到的知识"></a><strong>二、需要用到的知识</strong></h3><ol>
+<li>html</li>
+<li>css</li>
+<li>javascript、vue<h3 id="三：源代码及注释"><a href="#三：源代码及注释" class="headerlink" title="三：源代码及注释"></a><strong>三：源代码及注释</strong></h3><h5 id="html部分："><a href="#html部分：" class="headerlink" title="html部分："></a><strong>html部分：</strong></h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;</span><br><span class="line">    &lt;title&gt;vue路由练习&lt;/title&gt;</span><br><span class="line">	&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css&quot;&gt;</span><br><span class="line">	&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/index.css&quot;&gt;</span><br><span class="line">	&lt;link rel=&quot;icon&quot; type=&quot;text/css&quot; href=&quot;http://i2.muimg.com/567571/e0565125397e23c4.jpg&quot;&gt;</span><br><span class="line">    &lt;script src=&quot;https://unpkg.com/vue&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=&quot;https://unpkg.com/vue-router/dist/vue-router.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id=&quot;app&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;a&quot;&gt;</span><br><span class="line">        &lt;!-- 使用 router-link 组件来导航. --&gt;</span><br><span class="line">        &lt;!-- 通过传入 `to` 属性指定链接. --&gt;</span><br><span class="line">        &lt;!-- &lt;router-link&gt; 默认会被渲染成一个 `&lt;a&gt;` 标签 --&gt;</span><br><span class="line">            &lt;router-link to=&quot;/recommend&quot;&gt;推荐&lt;/router-link&gt;</span><br><span class="line">            &lt;router-link to=&quot;/society&quot;&gt;社会&lt;/router-link&gt;</span><br><span class="line">            &lt;router-link to=&quot;/recreation&quot;&gt;娱乐&lt;/router-link&gt;</span><br><span class="line">            &lt;router-link to=&quot;/military&quot;&gt;军事&lt;/router-link&gt;</span><br><span class="line">            &lt;router-link to=&quot;/education&quot;&gt;体育&lt;/router-link&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;!-- 路由出口 --&gt;</span><br><span class="line">        &lt;!-- 路由匹配到的组件将渲染在这里 --&gt;</span><br><span class="line">        &lt;router-view&gt;&lt;/router-view&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">	&lt;script type=&quot;text/javascript&quot; src=&quot;js/index.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h5 id="css部分："><a href="#css部分：" class="headerlink" title="css部分："></a><strong>css部分：</strong></h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">*&#123;</span><br><span class="line">	box-sizing: border-box;</span><br><span class="line">	padding: 0;</span><br><span class="line">	margin: 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#app&#123;</span><br><span class="line">	width: 490px;</span><br><span class="line">	border: 2px solid #666;</span><br><span class="line">	margin:5px auto;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#app .a&#123;</span><br><span class="line">	padding: 10px;</span><br><span class="line">	border-bottom: 2px solid #666;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">a&#123;</span><br><span class="line">	display: inline-block;</span><br><span class="line">	width: 90px;</span><br><span class="line">	height: 40px;</span><br><span class="line">	line-height: 40px;</span><br><span class="line">	text-align: center;</span><br><span class="line">	/* 去处a链接下面的横线 */</span><br><span class="line">	text-decoration: none;</span><br><span class="line">	font-size:20px;</span><br><span class="line">	background-color: #0AA770;</span><br><span class="line">	color:#fff;</span><br><span class="line">	border:2px solid #034D34;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#app div:last-child&#123;</span><br><span class="line">	padding:10px;</span><br><span class="line">	text-align: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">img&#123;</span><br><span class="line">	width: 400px;</span><br><span class="line">	height: 300px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="javascript、vue部分："><a href="#javascript、vue部分：" class="headerlink" title="javascript、vue部分："></a><strong>javascript、vue部分：</strong></h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line">// 定义（路由）组件。</span><br><span class="line">var recommend = &#123;</span><br><span class="line">	template:`</span><br><span class="line">	&lt;div&gt;</span><br><span class="line">		&lt;img src=&quot;https://ws1.sinaimg.cn/large/93838f95ly1fggker20l4j21hc0xcwfi.jpg&quot; alt=&quot;&quot;&gt;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">	`</span><br><span class="line">&#125;</span><br><span class="line">var society = &#123;</span><br><span class="line">	template:`</span><br><span class="line">	&lt;div&gt;</span><br><span class="line">		&lt;img src=&quot;https://ws1.sinaimg.cn/large/93838f95ly1fggkerb681j21hc0xcwfg.jpg&quot; alt=&quot;&quot;&gt;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">	`</span><br><span class="line">&#125;</span><br><span class="line">var recreation = &#123;</span><br><span class="line">	template:`</span><br><span class="line">	&lt;div&gt;</span><br><span class="line">    	&lt;img src=&quot;https://ws1.sinaimg.cn/large/93838f95ly1fggker6tmaj21hc0xc75b.jpg&quot; alt=&quot;&quot;&gt;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">	`</span><br><span class="line">&#125;</span><br><span class="line">var military = &#123;</span><br><span class="line">	template:`</span><br><span class="line">	&lt;div&gt;</span><br><span class="line">    	&lt;img src=&quot;https://ws1.sinaimg.cn/large/93838f95ly1fggkeqpmw4j21hc0xcdh1.jpg&quot; alt=&quot;&quot;&gt;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">	`</span><br><span class="line">&#125;</span><br><span class="line">var education = &#123;</span><br><span class="line">	template:`</span><br><span class="line">	&lt;div&gt;</span><br><span class="line">    	&lt;img src=&quot;https://ws1.sinaimg.cn/large/93838f95ly1fggkeqjmjsj21hc0xct9n.jpg&quot; alt=&quot;&quot;&gt;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">	`</span><br><span class="line">&#125;</span><br><span class="line">// 路由配置    每个路由应该映射一个组件。</span><br><span class="line">// new VueRoute 创建 router 实例，然后传 `routes` 配置</span><br><span class="line">var router = new VueRouter(&#123;</span><br><span class="line">	routes: [</span><br><span class="line">		&#123;</span><br><span class="line">			path:&quot;/recommend&quot;,</span><br><span class="line">			component:recommend</span><br><span class="line">		&#125;,</span><br><span class="line">		&#123;</span><br><span class="line">			path:&quot;/society&quot;,</span><br><span class="line">			component:society</span><br><span class="line">		&#125;,</span><br><span class="line">		&#123;</span><br><span class="line">			path:&quot;/recreation&quot;,</span><br><span class="line">			component:recreation</span><br><span class="line">		&#125;,</span><br><span class="line">		&#123;</span><br><span class="line">			path:&quot;/military&quot;,</span><br><span class="line">			component:military</span><br><span class="line">		&#125;,</span><br><span class="line">		&#123;</span><br><span class="line">			path:&quot;/education&quot;,</span><br><span class="line">			component:education</span><br><span class="line">		&#125;,</span><br><span class="line">// 路由重定向，保证打开页面的时候显示在设置的页面中（本demo设置的为推荐页/recommend）</span><br><span class="line">		&#123;</span><br><span class="line">			path:&quot;*&quot;,</span><br><span class="line">			redirect: &quot;/recommend&quot;</span><br><span class="line">		&#125;</span><br><span class="line">	]</span><br><span class="line">&#125;)</span><br><span class="line">// 4. 创建和挂载根实例。（挂载路由）</span><br><span class="line">// 记得要通过 router 配置参数注入路由，</span><br><span class="line">// 从而让整个应用都有路由功能</span><br><span class="line">new Vue(&#123;</span><br><span class="line">	el:&quot;#app&quot;,</span><br><span class="line">	router:router</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="四、效果展示及在线代码"><a href="#四、效果展示及在线代码" class="headerlink" title="四、效果展示及在线代码"></a><strong>四、效果展示及在线代码</strong></h3><p><a href="http://output.jsbin.com/cilimap#/recommend" target="_blank" rel="noopener">demo效果展示</a></p>
+<h3 id="五、vue代码步骤总结"><a href="#五、vue代码步骤总结" class="headerlink" title="五、vue代码步骤总结"></a><strong>五、vue代码步骤总结</strong></h3><ol>
+<li>显示链接</li>
+<li>配置路由</li>
+<li>配置组件</li>
+<li>创建 router 实例</li>
+<li>挂载路由</li>
+<li>渲染组件</li>
+<li>重定向</li>
+</ol>
+
+    </div>
+
+    <div class="post-footer">   
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="http://wangyongjie.top/" target="_blank">前端美男子</a>
+            
+        </div>
+        <div>
+            
+        </div>  
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2017/08/10/nodejs和npm关系/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
+    
+    
+        <a href="/2017/07/30/认识AJAX/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zNDc5OS8xMTMzNg==">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+         if (typeof LivereTower === 'function') { return; }
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+</div>
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+    <aside class="col-md-4 sidebar">
+        
+        
+    <div class="widget">    
+        <h3 class="title">Search</h3>
+        <div id="search-form">
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
+                    <button type="button" class="search-form-submit" id="search-local">localSearch</button>
+                
+                
+            </div>
+            <div id="result-wrap" class="hide">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget notification">
+        <h3 class="title">网站公告</h3>
+        <div>
+            <p>我的 vue 项目已经上线！欢迎浏览：<a href="https://coding.net/u/wangyongjie2017" title="fork me" target="_blank">Vue 搭建知乎日报</a></p>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget">
+      <h3 class="title">Social</h3> 
+        <div class="content social">
+            
+	            <a href="//github.com/wangyongjie2017" rel="external nofollow" title="Github" target="_blank">
+			    	<i class="git fa fa-git"></i>
+			    </a>
+            
+	            <a href="//mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=wfj09fj29ffz9IGwsO_irqw" rel="external nofollow" title="邮箱" target="_blank">
+			    	<i class="envelope-o fa fa-envelope-o"></i>
+			    </a>
+            
+	            <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=954974625" rel="external nofollow" title="联系QQ" target="_blank">
+			    	<i class="qq fa fa-qq"></i>
+			    </a>
+            
+	            <a href="/weibo.com/wangyongjie2017" rel="external nofollow" title="微博" target="_blank">
+			    	<i class="weibo fa fa-weibo"></i>
+			    </a>
+            
+        </div>
+    </div>
+
+
+        
+        
+
+        
+        
+    <div class="widget">
+      <h3 class="title">Archives</h3>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/"><i class="fa" aria-hidden="true">September 2017</i></a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/"><i class="fa" aria-hidden="true">August 2017</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/"><i class="fa" aria-hidden="true">July 2017</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/"><i class="fa" aria-hidden="true">June 2017</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/"><i class="fa" aria-hidden="true">May 2017</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/"><i class="fa" aria-hidden="true">April 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/"><i class="fa" aria-hidden="true">March 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/"><i class="fa" aria-hidden="true">February 2017</i></a><span class="archive-list-count">3</span></li></ul>
+    </div>
+
+
+        
+        
+  <div class="widget">
+    <h3 class="title">Tag Cloud</h3>
+    <div class="content tag-cloud">
+        <a href="/tags/AJAX/" style="font-size: 15px;">AJAX</a> <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/CSS3/" style="font-size: 10px;">CSS3</a> <a href="/tags/ES6/" style="font-size: 15px;">ES6</a> <a href="/tags/Git/" style="font-size: 15px;">Git</a> <a href="/tags/Vue-js/" style="font-size: 20px;">Vue.js</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a> <a href="/tags/前端总结/" style="font-size: 15px;">前端总结</a> <a href="/tags/布局/" style="font-size: 10px;">布局</a> <a href="/tags/跨域问题/" style="font-size: 10px;">跨域问题</a> <a href="/tags/遇到的问题/" style="font-size: 10px;">遇到的问题</a> <a href="/tags/面试题/" style="font-size: 15px;">面试题</a>
+    </div>
+  </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">Friends</h3>
+        <div class="content friends-link">
+        
+            <a href="http://wangyongjie.top" class="fa" target="_blank">个人博客</a>
+        
+            <a href="https://coding.net/u/wangyongjie2017" class="fa" target="_blank">coding</a>
+        
+            <a href="http://blog.csdn.net/wangyongjie2017" class="fa" target="_blank">CSDN</a>
+        
+            <a href="https://developer.mozilla.org/zh-CN" class="fa" target="_blank">MDN</a>
+        
+            <a href="http://www.w3cplus.com" class="fa" target="_blank">w3cplus</a>
+        
+            <a href="http://www.runoob.com" class="fa" target="_blank">菜鸟教程</a>
+        
+            <a href="https://cn.vuejs.org" class="fa" target="_blank">Vue.js</a>
+        
+            <a href="http://www.tuhaokuai.com" class="fa" target="_blank">在线图片压缩</a>
+        
+            <a href="https://www.codewars.com" class="fa" target="_blank">codewars</a>
+        
+        </div>
+    </div>
+
+
+        
+    </aside>
+
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"> 
+                <span>Copyright &copy; 2018
+                </span> | 
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | 
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+	<script src="/js/search.js?rev=@@hash"></script>
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>

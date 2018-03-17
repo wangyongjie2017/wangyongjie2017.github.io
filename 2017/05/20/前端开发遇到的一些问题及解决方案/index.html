@@ -1,0 +1,413 @@
+<!DOCTYPE HTML>
+<html lang="">
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="王永杰">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://wangyongjie2017.github.com">
+    <!--SEO-->
+
+<meta name="description" content="前端美男子王永杰个人博客 | 程序员 | 前端知识"/>
+
+
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>前端开发遇到的一些问题及解决方案 | 王永杰</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="王永杰" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.png">
+
+    
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css?rev=3.3.4">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?f42ffe5fed856accbf91820f137dab46";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+
+    
+</head>
+
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header"  style="background-image:url(http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner2.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="">
+            <img src="/img/avatar.jpg" alt="logo头像">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> 因为折腾,所有有趣 </h2>
+             
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                    </span>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation"><a href="/"><i class="fa fa-fw "></i>Home</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/前端/"><i class="fa fa-fw "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/后端/"><i class="fa fa-fw "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/工具/"><i class="fa fa-fw "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/资源/"><i class="fa fa-fw "></i>资源</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="前端开发遇到的一些问题及解决方案">
+            
+	            前端开发遇到的一些问题及解决方案
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/ ">
+             
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a href="/tags/遇到的问题">
+               遇到的问题
+            </a>
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/05/20</span>
+    </span>
+</div>
+
+            
+            
+            <p class="fa fa-exclamation-triangle warning">
+                本文于<strong>301</strong>天之前发表，文中内容可能已经过时。
+            </p>
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <h2 id="开发过程中的问题"><a href="#开发过程中的问题" class="headerlink" title="开发过程中的问题"></a>开发过程中的问题</h2><blockquote>
+<p>开发中遇到的问题及总结<br><a id="more"></a></p>
+</blockquote>
+<h2 id="1、关于Gulp合并css、javascript，压缩html、css、javascript、images可以加速网页打开速度，提升性能"><a href="#1、关于Gulp合并css、javascript，压缩html、css、javascript、images可以加速网页打开速度，提升性能" class="headerlink" title="1、关于Gulp合并css、javascript，压缩html、css、javascript、images可以加速网页打开速度，提升性能"></a>1、关于Gulp合并css、javascript，压缩html、css、javascript、images可以加速网页打开速度，提升性能</h2><blockquote>
+<p>通过Gulp构建工具进行配置实现合并、压缩、校验、预处理等一系列任务。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(&apos;gulp&apos;),</span><br><span class="line">    connect = require(&apos;gulp-connect&apos;)//使用connect启动一个Web服务器</span><br><span class="line">//gulp 基于流(任务)</span><br><span class="line">//gulp.task(&apos;任务名称&apos;,执行代码)</span><br><span class="line">gulp.task(&apos;connect&apos;, function() &#123;</span><br><span class="line">    connect.server(&#123;</span><br><span class="line">        //host: &apos;192.168.1.172&apos;, //地址，可不写，不写的话，默认localhost</span><br><span class="line">        //port: 3000, //端口号，可不写，默认8080</span><br><span class="line">        root: &apos;./&apos;, //当前项目主目录</span><br><span class="line">        livereload: true //自动刷新</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line">//任务 : 执行index.html</span><br><span class="line">gulp.task(&apos;html&apos;, function() &#123;</span><br><span class="line">    gulp.src(&apos;./*.html&apos;)</span><br><span class="line">        .pipe(connect.reload());</span><br><span class="line">&#125;);</span><br><span class="line">//testLess : 作用是编译.less文件</span><br><span class="line">gulp.task(&apos;testLess&apos;, function () &#123;</span><br><span class="line">    gulp.src(&apos;./less/*.less&apos;)</span><br><span class="line">        .pipe(less())  //执行less编译</span><br><span class="line">        .pipe(gulp.dest(&apos;./less&apos;));//生成.css文件的路径</span><br><span class="line">&#125;);</span><br><span class="line">gulp.task(&apos;watch&apos;, function() &#123;</span><br><span class="line">    //* 通配符,匹配文件所有所有名字</span><br><span class="line">    gulp.watch(&apos;./css/*.css&apos;, [&apos;html&apos;]); //监控css文件</span><br><span class="line">    gulp.watch(&apos;./js/*.js&apos;, [&apos;html&apos;]); //监控js文件</span><br><span class="line">    gulp.watch([&apos;./*.html&apos;], [&apos;html&apos;]); //监控html文件</span><br><span class="line">    gulp.watch(&apos;./less/*.less&apos;, [&apos;testLess&apos;,&apos;html&apos;]); //当所有less文件发生改变时，调用testLess任务</span><br><span class="line">&#125;); //执行gulp server开启服务器</span><br><span class="line"></span><br><span class="line">//最终任务,使用gulp server 同时启动connect,watch任务</span><br><span class="line">gulp.task(&apos;server&apos;, [&apos;connect&apos;, &apos;watch&apos;]);</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h4 id="常用Gulp插件"><a href="#常用Gulp插件" class="headerlink" title="常用Gulp插件"></a>常用Gulp插件</h4><ul>
+<li>gulp-less 编译LESS文件</li>
+<li>gulp-autoprefixer 添加CSS私有前缀</li>
+<li>gulp-cssmin 压缩CSS</li>
+<li>gulp-rname重命名</li>
+<li>gulp-imagemin 图片压缩</li>
+<li>gulp-uglify 压缩Javascript</li>
+<li>gulp-concat 合并</li>
+<li>gulp-htmlmin 压缩HTML</li>
+<li>gulp-rev 添加版本号</li>
+</ul>
+<h2 id="2、移动端左右滑动右侧有留白"><a href="#2、移动端左右滑动右侧有留白" class="headerlink" title="2、移动端左右滑动右侧有留白"></a>2、移动端左右滑动右侧有留白</h2><h4 id="出现这种问题的话查看一下自己的css中有没有用到position-relative或者position-absolute-我做页面的时候经常遇到这个问题，百分之一百是这个原因。"><a href="#出现这种问题的话查看一下自己的css中有没有用到position-relative或者position-absolute-我做页面的时候经常遇到这个问题，百分之一百是这个原因。" class="headerlink" title="出现这种问题的话查看一下自己的css中有没有用到position:relative或者position:absolute,我做页面的时候经常遇到这个问题，百分之一百是这个原因。"></a>出现这种问题的话查看一下自己的css中有没有用到position:relative或者position:absolute,我做页面的时候经常遇到这个问题，百分之一百是这个原因。</h4><h4 id="只要设置html，body的width为100-，overflow：hidden就可以了。"><a href="#只要设置html，body的width为100-，overflow：hidden就可以了。" class="headerlink" title="只要设置html，body的width为100%，overflow：hidden就可以了。"></a>只要设置html，body的width为100%，overflow：hidden就可以了。</h4><h2 id="3、iOS点击事件无效果的几个方案"><a href="#3、iOS点击事件无效果的几个方案" class="headerlink" title="3、iOS点击事件无效果的几个方案"></a>3、iOS点击事件无效果的几个方案</h2><ol>
+<li>为css添加cursor：pointer;</li>
+<li>动态添加的元素要使用on绑定事件;</li>
+<li>查询是否引用了js文件;</li>
+</ol>
+<h2 id="4、设置了div高度为百分比不起作用"><a href="#4、设置了div高度为百分比不起作用" class="headerlink" title="4、设置了div高度为百分比不起作用"></a>4、设置了div高度为百分比不起作用</h2><h4 id="检查htnl-body-height-100"><a href="#检查htnl-body-height-100" class="headerlink" title="检查htnl,body{height:100%}"></a>检查htnl,body{height:100%}</h4><h2 id="5、设置animation动画安卓没有效果"><a href="#5、设置animation动画安卓没有效果" class="headerlink" title="5、设置animation动画安卓没有效果"></a>5、设置animation动画安卓没有效果</h2><h4 id="为keyframes、animation、transform添加-webkit-前缀，缺一不可"><a href="#为keyframes、animation、transform添加-webkit-前缀，缺一不可" class="headerlink" title="为keyframes、animation、transform添加-webkit-前缀，缺一不可"></a>为keyframes、animation、transform添加-webkit-前缀，缺一不可</h4><h2 id="6、ios使用on绑定click事件出现绑定父标签闪烁的问题"><a href="#6、ios使用on绑定click事件出现绑定父标签闪烁的问题" class="headerlink" title="6、ios使用on绑定click事件出现绑定父标签闪烁的问题"></a>6、ios使用on绑定click事件出现绑定父标签闪烁的问题</h2><h4 id="给该元素一个样式如下：-webkit-tap-highlight-color-rgba-0-0-0-0"><a href="#给该元素一个样式如下：-webkit-tap-highlight-color-rgba-0-0-0-0" class="headerlink" title="给该元素一个样式如下：-webkit-tap-highlight-color: rgba(0,0,0,0);"></a>给该元素一个样式如下：-webkit-tap-highlight-color: rgba(0,0,0,0);</h4><h2 id="7、解决前端移动设备不兼容问题"><a href="#7、解决前端移动设备不兼容问题" class="headerlink" title="7、解决前端移动设备不兼容问题"></a>7、解决前端移动设备不兼容问题</h2><h4 id="使用-media设置设备尺寸，分尺寸设置css，格式如下："><a href="#使用-media设置设备尺寸，分尺寸设置css，格式如下：" class="headerlink" title="使用@media设置设备尺寸，分尺寸设置css，格式如下："></a>使用@media设置设备尺寸，分尺寸设置css，格式如下：</h4><h4 id="media-only-screen-and-min-device-width-768px-and-max-device-width-1024px-and-orientation-Portrait"><a href="#media-only-screen-and-min-device-width-768px-and-max-device-width-1024px-and-orientation-Portrait" class="headerlink" title="@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  and (orientation : Portrait ) { }"></a>@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  and (orientation : Portrait ) { }</h4><h2 id="8、iphone移动端click事件延迟300ms解决方案"><a href="#8、iphone移动端click事件延迟300ms解决方案" class="headerlink" title="8、iphone移动端click事件延迟300ms解决方案"></a>8、iphone移动端click事件延迟300ms解决方案</h2><ol>
+<li>禁止缩放：<meta name="viewport" content="width=device-width, user-scalable=no">; </li>
+<li>引用FastClick.js文件，window.addEventListener( “load”, function() { FastClick.attach( document.body );}, false ); </li>
+</ol>
+<h2 id="9、防止点透事件"><a href="#9、防止点透事件" class="headerlink" title="9、防止点透事件"></a>9、防止点透事件</h2><h4 id="为上层元素的点击事件添加-return-false"><a href="#为上层元素的点击事件添加-return-false" class="headerlink" title="为上层元素的点击事件添加 return false;"></a>为上层元素的点击事件添加 return false;</h4>
+    </div>
+
+    <div class="post-footer">   
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="http://wangyongjie.top/" target="_blank">前端美男子</a>
+            
+        </div>
+        <div>
+            
+        </div>  
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2017/05/24/ES6之-解构赋值/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
+    
+    
+        <a href="/2017/05/17/知乎日报的问题分析/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zNDc5OS8xMTMzNg==">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+         if (typeof LivereTower === 'function') { return; }
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+</div>
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+    <aside class="col-md-4 sidebar">
+        
+        
+    <div class="widget">    
+        <h3 class="title">Search</h3>
+        <div id="search-form">
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
+                    <button type="button" class="search-form-submit" id="search-local">localSearch</button>
+                
+                
+            </div>
+            <div id="result-wrap" class="hide">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget notification">
+        <h3 class="title">网站公告</h3>
+        <div>
+            <p>我的 vue 项目已经上线！欢迎浏览：<a href="https://coding.net/u/wangyongjie2017" title="fork me" target="_blank">Vue 搭建知乎日报</a></p>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget">
+      <h3 class="title">Social</h3> 
+        <div class="content social">
+            
+	            <a href="//github.com/wangyongjie2017" rel="external nofollow" title="Github" target="_blank">
+			    	<i class="git fa fa-git"></i>
+			    </a>
+            
+	            <a href="//mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=wfj09fj29ffz9IGwsO_irqw" rel="external nofollow" title="邮箱" target="_blank">
+			    	<i class="envelope-o fa fa-envelope-o"></i>
+			    </a>
+            
+	            <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=954974625" rel="external nofollow" title="联系QQ" target="_blank">
+			    	<i class="qq fa fa-qq"></i>
+			    </a>
+            
+	            <a href="/weibo.com/wangyongjie2017" rel="external nofollow" title="微博" target="_blank">
+			    	<i class="weibo fa fa-weibo"></i>
+			    </a>
+            
+        </div>
+    </div>
+
+
+        
+        
+
+        
+        
+    <div class="widget">
+      <h3 class="title">Archives</h3>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/"><i class="fa" aria-hidden="true">September 2017</i></a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/"><i class="fa" aria-hidden="true">August 2017</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/"><i class="fa" aria-hidden="true">July 2017</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/"><i class="fa" aria-hidden="true">June 2017</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/"><i class="fa" aria-hidden="true">May 2017</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/"><i class="fa" aria-hidden="true">April 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/"><i class="fa" aria-hidden="true">March 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/"><i class="fa" aria-hidden="true">February 2017</i></a><span class="archive-list-count">3</span></li></ul>
+    </div>
+
+
+        
+        
+  <div class="widget">
+    <h3 class="title">Tag Cloud</h3>
+    <div class="content tag-cloud">
+        <a href="/tags/AJAX/" style="font-size: 15px;">AJAX</a> <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/CSS3/" style="font-size: 10px;">CSS3</a> <a href="/tags/ES6/" style="font-size: 15px;">ES6</a> <a href="/tags/Git/" style="font-size: 15px;">Git</a> <a href="/tags/Vue-js/" style="font-size: 20px;">Vue.js</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a> <a href="/tags/前端总结/" style="font-size: 15px;">前端总结</a> <a href="/tags/布局/" style="font-size: 10px;">布局</a> <a href="/tags/跨域问题/" style="font-size: 10px;">跨域问题</a> <a href="/tags/遇到的问题/" style="font-size: 10px;">遇到的问题</a> <a href="/tags/面试题/" style="font-size: 15px;">面试题</a>
+    </div>
+  </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">Friends</h3>
+        <div class="content friends-link">
+        
+            <a href="http://wangyongjie.top" class="fa" target="_blank">个人博客</a>
+        
+            <a href="https://coding.net/u/wangyongjie2017" class="fa" target="_blank">coding</a>
+        
+            <a href="http://blog.csdn.net/wangyongjie2017" class="fa" target="_blank">CSDN</a>
+        
+            <a href="https://developer.mozilla.org/zh-CN" class="fa" target="_blank">MDN</a>
+        
+            <a href="http://www.w3cplus.com" class="fa" target="_blank">w3cplus</a>
+        
+            <a href="http://www.runoob.com" class="fa" target="_blank">菜鸟教程</a>
+        
+            <a href="https://cn.vuejs.org" class="fa" target="_blank">Vue.js</a>
+        
+            <a href="http://www.tuhaokuai.com" class="fa" target="_blank">在线图片压缩</a>
+        
+            <a href="https://www.codewars.com" class="fa" target="_blank">codewars</a>
+        
+        </div>
+    </div>
+
+
+        
+    </aside>
+
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"> 
+                <span>Copyright &copy; 2018
+                </span> | 
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> | 
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+	<script src="/js/search.js?rev=@@hash"></script>
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>
