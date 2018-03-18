@@ -29,7 +29,7 @@
     <!--Title-->
 
 
-<title>标签: 布局 | 前端美男子王永杰</title>
+<title>标题测试 | 前端美男子王永杰</title>
 
 
     <link rel="alternate" href="/atom.xml" title="前端美男子王永杰" type="application/atom+xml">
@@ -127,38 +127,94 @@
     <section class="content-wrap">
         <div class="container">
             <div class="row">
-                <main class="col-md-8 main-content ">
-                    <h3> 
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="标题测试">
+            
+	            标题测试
+            
+        </h1>
+        <div class="post-meta">
     
-        布局 
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/前端">
+            前端
+        </a>
+    </span>
     
     
-</h3>
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a href="/tags/测试">
+               测试
+            </a>
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2018/03/18</span>
+    </span>
+</div>
 
-    <article class="post">
-        
-        <div class="post-content">
-            <div class="post-head home-post-head">
-                <h1 class="post-title"> 
-                    <a href="/2017/09/10/关于Flex/">关于Flex</a>
-                </h1>
-                <div class="post-meta">  &bull;
-                    <time class="post-date" datetime="" title="">
-                        2017年09月10日
-                    </time>
-                </div>
-            </div>
-            <p class="brief">
-                
-                    Flex布局
-本文参考 阮一峰 Flex 布局教程：语法篇…
-                
-            </p> 
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h2 id="遇到问题的答案"><a href="#遇到问题的答案" class="headerlink" title="遇到问题的答案"></a>遇到问题的答案</h2><blockquote>
+<p>写知乎日报项目中所遇到的问题解决方法<br><a id="more"></a></p>
+</blockquote>
+<h2 id="1、知乎的图片防盗链"><a href="#1、知乎的图片防盗链" class="headerlink" title="1、知乎的图片防盗链"></a>1、知乎的图片防盗链</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">添加 &lt;meta name=&quot;referrer&quot; content=&quot;never&quot;&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="2、知乎接口跨域问题"><a href="#2、知乎接口跨域问题" class="headerlink" title="2、知乎接口跨域问题"></a>2、知乎接口跨域问题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">//引入express框架</span><br><span class="line">let express = require(&apos;express&apos;)</span><br><span class="line">let app = express()</span><br><span class="line">//引入跨域中间件</span><br><span class="line">let proxy = require(&apos;http-proxy-middleware&apos;);</span><br><span class="line">//引入跨域资源共享</span><br><span class="line">var cors = require(&apos;cors&apos;)</span><br><span class="line">	</span><br><span class="line">app.use(cors())</span><br><span class="line">	</span><br><span class="line">app.use(&apos;/&apos;, proxy(&#123;</span><br><span class="line">//目标地址(拿知乎日报做测试)</span><br><span class="line">	target: &apos;https://news-at.zhihu.com/&apos;,</span><br><span class="line">	pathRewrite: &#123;</span><br><span class="line">	  &apos;^/&apos; : &apos;&apos;</span><br><span class="line">	&#125;,</span><br><span class="line">	changeOrigin: true</span><br><span class="line">&#125;))</span><br><span class="line"></span><br><span class="line">app.listen(20000)</span><br><span class="line">console.log(&apos;server is running!&apos;)</span><br></pre></td></tr></table></figure>
+    </div>
+
+    <div class="post-footer">   
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="http://wangyongjie.top/" target="_blank">前端美男子</a>
+            
         </div>
-    </article>
- 
+        <div>
+            
+        </div>  
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+    
+        <a href="/2017/09/22/分布式版本控制系统2/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
 
 
+    <div id="comments">
+        
+	
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zNDc5OS8xMTMzNg==">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+         if (typeof LivereTower === 'function') { return; }
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+</div>
+
+
+    </div>
 
 
 
