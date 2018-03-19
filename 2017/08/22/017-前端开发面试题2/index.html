@@ -1,0 +1,972 @@
+<!DOCTYPE HTML>
+<html lang="">
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="前端美男子 王永杰">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://wangyongjie2017.github.com">
+    <!--SEO-->
+
+<meta name="description" content="前端美男子王永杰个人博客 | 程序员 | 前端知识 丨 wangyongjie"/>
+
+
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>前端开发面试题2 | 前端美男子 王永杰</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="前端美男子 王永杰" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css?rev=3.3.4">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?f42ffe5fed856accbf91820f137dab46";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+
+    
+</head>
+
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header"  style="background-image:url(https://ws1.sinaimg.cn/large/93838f95ly1fpgvnfwrkpg205a064dhr.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="">
+            <img src="/img/avatar.jpg" alt="logo头像">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> 因为折腾,所以有趣 </h2>
+             
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                    </span>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation"><a href="/"><i class="fa fa-fw "></i>主页</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/前端/"><i class="fa fa-fw "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/后端/"><i class="fa fa-fw "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/工具/"><i class="fa fa-fw "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/资源/"><i class="fa fa-fw "></i>资源</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="前端开发面试题2">
+            
+	            前端开发面试题2
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/前端">
+            前端
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a href="/tags/面试题">
+               面试题
+            </a>
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/08/22</span>
+    </span>
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h2 id="web前端开发面试题"><a href="#web前端开发面试题" class="headerlink" title="web前端开发面试题"></a>web前端开发面试题</h2><blockquote>
+<p>前端一些基础的知识<br><a id="more"></a></p>
+</blockquote>
+<h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><ul>
+<li><p>DOCTYPE 的作用？标准模式与兼容模式各有什么区别?</p>
+<pre><code>* DOCTYPE 告知浏览器用何种模式解析文档. DOCTYPE 不存在或格式不正确会导致文档以兼容模式呈现
+* 在兼容模式中，页面以宽松的向后兼容的方式显示，模拟老式浏览器的行为以防止站点无法工作
+</code></pre></li>
+<li><p>行内元素有哪些？块级元素有哪些？ 空(void)元素有那些？</p>
+<pre><code>* CSS规范规定，每个元素都有 display 属性及默认值确定该元素的类型，例如：
+div 的 display 默认值为 block，则为“块级”元素；span 默认 display 属性值为 inline 则为“行内”元素
+* 行内元素：a b span img input select strong
+* 块级元素：div ul ol li dl dt dd h1 h2 h3 h4… p
+* 常见的空元素：br hr img input link meta base area embed source
+</code></pre></li>
+<li><p>页面导入样式时，使用 link 和 @import 有什么区别？</p>
+<pre><code>* link 属于HTML标签，除了加载CSS外，还能用于定 RSS等；@import 只能用于加载CSS
+* 页面加载的时，link 会同时被加载，而 @import 引用的 CSS 会等到页面被加载完再加载
+* @import 只在 IE5 以上才能被识别，而 link 是HTML标签，无兼容问题
+</code></pre></li>
+<li><p>介绍一下你对浏览器内核的理解？</p>
+<pre><code>* 浏览器内核主要分为两部分：渲染引擎(layout engineer 或 Rendering Engine) 和 JS引擎
+* 渲染引擎负责取得网页的内容进行布局计和样式渲染，然后会输出至显示器或打印机
+* JS引擎则负责解析和执行JS脚本来实现网页的动态效果和用户交互
+* 最开始渲染引擎和JS引擎并没有区分的很明确，后来JS引擎越来越独立，内核就倾向于只指渲染引擎
+</code></pre></li>
+<li><p>常见的浏览器内核有哪些？</p>
+<pre><code>* Blink内核：新版 Chrome、新版 Opera
+* Webkit内核：Safari、原Chrome
+* Gecko内核：FireFox、Netscape6及以上版本
+* Trident内核（又称MSHTML内核）：IE、国产浏览器
+* Presto内核：原Opera7及以上
+</code></pre></li>
+<li><p>简述一下你对HTML语义化的理解？</p>
+<pre><code>* 即使在没有样式CSS情况下，页面结构仍然清晰刻度
+* 方便其他设备（如屏幕阅读器、盲人阅读器、移动设备）解析，以意义的方式渲染网页
+* 搜索引擎的爬虫也依赖于HTML标记来确定上下文和各个关键字的权重，利于SEO
+* 便于团队开发和维护，可以减少差异化
+</code></pre></li>
+<li><p>HTML5为什么只需要写 <code>&lt;!DOCTYPE HTML&gt;</code>？</p>
+<pre><code>* HTML5 不基于 SGML(标准通用标记语言)，因此不需要对 DTD 进行引用
+* HTML5 仍需要通过 DOCTYPE 来规范浏览器的行为（让浏览器按照它们应该的方式来运行）
+* HTML4.01 基于 SGML，所以需要对 DTD 进行引用，告知浏览器文档所使用的文档类型
+</code></pre></li>
+<li><p>HTML5有哪些新特性？</p>
+<pre><code>* 新增选择器 document.querySelector、document.querySelectorAll
+* 拖拽释放(Drag and drop) API
+* 媒体播放的 video 和 audio
+* 本地存储 localStorage 和 sessionStorage
+* 离线应用 manifest
+* 桌面通知 Notifications
+* 语意化标签 article、footer、header、nav、section
+* 增强表单控件 calendar、date、time、email、url、search
+* 地理位置 Geolocation
+* 多任务 webworker
+* 全双工通信协议 websocket
+* 历史管理 history
+* 跨域资源共享(CORS) Access-Control-Allow-Origin
+* 页面可见性改变事件 visibilitychange
+* 跨窗口通信 PostMessage
+* Form Data 对象
+* 绘画 canvas
+</code></pre></li>
+<li><p>HTML5移除了那些元素？</p>
+<pre><code>* 纯表现的元素：basefont、big、center、font、s、strike、tt、u
+* 对可用性产生负面影响的元素：frame、frameset、noframes
+</code></pre></li>
+<li><p>如何处理HTML5新标签的浏览器兼容问题？</p>
+<pre><code>* 通过 document.createElement 创建新标签
+* 使用垫片 html5shiv.js
+</code></pre></li>
+<li><p>如何区分 HTML 和 HTML5？</p>
+<pre><code>DOCTYPE声明、新增的结构元素、功能元素
+</code></pre></li>
+<li><p>HTML5的离线储存工作原理能不能解释一下，怎么使用？</p>
+<pre><code>* HTML5的离线储存原理：
+  用户在线时，保存更新用户机器上的缓存文件；当用户离线时，可以正常访离线储存问站点或应用内容
+
+* HTML5的离线储存使用：
+  - 在文档的 html 标签设置 manifest 属性，如 manifest=&quot;/offline.appcache&quot;
+  - 在项目中新建 manifest 文件，manifest 文件的命名建议：xxx.appcache
+  - 在 web 服务器配置正确的 MIME-type，即 text/cache-manifest
+</code></pre></li>
+<li><p>浏览器是怎么对HTML5的离线储存资源进行管理和加载的？</p>
+<pre><code>* 在线的情况下，浏览器发现 html 标签有 manifest 属性，它会请求 manifest 文件
+* 如果是第一次访问app，那么浏览器就会根据 manifest 文件的内容下载相应的资源并且进行离线存储
+* 如果已经访问过app且资源已经离线存储了，浏览器会对比新的 manifest 文件与旧的 manifest 文件，如果文件没有发生改变，就不做任何操作。如果文件改变了，那么就会重新下载文件中的资源并进行离线存储
+* 离线的情况下，浏览器就直接使用离线存储的资源。
+</code></pre></li>
+<li><p>描述 cookies、sessionStorage 和 localStorage 的区别？</p>
+<pre><code>* 与服务器交互：
+  - cookie 是网站为了标示用户身份而储存在用户本地终端上的数据（通常经过加密）
+  - cookie 始终会在同源 http 请求头中携带（即使不需要），在浏览器和服务器间来回传递
+  - sessionStorage 和 localStorage 不会自动把数据发给服务器，仅在本地保存
+
+* 存储大小：
+  - cookie 数据根据不同浏览器限制，大小一般不能超过 4k
+  - sessionStorage 和 localStorage 虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大
+
+* 有期时间：
+  - localStorage    存储持久数据，浏览器关闭后数据不丢失除非主动删除数据
+  - sessionStorage  数据在当前浏览器窗口关闭后自动删除
+  - cookie           设置的cookie过期时间之前一直有效，与浏览器是否关闭无关
+</code></pre></li>
+<li><p>iframe 有那些优点和缺点？</p>
+<pre><code>* 优点：
+  - 用来加载速度较慢的内容（如广告）
+  - 可以使脚本可以并行下载
+  - 可以实现跨子域通信
+
+* 缺点：
+  - iframe 会阻塞主页面的 onload 事件
+  - 无法被一些搜索引擎索识别
+  - 会产生很多页面，不容易管理
+</code></pre></li>
+<li><p>label 的作用是什么？怎么使用的？</p>
+<pre><code>* label标签来定义表单控件的关系：
+ 当用户选择label标签时，浏览器会自动将焦点转到和label标签相关的表单控件上
+* 使用方法1：
+</code></pre>   <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">"mobile"</span>&gt;</span>Number:<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">id</span>=<span class="string">"mobile"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+<pre><code>* 使用方法2：
+</code></pre>   <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span>&gt;</span>Date:<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span>/&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如何关闭 form 的自动完成功能？</p>
+<pre><code>为 form 或某个 input 设置属性 autocomplete=&quot;off&quot;
+</code></pre></li>
+<li><p>如何实现浏览器内多个标签页之间的通信？</p>
+<pre><code>* iframe + contentWindow
+* postMessage
+* SharedWorker(Web Worker API)
+* storage 事件(localStorge API)
+* WebSocket
+</code></pre></li>
+<li><p>webSocket 如何兼容低浏览器？</p>
+<pre><code>* Adobe Flash Socket
+* ActiveX HTMLFile (IE)
+* 基于 multipart 编码发送 XHR
+* 基于长轮询的 XHR
+</code></pre></li>
+<li><p>页面可见性（Page Visibility API） 可以有哪些用途？</p>
+<pre><code>* 在页面被切换到其他后台进程的时候，自动暂停音乐或视频的播放
+* 当用户浏览其他页面，暂停网站首页幻灯自动播放
+* 完成登陆后，无刷新自动同步其他页面的登录状态
+</code></pre></li>
+<li><p>如何在页面上实现一个圆形的可点击区域？</p>
+<pre><code>* 热区 `&lt;map&gt;&lt;area/&gt;&lt;/map&gt;`
+* `&lt;svg&gt;&lt;/svg&gt;`
+* border-radius
+* JS 计算圆的覆盖范围、获取鼠标坐标
+</code></pre></li>
+<li><p>不使用 border 画出 1px 高的线。</p>
+<pre><code>`&lt;div style=&quot;height:1px; overflow:hidden; background:gray&quot;&gt;&lt;/div&gt;`
+</code></pre></li>
+<li><p>说明网页验证码的应用，网页验证码解决什么安全问题？</p>
+<pre><code>* 网页验证码是区分操作者是计算机还是人的程序
+* 可以防止恶意破解密码、短信轰炸、刷票、灌水等；
+</code></pre></li>
+<li><p>title 与 h1 的区别、b 与 strong 的区别、i 与 em 的区别？</p>
+<pre><code>* title 表示是整个页面标题，h1 则表示层次明确的标题，对页面信息的抓取有很大的影响
+* strong 标明重点内容，有语气加强的含义，使用阅读设备阅读网络时，strong 会重读，而 b 是展示强调内容
+* i 内容展示为斜体，em 表示强调的文本
+
+* 自然样式标签：b, i, u, s, pre
+* 语义样式标签：strong, em, ins, del, code
+* 应该准确使用语义样式标签, 但不能滥用。如果不能确定时，首选使用自然样式标签
+</code></pre></li>
+</ul>
+<hr>
+<h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><ul>
+<li><p>介绍一下标准的CSS的盒子模型？低版本IE的盒子模型有什么不同的？</p>
+<pre><code>* 盒子模型构成：内容(content)、内填充(padding)、 边框(border)、外边距(margin)
+* IE8及其以下版本浏览器，未声明 DOCTYPE，内容宽高会包含内填充和边框，称为怪异盒模型(IE盒模型)
+* 标准(W3C)盒模型：元素宽度 = width + padding + border + margin
+* 怪异(IE)盒模型：元素宽度 = width + margin
+* 标准浏览器通过设置 css3 的 box-sizing: border-box 属性，触发“怪异模式”解析计算宽高
+</code></pre></li>
+<li><p>box-sizing 常用的属性有哪些？分别有什么作用？</p>
+<pre><code>* box-sizing: content-box;  // 默认的标准(W3C)盒模型元素效果
+* box-sizing: border-box;   // 触发怪异(IE)盒模型元素的效果
+* box-sizing: inherit;      //  继承父元素 box-sizing 属性的值
+</code></pre></li>
+<li><p>CSS选择器有哪些？</p>
+<pre><code>* id选择器        #id
+* 类选择器        .class
+* 标签选择器      div, h1, p
+* 相邻选择器      h1 + p
+* 子选择器        ul &gt; li
+* 后代选择器      li a
+* 通配符选择器    *
+* 属性选择器      a[rel=&apos;external&apos;]
+* 伪类选择器      a:hover, li:nth-child
+</code></pre></li>
+<li><p>CSS哪些属性可以继承？哪些属性不可以继承？</p>
+<pre><code>* 可以继承的样式：font-size、font-family、color、list-style、cursor
+* 不可继承的样式：width、height、border、padding、margin、background
+</code></pre></li>
+<li><p>CSS如何计算选择器优先？</p>
+<pre><code>* 相同权重，定义最近者为准：行内样式 &gt; 内部样式 &gt; 外部样式
+* 含外部载入样式时，后载入样式覆盖其前面的载入的样式和内部样式
+* 选择器优先级: 行内样式[1000] &gt; id[100] &gt; class[10] &gt; Tag[1]
+* 在同一组属性设置中，!important 优先级最高，高于行内样式
+* JS动态设置样式，高于一切样式设定
+</code></pre></li>
+<li><p>CSS3新增伪类有哪些？</p>
+<pre><code>:root           选择文档的根元素，等同于 html 元素
+
+:empty          选择没有子元素的元素
+:target         选取当前活动的目标元素
+:not(selector)  选择除 selector 元素意外的元素
+
+:enabled        选择可用的表单元素
+:disabled       选择禁用的表单元素
+:checked        选择被选中的表单元素
+
+:after          在元素内部最前添加内容
+:before         在元素内部最后添加内容
+
+:nth-child(n)      匹配父元素下指定子元素，在所有子元素中排序第n
+:nth-last-child(n) 匹配父元素下指定子元素，在所有子元素中排序第n，从后向前数
+:nth-child(odd)
+:nth-child(even)
+:nth-child(3n+1)
+:first-child
+:last-child
+:only-child
+
+:nth-of-type(n)      匹配父元素下指定子元素，在同类子元素中排序第n
+:nth-last-of-type(n) 匹配父元素下指定子元素，在同类子元素中排序第n，从后向前数
+:nth-of-type(odd)
+:nth-of-type(even)
+:nth-of-type(3n+1)
+:first-of-type
+:last-of-type
+:only-of-type
+
+::selection     选择被用户选取的元素部分
+:first-line     选择元素中的第一行
+:first-letter   选择元素中的第一个字符
+</code></pre></li>
+<li><p>display有哪些值？说明他们的作用</p>
+<pre><code>none            元素被隐藏
+block           元素将显示为块级元素
+inline          元素会被显示为内联元素
+inline-block    行内块元素
+inherit         从父元素继承 display 属性的值
+
+table           元素会作为块级表格来显示，表格前后带有换行符
+inline-table    元素会作为内联表格来显示，表格前后没有换行符
+list-item       元素会作为列表显示
+
+flex            将对象作为弹性伸缩盒显示
+inline-flex     将对象作为内联块级弹性伸缩盒显示
+run-in          根据上下文决定对象是内联对象还是块级对象
+</code></pre></li>
+<li><p>请列举几种隐藏元素的方法</p>
+<pre><code>* visibility: hidden;   这个属性只是简单的隐藏某个元素，但是元素占用的空间任然存在
+* opacity: 0;           CSS3属性，设置0可以使一个元素完全透明
+* position: absolute;   设置一个很大的 left 负值定位，使元素定位在可见区域之外
+* display: none;        元素会变得不可见，并且不会再占用文档的空间。
+* transform: scale(0);  将一个元素设置为缩放无限小，元素将不可见，元素原来所在的位置将被保留
+* `&lt;div hidden=&quot;hidden&quot;&gt;` HTML5属性,效果和display:none;相同，但这个属性用于记录一个元素的状态
+* height: 0;            将元素高度设为 0 ，并消除边框
+* filter: blur(0);      CSS3属性，将一个元素的模糊度设置为0，从而使这个元素“消失”在页面中
+</code></pre></li>
+<li><p>说明 relative 和 absolute 定位原点？</p>
+<pre><code>* absolute  绝对定位，相对于最近定位父级元素进行定位。如果没有定位父级，则相对于浏览器窗口（不是body）
+* relative  相对定位，相对于自身正常位置进行定位
+* fixed     固定定位，相对于浏览器窗口进行定位（不是body）
+* static    消除定位，元素位于正常的流（忽略top、bottom、left、right、z-index 值）
+* inherit   继承父级元素的 position 属性的值
+</code></pre></li>
+<li><p>rgba() 和 opacity 的透明效果有什么不同？</p>
+<pre><code>* opacity 作用于元素以及元素内的所有内容（包括文字）的透明度
+* rgba() 只作用于元素自身的颜色或其背景色，子元素不会继承透明效果
+</code></pre></li>
+<li><p>css 属性 content 有什么作用？</p>
+<pre><code>content 属性专门应用在 before/after 伪元素上，用于插入额外内容或样式
+</code></pre></li>
+<li><p>CSS3有哪些新特性？</p>
+<pre><code>- 新增选择器     p:nth-child(n){color: rgba(255, 0, 0, 0.75)}
+- 弹性盒模型     display: flex;
+- 多列布局       column-count: 5;
+- 媒体查询       @media (max-width: 480px) {.box: {column-count: 1;}}
+- 个性化字体     @font-face{font-family: BorderWeb; src:url(BORDERW0.eot);}
+- 颜色透明度     color: rgba(255, 0, 0, 0.75);
+- 圆角           border-radius: 5px;
+- 渐变           background:linear-gradient(red, green, blue);
+- 阴影           box-shadow:3px 3px 3px rgba(0, 64, 128, 0.3);
+- 倒影           box-reflect: below 2px;
+- 文字装饰       text-stroke-color: red;
+- 文字溢出       text-overflow:ellipsis;
+- 背景效果       background-size: 100px 100px;
+- 边框效果       border-image:url(bt_blue.png) 0 10;
+- 转换
+   旋转          transform: rotate(20deg);
+   倾斜          transform: skew(150deg, -10deg);
+   位移          transform: translate(20px, 20px);
+   缩放          transform: scale(.5);
+- 平滑过渡       transition: all .3s ease-in .1s;
+- 动画           @keyframes anim-1 {50% {border-radius: 50%;}} animation: anim-1 1s;
+</code></pre></li>
+<li><p>请解释一下 CSS3 的 Flexbox（弹性盒布局模型）以及适用场景？</p>
+<pre><code>Flexbox 用于不同尺寸屏幕中创建可自动扩展和收缩布局
+</code></pre></li>
+<li><p>用CSS创建一个三角形的原理是什么？</p>
+<pre><code>把上、左、右三条边隐藏（颜色设为 transparent）
+</code></pre>   <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.triangle</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">border-width</span>: <span class="number">20px</span>;</span><br><span class="line">  <span class="attribute">border-style</span>: solid;</span><br><span class="line">  <span class="attribute">border-color</span>: transparent transparent red transparent;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>一个满屏“品”字布局如何设计?</p>
+<pre><code>1. 上面的 div 宽 100%
+2. 下面的两个 div 分别宽50%
+3. 用 float 或者 inline 使其不换行
+</code></pre></li>
+<li><p>经常遇到的浏览器的CSS兼容性有哪些？解决方法是什么？</p>
+<pre><code>* 在IE6，7下，li的内容有浮动，li下边就会产生间隙。解决方法：给li加 vertical-align 或 加浮动
+* 在IE6下，元素的高度的小于19px的时候，会被当做19px来处理。解决方法：overflow:hidden
+* IE6双边距bug。解决方法：在float的标签样式中加入 _display:inline
+* 在IE6下，浮动元素和绝对定位元素并列时，绝对定位元素会消失。解决方法：给定位元素外面包个div
+* 在IE6，7下，子元素有相对定位的话，父级的overflow包不住子元素。解决方法：给父级加相对定位
+* 在IE6，7下输入类型的表单控件上下各有1px的间隙。解决方法：给input加浮动
+* 在IE6下父级有边框的时候，子元素的margin值消失。解决方法：触发父级的haslayout
+* 在IE6下不兼容 opacity:0.3; 透明度设置。解决方法：filter:alpha(opacity=30);
+</code></pre></li>
+<li><p>经常遇到的浏览器的JS兼容性有哪些？解决方法是什么？</p>
+<pre><code>* 当前样式：getComputedStyle(el, null) VS el.currentStyle
+* 事件对象：e VS window.event
+* 鼠标坐标：e.pageX, e.pageY VS window.event.x, window.event.y
+* 按键码：e.which VS event.keyCode
+* 文本节点：el.textContent VS el.innerText
+</code></pre></li>
+<li><p>li与li之间有看不见的空白间隔是什么原因引起的？有什么解决办法？</p>
+<pre><code>* li排列受到中间空白(回车/空格)等的影响，因为空白也属于字符，会被应用样式占据空间，产生间隔
+* 解决办法：在ul设置设置font-size=0,在li上设置需要的文字大小
+</code></pre></li>
+<li><p>什么是外边距重叠？ 重叠的结果是什么？</p>
+<pre><code>* 外边距重叠就是 margin-collapse
+* 相邻的两个盒子（可能是兄弟关系也可能是祖先关系）的外边距可以结合成一个单独的外边距。
+这种合并外边距的方式被称为折叠，结合而成的外边距称为折叠外边距。
+
+* 折叠结果遵循下列计算规则：
+  - 两个相邻的外边距都是正数时，折叠结果是它们两者之间较大的值
+  - 两个相邻的外边距都是负数时，折叠结果是两者绝对值的较大值
+  - 两个外边距一正一负时，折叠结果是两者的相加的和
+</code></pre></li>
+<li><p>请写出多种等高布局</p>
+<pre><code>* 在列的父元素上使用这个背景图进行Y轴的铺放，从而实现一种等高列的假像
+* 模仿表格布局等高列效果：兼容性不好，在ie6-7无法正常运行
+* css3 flexbox 布局： .container{display: flex; align-items: stretch;}
+</code></pre></li>
+<li><p>css垂直居中的方法有哪些？</p>
+<pre><code>* 如果是单行文本, line-height 设置成和 height 值
+</code></pre>  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.vertical</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">100px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code>* 已知高度的块级子元素，采用绝对定位和负边距
+</code></pre>  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.vertical</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">300px</span>;  <span class="comment">/*子元素高度*/</span></span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>:<span class="number">50%</span>;  <span class="comment">/*父元素高度50%*/</span></span><br><span class="line">  <span class="attribute">margin-top</span>: -<span class="number">150px</span>; <span class="comment">/*自身高度一半*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code>* 未知高度的块级父子元素居中，模拟表格布局
+缺点：IE67不兼容，父级 overflow：hidden 失效
+</code></pre>  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: table;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.content</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: table-cell;</span><br><span class="line">  <span class="attribute">vertical-align</span>: middle;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>新增 inline-block 兄弟元素，设置 vertical-align<br>缺点：需要增加额外标签，IE67不兼容</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span>;<span class="comment">/*定义父级高度，作为参考*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.extra</span> <span class="selector-class">.vertical</span>&#123;</span><br><span class="line">  <span class="attribute">display</span>: inline-block;  <span class="comment">/*行内块显示*/</span></span><br><span class="line">  <span class="attribute">vertical-align</span>: middle; <span class="comment">/*垂直居中*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.extra</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100%</span>; <span class="comment">/*设置新增元素高度为100%*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>绝对定位配合 CSS3 位移</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.vertical</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>:<span class="number">50%</span>;  <span class="comment">/*父元素高度50%*/</span></span><br><span class="line">  <span class="attribute">transform</span>:<span class="built_in">translateY</span>(-50%, -50%);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>CSS3弹性盒模型</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>:flex;</span><br><span class="line">  <span class="attribute">justify-content</span>: center; <span class="comment">/*子元素水平居中*/</span></span><br><span class="line">  <span class="attribute">align-items</span>: center; <span class="comment">/*子元素垂直居中*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>圣杯布局的实现原理？</p>
+<pre><code>* 要求：三列布局；中间主体内容前置，且宽度自适应；两边内容定宽
+* 好处：重要的内容放在文档流前面可以优先渲染
+* 原理：利用相对定位、浮动、负边距布局，而不添加额外标签
+</code></pre>  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">padding-left</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">padding-right</span>: <span class="number">190px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.main</span> &#123;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.left</span> &#123;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">190px</span>;</span><br><span class="line">    <span class="attribute">margin-left</span>: -<span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">left</span>: -<span class="number">150px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.right</span> &#123;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">190px</span>;</span><br><span class="line">    <span class="attribute">margin-left</span>: -<span class="number">190px</span>;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">right</span>: -<span class="number">190px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>什么是双飞翼布局？实现原理？</p>
+<pre><code>双飞翼布局：对圣杯布局（使用相对定位，对以后布局有局限性）的改进，消除相对定位布局
+原理：主体元素上设置左右边距，预留两翼位置。左右两栏使用浮动和负边距归位，消除相对定位。
+</code></pre>   <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="comment">/*padding-left:150px;*/</span></span><br><span class="line">    <span class="comment">/*padding-right:190px;*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.main-wrap</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.main</span> &#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">margin-right</span>: <span class="number">190px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.left</span> &#123;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">margin-left</span>: -<span class="number">100%</span>;</span><br><span class="line">    <span class="comment">/*position: relative;*/</span></span><br><span class="line">    <span class="comment">/*left:-150px;*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.right</span> &#123;</span><br><span class="line">    <span class="attribute">float</span>: left;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">190px</span>;</span><br><span class="line">    <span class="attribute">margin-left</span>: -<span class="number">190px</span>;</span><br><span class="line">    <span class="comment">/*position:relative;*/</span></span><br><span class="line">    <span class="comment">/*right:-190px;*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在CSS样式中常使用 px、em 在表现上有什么区别？</p>
+<pre><code>* px 相对于显示器屏幕分辨率，无法用浏览器字体放大功能
+* em 值并不是固定的，会继承父级的字体大小： em = 像素值 / 父级font-size
+</code></pre></li>
+<li><p>为什么要初始化CSS样式？</p>
+<pre><code>* 不同浏览器对有些标签样式的默认值解析不同
+* 不初始化CSS会造成各现浏览器之间的页面显示差异
+* 可以使用 reset.css 或 Normalize.css 做 CSS 初始化
+</code></pre></li>
+<li><p>解释下什么是浮动和它的工作原理？</p>
+<pre><code>* 非IE浏览器下，容器不设高度且子元素浮动时，容器高度不能被内容撑开。
+此时，内容会溢出到容器外面而影响布局。这种现象被称为浮动（溢出）。
+
+* 工作原理：
+  - 浮动元素脱离文档流，不占据空间（引起“高度塌陷”现象）
+ - 浮动元素碰到包含它的边框或者其他浮动元素的边框停留
+</code></pre></li>
+<li><p>浮动元素引起的问题？</p>
+<pre><code>* 父元素的高度无法被撑开，影响与父元素同级的元素
+* 与浮动元素同级的非浮动元素会跟随其后
+</code></pre></li>
+<li><p>列举几种清除浮动的方式？</p>
+<pre><code>* 添加额外标签，例如 `&lt;div style=&quot;clear:both&quot;&gt;&lt;/div&gt;`
+* 使用 br 标签和其自身的 clear 属性，例如 `&lt;br clear=&quot;all&quot; /&gt;`
+* 父元素设置 overflow：hidden; 在IE6中还需要触发 hasLayout，例如zoom：1;
+* 父元素也设置浮动
+* 使用 :after 伪元素。由于IE6-7不支持 :after，使用 zoom:1 触发 hasLayout
+</code></pre></li>
+<li><p>清除浮动最佳实践（after伪元素闭合浮动）：</p>
+  <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span>&#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">"\200B"</span>;</span><br><span class="line">  <span class="attribute">display</span>: table; </span><br><span class="line">  <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">clear</span>: both;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clearfix</span>&#123;</span><br><span class="line">  *zoom: 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>什么是 FOUC(Flash of Unstyled Content)？ 如何来避免 FOUC？</p>
+<pre><code>* 当使用 @import 导入 CSS 时，会导致某些页面在 IE 出现奇怪的现象：
+没有样式的页面内容显示瞬间闪烁，这种现象称为“文档样式短暂失效”，简称为FOUC
+
+* 产生原因：当样式表晚于结构性html加载时，加载到此样式表时，页面将停止之前的渲染。
+ 等待此样式表被下载和解析后，再重新渲染页面，期间导致短暂的花屏现象。
+
+* 解决方法：使用 link 标签将样式表放在文档 head
+</code></pre></li>
+<li><p>介绍使用过的 CSS 预处理器？</p>
+<pre><code>* CSS 预处理器基本思想：为 CSS 增加了一些编程的特性（变量、逻辑判断、函数等）
+* 开发者使用这种语言进行进行 Web 页面样式设计，再编译成正常的 CSS 文件使用
+* 使用 CSS 预处理器，可以使 CSS 更加简洁、适应性更强、可读性更佳，无需考虑兼容性
+* 最常用的 CSS 预处理器语言包括：Sass（SCSS）和 LESS
+</code></pre></li>
+<li><p>CSS优化、提高性能的方法有哪些？</p>
+<pre><code>* 多个css合并，尽量减少HTTP请求
+* 将css文件放在页面最上面
+* 移除空的css规则
+* 避免使用CSS表达式
+* 选择器优化嵌套，尽量避免层级过深
+* 充分利用css继承属性，减少代码量
+* 抽象提取公共样式，减少代码量
+* 属性值为0时，不加单位
+* 属性值为小于1的小数时，省略小数点前面的0
+* css雪碧图
+</code></pre></li>
+<li><p>浏览器是怎样解析CSS选择器的？</p>
+<pre><code>浏览器解析 CSS 选择器的方式是从右到左
+</code></pre></li>
+<li><p>在网页中的应该使用奇数还是偶数的字体？</p>
+<pre><code>在网页中的应该使用“偶数”字体：
+* 偶数字号相对更容易和 web 设计的其他部分构成比例关系
+* 使用奇数号字体时文本段落无法对齐
+* 宋体的中文网页排布中使用最多的就是 12 和 14
+</code></pre></li>
+<li><p>margin和padding分别适合什么场景使用？</p>
+<pre><code>* 需要在border外侧添加空白，且空白处不需要背景（色）时，使用 margin
+* 需要在border内测添加空白，且空白处需要背景（色）时，使用 padding
+</code></pre></li>
+<li><p>抽离样式模块怎么写，说出思路？</p>
+<pre><code>CSS可以拆分成2部分：公共CSS 和 业务CSS：
+1.网站的配色，字体，交互提取出为公共CSS。这部分CSS命名不应涉及具体的业务
+2.对于业务CSS，需要有统一的命名，使用公用的前缀。可以参考面向对象的CSS
+</code></pre></li>
+<li><p>元素竖向的百分比设定是相对于容器的高度吗？</p>
+<pre><code>元素竖向的百分比设定是相对于容器的宽度，而不是高度
+</code></pre></li>
+<li><p>全屏滚动的原理是什么？ 用到了CSS的那些属性？</p>
+<pre><code>* 原理类似图片轮播原理，超出隐藏部分，滚动时显示
+* 可能用到的CSS属性：overflow:hidden; transform:translate(100%, 100%); display:none;
+</code></pre></li>
+<li><p>什么是响应式设计？响应式设计的基本原理是什么？如何兼容低版本的IE？</p>
+<pre><code>* 响应式设计就是网站能够兼容多个终端，而不是为每个终端做一个特定的版本
+* 基本原理是利用CSS3媒体查询，为不同尺寸的设备适配不同样式
+* 对于低版本的IE，可采用JS获取屏幕宽度，然后通过resize方法来实现兼容：
+</code></pre>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$(<span class="built_in">window</span>).resize(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    screenRespond();</span><br><span class="line">&#125;);</span><br><span class="line">screenRespond();</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">screenRespond</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> screenWidth = $(<span class="built_in">window</span>).width();</span><br><span class="line">  <span class="keyword">if</span>(screenWidth &lt;= <span class="number">1800</span>)&#123;</span><br><span class="line">    $(<span class="string">"body"</span>).attr(<span class="string">"class"</span>, <span class="string">"w1800"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span>(screenWidth &lt;= <span class="number">1400</span>)&#123;</span><br><span class="line">    $(<span class="string">"body"</span>).attr(<span class="string">"class"</span>, <span class="string">"w1400"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span>(screenWidth &gt; <span class="number">1800</span>)&#123;</span><br><span class="line">    $(<span class="string">"body"</span>).attr(<span class="string">"class"</span>, <span class="string">""</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>什么是视差滚动效果，如何给每页做不同的动画？</p>
+<pre><code>* 视差滚动是指多层背景以不同的速度移动，形成立体的运动效果，具有非常出色的视觉体验。
+ 一般把网页解剖为：背景层、内容层和悬浮层。当滚动鼠标滚轮时，各图层以不同速度移动，形成视差的。
+
+* 实现原理:
+ 1.以 “页面滚动条” 作为 “视差动画进度条”
+ 2.以 “滚轮刻度” 当作 “动画帧度” 去播放动画的
+ 3.监听 mousewheel 事件，事件被触发即播放动画，实现“翻页”效果
+</code></pre></li>
+<li><p>a标签上四个伪类的执行顺序是怎么样的？</p>
+<pre><code>link &gt; visited &gt; hover &gt; active
+L-V-H-A love hate 用喜欢和讨厌两个词来方便记忆
+</code></pre></li>
+<li><p>伪元素和伪类的区别和作用？</p>
+<pre><code>* 伪元素 -- 在内容元素的前后插入额外的元素或样式，但是这些元素实际上并不在文档中生成。
+ 它们只在外部显示可见，但不会在文档的源代码中找到它们，因此，称为“伪”元素。例如：
+</code></pre>   <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span><span class="selector-pseudo">::before</span> &#123;<span class="attribute">content</span>:<span class="string">"第一章："</span>;&#125;</span><br><span class="line"><span class="selector-tag">p</span><span class="selector-pseudo">::after</span> &#123;<span class="attribute">content</span>:<span class="string">"Hot!"</span>;&#125;</span><br><span class="line"><span class="selector-tag">p</span><span class="selector-pseudo">::first-line</span> &#123;<span class="attribute">background</span>:red;&#125;</span><br><span class="line"><span class="selector-tag">p</span><span class="selector-pseudo">::first-letter</span> &#123;<span class="attribute">font-size</span>:<span class="number">30px</span>;&#125;</span><br></pre></td></tr></table></figure>
+<pre><code>* 伪类 -- 将特殊的效果添加到特定选择器上。它是已有元素上添加类别的，不会产生新的元素。例如：
+</code></pre>   <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;<span class="attribute">color</span>: <span class="number">#FF00FF</span>&#125;</span><br><span class="line"><span class="selector-tag">p</span><span class="selector-pseudo">:first-child</span> &#123;<span class="attribute">color</span>: red&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>::before 和 :after 中双冒号和单冒号有什么区别？</p>
+<pre><code>* 在 CSS 中伪类一直用 : 表示，如 :hover, :active 等
+* 伪元素在CSS1中已存在，当时语法是用 : 表示，如 :before 和 :after
+* 后来在CSS3中修订，伪元素用 :: 表示，如 ::before 和 ::after，以此区分伪元素和伪类
+* 由于低版本IE对双冒号不兼容，开发者为了兼容性各浏览器，继续使使用 :after 这种老语法表示伪元素
+* 综上所述：::before 是 CSS3 中写伪元素的新语法； :after 是 CSS1 中存在的、兼容IE的老语法
+</code></pre></li>
+<li><p>如何修改Chrome记住密码后自动填充表单的黄色背景？</p>
+<pre><code>产生原因：由于Chrome默认会给自动填充的input表单加上 input:-webkit-autofill 私有属性造成的
+解决方案1：在form标签上直接关闭了表单的自动填充：autocomplete=&quot;off&quot;
+解决方案2：input:-webkit-autofill { background-color: transparent; }
+</code></pre></li>
+<li><p>input [type=search] 搜索框右侧小图标如何美化？</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">input</span><span class="selector-attr">[type="search"]</span><span class="selector-pseudo">::-webkit-search-cancel-button</span>&#123;</span><br><span class="line">    <span class="attribute">-webkit-appearance</span>: none;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">15px</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">15px</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">8px</span>;</span><br><span class="line">    <span class="attribute">background</span>:<span class="built_in">url</span>(<span class="string">"images/searchicon.png"</span>) no-repeat <span class="number">0</span> <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">background-size</span>: <span class="number">15px</span> <span class="number">15px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>网站图片文件，如何点击下载？而非点击预览？</p>
+<pre><code>`&lt;a href=&quot;logo.jpg&quot; download&gt;下载&lt;/a&gt;`
+`&lt;a href=&quot;logo.jpg&quot; download=&quot;网站LOGO&quot; &gt;下载&lt;/a&gt;`
+</code></pre></li>
+<li><p>iOS safari 如何阻止“橡皮筋效果”？</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> stopScrolling = <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">        event.preventDefault();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">document</span>.addEventListener(<span class="string">'touchstart'</span>, stopScrolling, <span class="literal">false</span>);</span><br><span class="line">    <span class="built_in">document</span>.addEventListener(<span class="string">'touchmove'</span>, stopScrolling, <span class="literal">false</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>你对 line-height 是如何理解的？</p>
+<pre><code>* line-height 指一行字的高度，包含了字间距，实际上是下一行基线到上一行基线距离
+* 如果一个标签没有定义 height 属性，那么其最终表现的高度是由 line-height 决定的
+* 一个容器没有设置高度，那么撑开容器高度的是 line-height 而不是容器内的文字内容
+* 把 line-height 值设置为 height 一样大小的值可以实现单行文字的垂直居中
+* line-height 和 height 都能撑开一个高度，height 会触发 haslayout，而 line-height 不会
+</code></pre></li>
+<li><p>line-height 三种赋值方式有何区别？（带单位、纯数字、百分比）</p>
+<pre><code>* 带单位：px 是固定值，而 em 会参考父元素 font-size 值计算自身的行高
+* 纯数字：会把比例传递给后代。例如，父级行高为 1.5，子元素字体为 18px，则子元素行高为 1.5 * 18 = 27px
+* 百分比：将计算后的值传递给后代
+</code></pre></li>
+<li><p>设置元素浮动后，该元素的 display 值会如何变化？</p>
+<pre><code>设置元素浮动后，该元素的 display 值自动变成 block
+</code></pre></li>
+<li><p>怎么让Chrome支持小于12px 的文字？</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.shrink</span>&#123;</span><br><span class="line">  <span class="attribute">-webkit-transform</span>:<span class="built_in">scale</span>(0.8);</span><br><span class="line">  <span class="attribute">-o-transform</span>:<span class="built_in">scale</span>(1);</span><br><span class="line">  <span class="attribute">display</span>:inline-block;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>让页面里的字体变清晰，变细用CSS怎么做？（IOS手机浏览器字体齿轮设置）</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.font1</span>&#123;</span><br><span class="line">    <span class="attribute">-webkit-font-smoothing</span>: antialiased;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>font-style 属性 oblique 是什么意思？</p>
+<pre><code>font-style: oblique; 使没有 italic 属性的文字实现倾斜
+</code></pre></li>
+<li><p>position:fixed; 在 android 下无效怎么处理？</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0,</span></span></span><br><span class="line"><span class="tag"><span class="string"> maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果需要手动写动画，你认为最小时间间隔是多久？</p>
+<pre><code>16.7ms 多数显示器默认频率是60Hz，即1秒刷新60次，所以理论上最小间隔: 1s / 60 * 1000 ＝ 16.7ms
+</code></pre></li>
+<li><p>display:inline-block 什么时候会显示间隙？</p>
+<pre><code>* 相邻的 inline-block 元素之间有换行或空格分隔的情况下会产生间距
+* 非 inline-block 水平元素设置为 inline-block 也会有水平间距
+* 可以借助 vertical-align:top; 消除垂直间隙
+* 可以在父级加 font-size：0; 在子元素里设置需要的字体大小，消除垂直间隙
+* 把 li 标签写到同一行可以消除垂直间隙，但代码可读性差
+</code></pre></li>
+<li><p>overflow: scroll 时不能平滑滚动的问题怎么处理？</p>
+<pre><code>监听滚轮事件，然后滚动到一定距离时用 jquery 的 animate 实现平滑效果。
+</code></pre></li>
+<li><p>一个高度自适应的div，里面有两个div，一个高度100px，希望另一个填满剩下的高度</p>
+<pre><code>方案1：
+</code></pre>   <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.sub</span> &#123; <span class="attribute">height</span>: <span class="built_in">calc</span>(100%-100px); &#125;</span><br></pre></td></tr></table></figure>
+<pre><code>方案2：
+</code></pre>   <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123; <span class="attribute">position</span>:relative; &#125;</span><br><span class="line"><span class="selector-class">.sub</span> &#123; <span class="attribute">position</span>: absolute; <span class="attribute">top</span>: <span class="number">100px</span>; <span class="attribute">bottom</span>: <span class="number">0</span>; &#125;</span><br></pre></td></tr></table></figure>
+<pre><code>方案3：
+</code></pre>   <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123; <span class="attribute">display</span>:flex; <span class="attribute">flex-direction</span>:column; &#125;</span><br><span class="line"><span class="selector-class">.sub</span> &#123; <span class="attribute">flex</span>:<span class="number">1</span>; &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>png、jpg、gif 这些图片格式解释一下，分别什么时候用。有没有了解过webp？</p>
+<pre><code>png   支持完全透明；不支持动画
+jpg   支持上百万种颜色，不支持背景透明、动画
+gif   支持背景透明、动画，只有256种颜色
+webp  加载速度快，压缩体积小，但兼容性差
+
+gif 适用范围：动图、小图标
+png 适用范围：小图标、平铺背景、屏幕截图
+jpg 适用范围：自然风景照片、高清海报等照片
+</code></pre></li>
+<li><p>style 标签写在 body 结束标签后与 body 结束标签前有什么区别？</p>
+<pre><code>标准做法是放在 head 标签区间，好处是保证网页主体加载时，样式已提交加载生效
+</code></pre></li>
+<li><p>什么是CSS 预处理器 / 后处理器？</p>
+<pre><code>* 预处理器（LESS、Sass）用来预编译 Sass 或 less，增强了 css 代码的复用性。
+使 css 具备层级、mixin、变量、循环、函数等，极大方便了UI组件模块化开发。
+
+* 后处理器（PostCSS），在完成的 CSS 样式表中根据 CSS 规范进行处理，让其更有效；
+目前最常用于给CSS属性添加浏览器私有前缀，实现跨浏览器兼容性的问题。
+</code></pre></li>
+</ul>
+
+    </div>
+
+    <div class="post-footer">   
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="http://wangyongjie.top/" target="_blank">前端美男子</a>
+            
+        </div>
+        <div>
+            
+        </div>  
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2017/09/01/018-AJAX之跨域问题/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
+    
+    
+        <a href="/2017/08/10/016-nodejs和npm关系/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zNDc5OS8xMTMzNg==">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+         if (typeof LivereTower === 'function') { return; }
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+</div>
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+    <aside class="col-md-4 sidebar">
+        
+        
+    <div class="widget">    
+        <h3 class="title">搜索</h3>
+        <div id="search-form">
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
+                    <button type="button" class="search-form-submit" id="search-local">站内搜索</button>
+                
+                
+                    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Google Search"><button type="submit" class="search-form-submit">谷歌搜索</button><input type="hidden" name="sitesearch" value="http://wangyongjie2017.github.com"></form>
+                
+            </div>
+            <div id="result-wrap" class="hide">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget notification">
+        <h3 class="title">网站公告</h3>
+        <div>
+            <p>我的 vue 项目已经上线！欢迎浏览：<a href="http://wangyongjie2017.coding.me/" title="fork me" target="_blank">Vue 搭建知乎日报</a></p>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget">
+      <h3 class="title">社交</h3> 
+        <div class="content social">
+            
+	            <a href="//github.com/wangyongjie2017" rel="external nofollow" title="Github" target="_blank">
+			    	<i class="git fa fa-git"></i>
+			    </a>
+            
+	            <a href="//mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=wfj09fj29ffz9IGwsO_irqw" rel="external nofollow" title="邮箱" target="_blank">
+			    	<i class="envelope-o fa fa-envelope-o"></i>
+			    </a>
+            
+	            <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=954974625" rel="external nofollow" title="联系QQ" target="_blank">
+			    	<i class="qq fa fa-qq"></i>
+			    </a>
+            
+	            <a href="//weibo.com/wangyongjie2017" rel="external nofollow" title="微博" target="_blank">
+			    	<i class="weibo fa fa-weibo"></i>
+			    </a>
+            
+        </div>
+    </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">分类</h3>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/前端/"><i class="fa" aria-hidden="true">前端</i></a><span class="category-list-count">21</span></li><li class="category-list-item"><a class="category-list-link current" href="/categories/后端/"><i class="fa" aria-hidden="true">后端</i></a><span class="category-list-count">1</span></li></ul>
+    </div>
+
+
+        
+        
+    <div class="widget">
+      <h3 class="title">归档</h3>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/"><i class="fa" aria-hidden="true">March 2018</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/"><i class="fa" aria-hidden="true">September 2017</i></a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/"><i class="fa" aria-hidden="true">August 2017</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/"><i class="fa" aria-hidden="true">July 2017</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/"><i class="fa" aria-hidden="true">June 2017</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/"><i class="fa" aria-hidden="true">May 2017</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/"><i class="fa" aria-hidden="true">April 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/"><i class="fa" aria-hidden="true">March 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/"><i class="fa" aria-hidden="true">February 2017</i></a><span class="archive-list-count">3</span></li></ul>
+    </div>
+
+
+        
+        
+  <div class="widget">
+    <h3 class="title">标签云</h3>
+    <div class="content tag-cloud">
+        <a href="/tags/AJAX/" style="font-size: 15px;">AJAX</a> <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/CSS3/" style="font-size: 10px;">CSS3</a> <a href="/tags/ES6/" style="font-size: 15px;">ES6</a> <a href="/tags/Git/" style="font-size: 15px;">Git</a> <a href="/tags/Vue-js/" style="font-size: 20px;">Vue.js</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a> <a href="/tags/前端总结/" style="font-size: 15px;">前端总结</a> <a href="/tags/后端起步/" style="font-size: 10px;">后端起步</a> <a href="/tags/布局/" style="font-size: 10px;">布局</a> <a href="/tags/跨域问题/" style="font-size: 10px;">跨域问题</a> <a href="/tags/遇到的问题/" style="font-size: 10px;">遇到的问题</a> <a href="/tags/面试题/" style="font-size: 15px;">面试题</a>
+    </div>
+  </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">友链</h3>
+        <div class="content friends-link">
+        
+            <a href="http://wangyongjie.top" class="fa" target="_blank">个人博客</a>
+        
+            <a href="https://coding.net/u/wangyongjie2017" class="fa" target="_blank">coding</a>
+        
+            <a href="http://blog.csdn.net/wangyongjie2017" class="fa" target="_blank">CSDN</a>
+        
+            <a href="https://developer.mozilla.org/zh-CN" class="fa" target="_blank">MDN</a>
+        
+            <a href="http://www.w3cplus.com" class="fa" target="_blank">w3cplus</a>
+        
+            <a href="http://www.runoob.com" class="fa" target="_blank">菜鸟教程</a>
+        
+            <a href="https://cn.vuejs.org" class="fa" target="_blank">Vue.js</a>
+        
+            <a href="http://www.tuhaokuai.com" class="fa" target="_blank">在线图片压缩</a>
+        
+            <a href="https://www.codewars.com" class="fa" target="_blank">codewars</a>
+        
+        </div>
+    </div>
+
+
+        
+    </aside>
+
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"> 
+                <span>Copyright &copy; 2018
+                </span> | 
+                <span>
+                    <a href="//wangyongjie.top" class="copyright-links" target="_blank" rel="nofollow">王永杰的博客</a>
+                </span> | 
+                <span>
+                    <a href="//weibo.com/wangyongjie2017" class="copyright-links" target="_blank" rel="nofollow">前端美男子</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+	<script src="/js/search.js?rev=@@hash"></script>
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,508 @@
+<!DOCTYPE HTML>
+<html lang="">
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="前端美男子 王永杰">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://wangyongjie2017.github.com">
+    <!--SEO-->
+
+<meta name="description" content="前端美男子王永杰个人博客 | 程序员 | 前端知识 丨 wangyongjie"/>
+
+
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>ES6之-解构赋值 | 前端美男子 王永杰</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="前端美男子 王永杰" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css?rev=3.3.4">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?f42ffe5fed856accbf91820f137dab46";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+
+    
+</head>
+
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header"  style="background-image:url(https://ws1.sinaimg.cn/large/93838f95ly1fpgvnfwrkpg205a064dhr.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="">
+            <img src="/img/avatar.jpg" alt="logo头像">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> 因为折腾,所以有趣 </h2>
+             
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                    </span>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation"><a href="/"><i class="fa fa-fw "></i>主页</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/前端/"><i class="fa fa-fw "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/后端/"><i class="fa fa-fw "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/工具/"><i class="fa fa-fw "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/资源/"><i class="fa fa-fw "></i>资源</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="ES6之-解构赋值">
+            
+	            ES6之-解构赋值
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/前端">
+            前端
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a href="/tags/ES6">
+               ES6
+            </a>
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/05/24</span>
+    </span>
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h2 id="解构赋值"><a href="#解构赋值" class="headerlink" title="解构赋值"></a>解构赋值</h2><blockquote>
+<p>ES6允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为<font color="red"><strong>解构赋值（Destructuring）</strong></font>也可以简称:<font color="red"><strong>解构</strong></font>。<br><a id="more"></a></p>
+</blockquote>
+<h3 id="一、什么是结构赋值"><a href="#一、什么是结构赋值" class="headerlink" title="一、什么是结构赋值"></a>一、什么是结构赋值</h3><blockquote>
+<p>ES6允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为<font color="red"><strong>解构赋值（Destructuring）</strong></font>也可以简称:<font color="red"><strong>解构</strong></font>。</p>
+</blockquote>
+<h4 id="下面用代码进一步解释一下什么叫解构赋值。"><a href="#下面用代码进一步解释一下什么叫解构赋值。" class="headerlink" title="下面用代码进一步解释一下什么叫解构赋值。"></a>下面用代码进一步解释一下什么叫<font color="red"><strong>解构赋值</strong></font>。</h4><h5 id="1-关于给变量赋值，传统的变量赋值是这样的："><a href="#1-关于给变量赋值，传统的变量赋值是这样的：" class="headerlink" title="1.关于给变量赋值，传统的变量赋值是这样的："></a>1.关于给变量赋值，传统的变量赋值是这样的：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1,2,3];//把数组的值分别赋给下面的变量；</span><br><span class="line">var a = arr[0];</span><br><span class="line">var b = arr[1];</span><br><span class="line">var c = arr[2];</span><br><span class="line">console.log(a);//a的值为1</span><br><span class="line">console.log(b);//b的值为2</span><br><span class="line">console.log(c);//c的值为3</span><br></pre></td></tr></table></figure>
+<ul>
+<li>将数组的元素值1、2、3分别赋值给变量a、b、c，结果也是如我们所愿，赋值成功，这是传统的赋值方法</li>
+</ul>
+<h5 id="2-关于结构赋值是这样的（以数组为例）："><a href="#2-关于结构赋值是这样的（以数组为例）：" class="headerlink" title="2.关于结构赋值是这样的（以数组为例）："></a>2.关于结构赋值是这样的（以数组为例）：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var [a,b,c] = [1,2,3]; //把数组的值分别赋给下面的变量；</span><br><span class="line">console.log(a);//a的值为1</span><br><span class="line">console.log(b);//b的值为2</span><br><span class="line">console.log(c);//c的值为3</span><br></pre></td></tr></table></figure>
+<ul>
+<li>赋值的代码大大减少了，不需要分别把变量a，b，c分别声明定义和赋值，只需要将变量a，b，c作为一个数组的元素，然后将数组[1,2,3]赋值给数组[a,b,c]即可，变量a，b，c即可分别得到对应的值。</li>
+</ul>
+<blockquote>
+<p>优点：<font color="red"><strong>代码简短了很多，可读性也很强</strong></font></p>
+</blockquote>
+<h3 id="二、数组的结构赋值"><a href="#二、数组的结构赋值" class="headerlink" title="二、数组的结构赋值"></a>二、数组的结构赋值</h3><blockquote>
+<p>数组的用法除了上面的简单用法以外，还有一下几种情况需要注意：</p>
+</blockquote>
+<h5 id="1-结构赋值可以嵌套"><a href="#1-结构赋值可以嵌套" class="headerlink" title="1.结构赋值可以嵌套"></a>1.结构赋值可以嵌套</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var [ a,b,[ c1,c2 ] ] = [ 1,2,[ 3.1,3.2 ] ];</span><br><span class="line">console.log(c1);//结果：c1的值为3.1</span><br><span class="line">console.log(c2);//结果：c2的值为3.2</span><br></pre></td></tr></table></figure>
+<ul>
+<li>数组中即使再嵌套另一个数组，结构赋值也能为我们的变量准确的赋值，c1和c2的值分别为3.1 , 3.2，也就是赋值成功。</li>
+</ul>
+<h5 id="2-不完全结构赋值"><a href="#2-不完全结构赋值" class="headerlink" title="2.不完全结构赋值"></a>2.不完全结构赋值</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var [a,b,c] = [1,2];</span><br><span class="line">console.log(a);//结果：a的值为1</span><br><span class="line">console.log(b);//结果：b的值为2</span><br></pre></td></tr></table></figure>
+<ul>
+<li>当左边的模式（你可以理解为格式）与右边不完全一样的时候，那么赋值过程中，只会给模式匹配成功的部分的变量赋值，例如：变量c没有在右边找到匹配的模式，所以无法进行赋值，但这并不影响变量a和变量b的赋值，因为它们在右边找到与之匹配的模式，这种叫做不完全解构。</li>
+</ul>
+<h5 id="3-赋值不成功，变量的值为undefined"><a href="#3-赋值不成功，变量的值为undefined" class="headerlink" title="3.赋值不成功，变量的值为undefined"></a>3.赋值不成功，变量的值为undefined</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var [a,b,c] = [1,2];</span><br><span class="line">console.log(a);//结果：a的值为1</span><br><span class="line">console.log(b);//结果：b的值为2</span><br><span class="line">console.log(c);//结果：c的值为undefined</span><br></pre></td></tr></table></figure>
+<ul>
+<li>还是接着上面的不完全解构例子讲解，变量a和变量b为不完全解构，那么变量c解构不成功会怎么样呢？记住，解构不成功，变量的值就等于undefined。相当于只声明了变量c，但是没赋值。</li>
+</ul>
+<h5 id="4-允许设定默认值"><a href="#4-允许设定默认值" class="headerlink" title="4.允许设定默认值"></a>4.允许设定默认值</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var [a,b,c=3] = [1,2];</span><br><span class="line">console.log(a);//结果:a的值为1</span><br><span class="line">console.log(b);//结果:b的值为2</span><br><span class="line">console.log(c);//结果:c的值为3</span><br></pre></td></tr></table></figure>
+<ul>
+<li>例子中变量c已经指定默认值为3，即使右侧没有与之对应的值赋给它也没关系，它都可以成功赋值为3，如果你想覆盖默认值3，只需赋一个有效的值即可。如下：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var [a,b,c=3] =[1,2,4];</span><br><span class="line">console.log(a);//结果:a的值为1</span><br><span class="line">console.log(b);//结果:b的值为2</span><br><span class="line">console.log(c);//结果:c的值为4</span><br></pre></td></tr></table></figure>
+<ul>
+<li>这个时候默认值3会被新的值4覆盖，c的值为4；注意：<font color="red">当新的值为undefined的时候，是不会覆盖默认值的</font>。</li>
+</ul>
+<h5 id="5-属性调换影响结果"><a href="#5-属性调换影响结果" class="headerlink" title="5.属性调换影响结果"></a>5.属性调换影响结果</h5><blockquote>
+<p>把右侧的数组属性b和属性c的位置进行了调换，但这会影响赋值的结果，变量b和变量c的值会改变，b为3，c为2。这就告诉我们数组的解构赋值会受到属性的排列次序影响</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var [a,c,b] = [1,2,3]</span><br><span class="line">console.log(a);//结果:a的值为1</span><br><span class="line">console.log(b);//结果:b的值为3</span><br><span class="line">console.log(c);//结果:c的值为2</span><br></pre></td></tr></table></figure>
+<h3 id="三、对象的结构赋值"><a href="#三、对象的结构赋值" class="headerlink" title="三、对象的结构赋值"></a>三、对象的结构赋值</h3><blockquote>
+<p>对象的解构赋值跟数组的解构赋值很类似，我们来看一段小代码： </p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var &#123; a,b,c&#125; = &#123;&quot;a&quot;:1,&quot;b&quot;:2,&quot;c&quot;:3&#125;;</span><br><span class="line">console.log(a);//结果：a的值为1    </span><br><span class="line">console.log(b);//结果：b的值为2</span><br><span class="line">console.log(c);//结果：c的值为3</span><br></pre></td></tr></table></figure>
+<ul>
+<li>这段例子的代码是不是跟数组的解构赋值很相似，只不过是数组换成了对象。但是两者有<font color="red">一个不同的地方</font>，我们对上面的代码稍做修改：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var &#123; a,b,c &#125; = &#123;&quot;a&quot;:1,&quot;c&quot;:3,&quot;b&quot;:2&#125;;</span><br><span class="line">console.log(a);//结果：a的值为1</span><br><span class="line">console.log(b);//结果：b的值为2</span><br><span class="line">console.log(c);//结果：c的值为3</span><br></pre></td></tr></table></figure>
+<ul>
+<li>我把右侧的对象属性b和属性c的位置进行了调换，但这并不会影响赋值的结果，变量b和变量c的值不会改变，依然是b为2，c为3。这就告诉我们对象的解构赋值不会受到属性的排列次序影响（数组则会受影响），它是跟属性名关联起来的，变量名要和属性名一致，才会成功赋值。</li>
+</ul>
+<ul>
+<li><p>如果变量找不到与其名字相同的属性，就会赋值不成功，如下面的例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var &#123; a &#125; = &#123;&quot;b&quot;:2&#125;;</span><br><span class="line">console.log(a);//结果：a的值为undefined</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>变量a在右侧找不到与之名字匹配的属性a，所以变量a赋值不成功，a的值为undefined。</p>
+</li>
+</ul>
+<ul>
+<li><p>但也不是完全没有办法补救的，如果你想给一个变量名与属性名不一样的变量解构赋值，可以这样写：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var &#123; b:a,&#125; = &#123;&quot;b&quot;:2&#125;;</span><br><span class="line">console.log(a);//结果：a的值为2</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>这样变量a同样可以赋值成功，a的值最终为2。</p>
+</li>
+</ul>
+<h5 id="1-对象结构赋值也可以嵌套"><a href="#1-对象结构赋值也可以嵌套" class="headerlink" title="1.对象结构赋值也可以嵌套"></a>1.对象结构赋值也可以嵌套</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var &#123;a:&#123;b&#125;&#125; = &#123;&quot;a&quot;:&#123;&quot;b&quot;:1&#125;&#125;;</span><br><span class="line">console.log(b);//结果：b的值为1</span><br></pre></td></tr></table></figure>
+<h5 id="2-可以指定默认值"><a href="#2-可以指定默认值" class="headerlink" title="2.可以指定默认值"></a>2.可以指定默认值</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var &#123;a,b=2&#125; = &#123;&quot;a&quot;:1&#125;;</span><br><span class="line">console.log(b);//结果：b的值为默认值2</span><br></pre></td></tr></table></figure>
+<h3 id="四、字符串的结构赋值"><a href="#四、字符串的结构赋值" class="headerlink" title="四、字符串的结构赋值"></a>四、字符串的结构赋值</h3><blockquote>
+<p>除了对象和数组可以解构赋值外，字符串也可以结构赋值，此时字符串被转换成一个类似数组的对象，看看下面的例子：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var [a,b,c] = &quot;王永杰&quot;;</span><br><span class="line">console.log(a);//王</span><br><span class="line">console.log(b);//永</span><br><span class="line">console.log(c);//杰</span><br></pre></td></tr></table></figure>
+<ul>
+<li>这是因为在解构赋值的过程中，字符串被转换成了一个类似数组的对象。变量a，b，c都分别赋上了对应的值。</li>
+</ul>
+<h3 id="五、结构赋值的用途"><a href="#五、结构赋值的用途" class="headerlink" title="五、结构赋值的用途"></a>五、结构赋值的用途</h3><h5 id="1-交换变量的值"><a href="#1-交换变量的值" class="headerlink" title="1.交换变量的值"></a>1.交换变量的值</h5><blockquote>
+<p>传统做法最常用的是引入第三个变量来临时存放，如下：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var x = 1;</span><br><span class="line">var y = 2;</span><br><span class="line">var z = x;//第三个变量临时存放x的值</span><br><span class="line">x = y;  //把y的值赋给x；</span><br><span class="line">y = z;  //把z的值赋值给y；</span><br><span class="line">console.log(x); //结果：x为2</span><br><span class="line">console.log(y); //结果：y为1</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>解构赋值，想交换两个变量的值就简单多了。看下面的代码：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var x = 1;</span><br><span class="line">var y = 2;</span><br><span class="line">[x,y] = [y,x];</span><br></pre></td></tr></table></figure>
+<ul>
+<li>简单的一句代码即可成功交换x，y的值。</li>
+</ul>
+<h5 id="2-提取函数返回的多个值"><a href="#2-提取函数返回的多个值" class="headerlink" title="2.提取函数返回的多个值"></a>2.提取函数返回的多个值</h5><blockquote>
+<p>函数只能返回一个值，我们可以将多个值装在一个数组或者对象中，再用解构赋值快速提取其中的值。</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function demo()&#123;</span><br><span class="line">    return &#123;&quot;name&quot;:&quot;张三&quot;,&quot;age&quot;:21&#125;</span><br><span class="line">&#125;</span><br><span class="line">var &#123;name,age&#125; = demo();</span><br><span class="line">console.log(name);//结果：张三</span><br><span class="line">console.log(age);//结果：21</span><br></pre></td></tr></table></figure>
+<ul>
+<li>将demo函数的运行结果直接通过结构赋值赋给变量name和age，实现快速的提取对应的值。</li>
+</ul>
+<h5 id="3-定义函数参数"><a href="#3-定义函数参数" class="headerlink" title="3.定义函数参数"></a>3.定义函数参数</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function demo(&#123;a,b,c&#125;)&#123;</span><br><span class="line">    console.log(&quot;姓名：&quot;+ a);</span><br><span class="line">    console.log(&quot;身高：&quot;+ b);</span><br><span class="line">    console.log(&quot;体重：&quot;+ c);</span><br><span class="line">&#125;</span><br><span class="line">demo(&#123;a:&quot;张三&quot;,b:&quot;1.72m&quot;,c:&quot;50kg&quot;,d:&quot;8000&quot;&#125;);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>通过这种写法， 很方便就能提取JSON对象中想要的参数，例如案例中，我们只需要获取实参中的：a，b，c，而不需要关其他的参数，比如：d或者其他更多的参数。’</li>
+</ul>
+<h5 id="4-函数参数默认值"><a href="#4-函数参数默认值" class="headerlink" title="4.函数参数默认值"></a>4.函数参数默认值</h5><ul>
+<li>传统的参数默认值的实现方式是，先判断该参数是否为undefined，如果是代表没传，需要手动给它赋一个值，如：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function demo(a)&#123;</span><br><span class="line">    var name;</span><br><span class="line">    if(a === undefined)&#123;//判断参数书否是否传值</span><br><span class="line">   name= &quot;张三&quot;; //没传，赋默认值</span><br><span class="line"> &#125;else&#123;</span><br><span class="line">        name= a;</span><br><span class="line"> 	 &#125;</span><br><span class="line">    console.log(name);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>但是有了解构赋值，一切都变得简单很多！看下面的代码：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function demo(&#123;name=&quot;张三&quot;&#125;)&#123;</span><br><span class="line">    console.log(&quot;姓名：&quot;+name);//结果：姓名：张三</span><br><span class="line">&#125;</span><br><span class="line">demo(&#123;&#125;);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>上面的代码给我们展示了通过解构赋值设定函数参数的默认值，简洁地代码即可实现。函数调用的时候没有传入对应的name参数，此时name就会使用默认值：“张三”，是不是很简洁很方便….</li>
+</ul>
+<ul>
+<li>以上介绍了解构赋值的4个用途，你是不是也感觉到了它给我们带来的方便，它使我们的代码量大大的减少，并且语法十分清晰，增加了代码的可读性和表现力。</li>
+<li>除了这些用途以外，解构赋值在其他领域都有很好的应用，因为涉及到ES6的其他新知识，就放在在后面的教程再展开讲解。</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
+<li>总结：解构赋值给我们一种新的变量赋值方式，主要可以利用数组解构赋值和对象解构赋值。它的用途包括：交换变量值，提取函数返回值，函数参数定义，默认值设定等等，都给我们编程带来便利，在未来的代码中会见到越来越多人使用这个新特性。</li>
+</ul>
+
+    </div>
+
+    <div class="post-footer">   
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="http://wangyongjie.top/" target="_blank">前端美男子</a>
+            
+        </div>
+        <div>
+            
+        </div>  
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2017/06/10/009-Vue之组件之间的通讯/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
+    
+    
+        <a href="/2017/05/20/007-前端开发遇到的一些问题及解决方案/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zNDc5OS8xMTMzNg==">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+         if (typeof LivereTower === 'function') { return; }
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+</div>
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+    <aside class="col-md-4 sidebar">
+        
+        
+    <div class="widget">    
+        <h3 class="title">搜索</h3>
+        <div id="search-form">
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
+                    <button type="button" class="search-form-submit" id="search-local">站内搜索</button>
+                
+                
+                    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Google Search"><button type="submit" class="search-form-submit">谷歌搜索</button><input type="hidden" name="sitesearch" value="http://wangyongjie2017.github.com"></form>
+                
+            </div>
+            <div id="result-wrap" class="hide">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget notification">
+        <h3 class="title">网站公告</h3>
+        <div>
+            <p>我的 vue 项目已经上线！欢迎浏览：<a href="http://wangyongjie2017.coding.me/" title="fork me" target="_blank">Vue 搭建知乎日报</a></p>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget">
+      <h3 class="title">社交</h3> 
+        <div class="content social">
+            
+	            <a href="//github.com/wangyongjie2017" rel="external nofollow" title="Github" target="_blank">
+			    	<i class="git fa fa-git"></i>
+			    </a>
+            
+	            <a href="//mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=wfj09fj29ffz9IGwsO_irqw" rel="external nofollow" title="邮箱" target="_blank">
+			    	<i class="envelope-o fa fa-envelope-o"></i>
+			    </a>
+            
+	            <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=954974625" rel="external nofollow" title="联系QQ" target="_blank">
+			    	<i class="qq fa fa-qq"></i>
+			    </a>
+            
+	            <a href="//weibo.com/wangyongjie2017" rel="external nofollow" title="微博" target="_blank">
+			    	<i class="weibo fa fa-weibo"></i>
+			    </a>
+            
+        </div>
+    </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">分类</h3>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/前端/"><i class="fa" aria-hidden="true">前端</i></a><span class="category-list-count">21</span></li><li class="category-list-item"><a class="category-list-link current" href="/categories/后端/"><i class="fa" aria-hidden="true">后端</i></a><span class="category-list-count">1</span></li></ul>
+    </div>
+
+
+        
+        
+    <div class="widget">
+      <h3 class="title">归档</h3>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/"><i class="fa" aria-hidden="true">March 2018</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/"><i class="fa" aria-hidden="true">September 2017</i></a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/"><i class="fa" aria-hidden="true">August 2017</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/"><i class="fa" aria-hidden="true">July 2017</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/"><i class="fa" aria-hidden="true">June 2017</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/"><i class="fa" aria-hidden="true">May 2017</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/"><i class="fa" aria-hidden="true">April 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/"><i class="fa" aria-hidden="true">March 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/"><i class="fa" aria-hidden="true">February 2017</i></a><span class="archive-list-count">3</span></li></ul>
+    </div>
+
+
+        
+        
+  <div class="widget">
+    <h3 class="title">标签云</h3>
+    <div class="content tag-cloud">
+        <a href="/tags/AJAX/" style="font-size: 15px;">AJAX</a> <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/CSS3/" style="font-size: 10px;">CSS3</a> <a href="/tags/ES6/" style="font-size: 15px;">ES6</a> <a href="/tags/Git/" style="font-size: 15px;">Git</a> <a href="/tags/Vue-js/" style="font-size: 20px;">Vue.js</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a> <a href="/tags/前端总结/" style="font-size: 15px;">前端总结</a> <a href="/tags/后端起步/" style="font-size: 10px;">后端起步</a> <a href="/tags/布局/" style="font-size: 10px;">布局</a> <a href="/tags/跨域问题/" style="font-size: 10px;">跨域问题</a> <a href="/tags/遇到的问题/" style="font-size: 10px;">遇到的问题</a> <a href="/tags/面试题/" style="font-size: 15px;">面试题</a>
+    </div>
+  </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">友链</h3>
+        <div class="content friends-link">
+        
+            <a href="http://wangyongjie.top" class="fa" target="_blank">个人博客</a>
+        
+            <a href="https://coding.net/u/wangyongjie2017" class="fa" target="_blank">coding</a>
+        
+            <a href="http://blog.csdn.net/wangyongjie2017" class="fa" target="_blank">CSDN</a>
+        
+            <a href="https://developer.mozilla.org/zh-CN" class="fa" target="_blank">MDN</a>
+        
+            <a href="http://www.w3cplus.com" class="fa" target="_blank">w3cplus</a>
+        
+            <a href="http://www.runoob.com" class="fa" target="_blank">菜鸟教程</a>
+        
+            <a href="https://cn.vuejs.org" class="fa" target="_blank">Vue.js</a>
+        
+            <a href="http://www.tuhaokuai.com" class="fa" target="_blank">在线图片压缩</a>
+        
+            <a href="https://www.codewars.com" class="fa" target="_blank">codewars</a>
+        
+        </div>
+    </div>
+
+
+        
+    </aside>
+
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"> 
+                <span>Copyright &copy; 2018
+                </span> | 
+                <span>
+                    <a href="//wangyongjie.top" class="copyright-links" target="_blank" rel="nofollow">王永杰的博客</a>
+                </span> | 
+                <span>
+                    <a href="//weibo.com/wangyongjie2017" class="copyright-links" target="_blank" rel="nofollow">前端美男子</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+	<script src="/js/search.js?rev=@@hash"></script>
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>

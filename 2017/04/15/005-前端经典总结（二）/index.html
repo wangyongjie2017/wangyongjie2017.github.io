@@ -1,0 +1,1385 @@
+<!DOCTYPE HTML>
+<html lang="">
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="前端美男子 王永杰">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://wangyongjie2017.github.com">
+    <!--SEO-->
+
+<meta name="description" content="前端美男子王永杰个人博客 | 程序员 | 前端知识 丨 wangyongjie"/>
+
+
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>前端经典总结（二） | 前端美男子 王永杰</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="前端美男子 王永杰" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css?rev=3.3.4">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?f42ffe5fed856accbf91820f137dab46";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+
+    
+</head>
+
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header"  style="background-image:url(https://ws1.sinaimg.cn/large/93838f95ly1fpgvnfwrkpg205a064dhr.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="">
+            <img src="/img/avatar.jpg" alt="logo头像">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> 因为折腾,所以有趣 </h2>
+             
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                    </span>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation"><a href="/"><i class="fa fa-fw "></i>主页</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/前端/"><i class="fa fa-fw "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/后端/"><i class="fa fa-fw "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/工具/"><i class="fa fa-fw "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/资源/"><i class="fa fa-fw "></i>资源</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="前端经典总结（二）">
+            
+	            前端经典总结（二）
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/前端">
+            前端
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a href="/tags/前端总结">
+               前端总结
+            </a>
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/04/15</span>
+    </span>
+</div>
+
+            
+            
+            <p class="fa fa-exclamation-triangle warning">
+                本文于<strong>338</strong>天之前发表，文中内容可能已经过时。
+            </p>
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <h2 id="经典总结知识（二）"><a href="#经典总结知识（二）" class="headerlink" title="经典总结知识（二）"></a>经典总结知识（二）</h2><blockquote>
+<p>前端路途漫远,学会分享:参考了别人的分享,增加了自己的分享,期待你的分享在前端路上摸索前行，在这里分享自己长期关注的前端开发相关的优秀网站、博客、以及活跃开发者。<br><a id="more"></a></p>
+</blockquote>
+<h4 id="学习过程中的一些网址"><a href="#学习过程中的一些网址" class="headerlink" title="学习过程中的一些网址"></a>学习过程中的一些网址</h4><p><a href="http://jankfree.org" target="_blank" rel="noopener">让网页加载更加流畅</a></p>
+<p><a href="http://how2j.cn" target="_blank" rel="noopener">JavaWeb学习资料,其中很多web案例</a></p>
+<p><a href="https://www.awesomes.cn" target="_blank" rel="noopener">前端框架排名,TOP100</a></p>
+<p><a href="https://github.com/jaywcjlove/awesome-mac" target="_blank" rel="noopener">好用的Mac应用程序、软件以及工具</a></p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript" target="_blank" rel="noopener">JavaScript MDN</a></p>
+<p><a href="http://duni.sinaapp.com" target="_blank" rel="noopener">这世间唯有梦想和好姑娘不可辜负!</a></p>
+<p><a href="http://www.w3cplus.com" target="_blank" rel="noopener">w3cplus</a></p>
+<p><a href="http://www.imooc.com/article/12645?block_id=tuijian_wz" target="_blank" rel="noopener">GitHub上收集的最全的前端资源汇总</a></p>
+<p><a href="https://github.com/IonicChina/Mobile-front-end-tutorial" target="_blank" rel="noopener">Angular+Ionic</a></p>
+<p><a href="http://www.cnblogs.com/dxy1982/tag/svg/" target="_blank" rel="noopener">HTML5之SVG</a></p>
+<p><a href="http://growth.ren" target="_blank" rel="noopener">全栈增长工程师的指南</a></p>
+<p><a href="https://github.com/qiu-deqing/FE-interview" target="_blank" rel="noopener">收集的前端面试题和答案</a></p>
+<p><a href="http://edu.51cto.com" target="_blank" rel="noopener">51CTO,有些不错视频</a></p>
+<p><a href="http://mux.alimama.com/posts" target="_blank" rel="noopener">阿里妈妈MUX文章分享</a></p>
+<p><a href="http://www.angularjsapi.cn/hetao/" target="_blank" rel="noopener">经验</a></p>
+<p><a href="http://www.runoob.com/php/func-mysqli-select-db.html" target="_blank" rel="noopener">PHP菜鸟</a></p>
+<p><a href="http://php.net/manual/zh/" target="_blank" rel="noopener">PHP手册</a></p>
+<p><a href="http://www.php1.cn" target="_blank" rel="noopener">PHP第一社区</a></p>
+<p><a href="http://laod.cn" target="_blank" rel="noopener">老D博客</a></p>
+<p><a href="http://www.cnblogs.com/vajoy/p/4188579.html" target="_blank" rel="noopener">告别2014，你是否感谢这一年的自己？</a></p>
+<p><a href="http://getbootstrap.com" target="_blank" rel="noopener">Bootstrap</a></p>
+<p><a href="http://web.jobbole.com" target="_blank" rel="noopener">伯乐在线</a></p>
+<p><a href="http://fex.baidu.com/blog/2015/05/cross-mobile/" target="_blank" rel="noopener">聊聊移动端跨平台开发的各种技术</a></p>
+<p><a href="http://www.html5wd.com/archives/category/html5" target="_blank" rel="noopener">前端开发</a></p>
+<p><a href="https://segmentfault.com/t/html5" target="_blank" rel="noopener">segmentfault</a></p>
+<p><a href="http://runjs.cn" target="_blank" rel="noopener">RunJS</a></p>
+<p><a href="http://yanhaijing.com" target="_blank" rel="noopener">颜海镜</a></p>
+<p><a href="https://blog.dandyweng.com" target="_blank" rel="noopener">翁天信的博客</a></p>
+<p><a href="https://www.qianduan.net" target="_blank" rel="noopener">前端观察</a></p>
+<p><a href="http://www.ibm.com/developerworks/cn/web/lp/html5/index.html" target="_blank" rel="noopener">HTML5 专题</a></p>
+<p><a href="http://www.w3school.com.cn" target="_blank" rel="noopener">w3school</a></p>
+<p><a href="http://www.html5cn.org" target="_blank" rel="noopener">html5cn</a></p>
+<p><a href="http://cv.qiaobutang.com/tpl/" target="_blank" rel="noopener">简历</a></p>
+<p><a href="http://www.sxsoft.com" target="_blank" rel="noopener">软件项目交易网</a></p>
+<p><a href="https://gitlab.com" target="_blank" rel="noopener">前段时间挂掉的GitLab</a></p>
+<h4 id="专业博客"><a href="#专业博客" class="headerlink" title="专业博客"></a>专业博客</h4><p>注:此处<code>活跃度</code>为博客更新频率，<code>原创度</code>指的是作者原创或者翻译的文章所占博文比例。请尊重原创，大量转载其他网站资讯的网站和聚合类网站不做推荐。</p>
+<h6 id="中文博客"><a href="#中文博客" class="headerlink" title="中文博客"></a>中文博客</h6><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>活跃度</th>
+<th>原创度</th>
+<th>维护者</th>
+<th>其他</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://www.w3cplus.com/" target="_blank" rel="noopener">W3Cplus</a></td>
+<td>★★★★★</td>
+<td>★★★★★</td>
+<td>淘宝 @大漠</td>
+<td>国内最优秀的前端博客，原创居多</td>
+</tr>
+<tr>
+<td><a href="http://www.w3cfuns.com/" target="_blank" rel="noopener">W3Cfuns</a></td>
+<td>★★★★★</td>
+<td>★★★★☆</td>
+<td><a href="http://www.w3cfuns.com/misc.php?mod=faq&amp;action=faq&amp;id=1" target="_blank" rel="noopener">#</a></td>
+<td>专注于web前端开发行业的综合性门户网站</td>
+</tr>
+<tr>
+<td><a href="http://www.qianduan.net/" target="_blank" rel="noopener">前端观察</a></td>
+<td>★★★★☆</td>
+<td>★★★★☆</td>
+<td>腾讯 ISUX @神飞</td>
+<td>曾经最优秀，最近更新不频繁了</td>
+</tr>
+<tr>
+<td><a href="http://www.alloyteam.com/" target="_blank" rel="noopener">腾讯web前端 AlloyTeam 团队</a></td>
+<td>★★★★</td>
+<td>★★★★</td>
+<td><a href="http://t.qq.com/AlloyTeam" target="_blank" rel="noopener">@腾讯AlloyTeam</a></td>
+<td>来自于腾讯SNG(社交网络事业群)</td>
+</tr>
+<tr>
+<td><a href="http://www.zhangxinxu.com/wordpress/" target="_blank" rel="noopener">张鑫旭-鑫空间-鑫生活</a></td>
+<td>★★★★☆</td>
+<td>★★★★★</td>
+<td>张鑫旭</td>
+<td>重构很厉害，不少经典文章经验</td>
+</tr>
+<tr>
+<td><a href="http://www.36ria.com/" target="_blank" rel="noopener">ria之家</a></td>
+<td>★★★★☆</td>
+<td>★★★★☆</td>
+<td>淘宝 @明河</td>
+<td>#</td>
+</tr>
+<tr>
+<td><a href="http://www.daqianduan.com/" target="_blank" rel="noopener">大前端</a></td>
+<td>★★★★☆</td>
+<td>★★★★☆</td>
+<td><a href="http://www.cssforest.org/blog/index.php?s=about" target="_blank" rel="noopener">#</a></td>
+<td>#</td>
+</tr>
+<tr>
+<td><a href="http://www.cssforest.org/blog/" target="_blank" rel="noopener">CSS森林</a></td>
+<td>★★★★☆</td>
+<td>★★★★☆</td>
+<td><a href="http://www.cssforest.org/blog/index.php?s=about" target="_blank" rel="noopener">关于</a></td>
+<td>#</td>
+</tr>
+<tr>
+<td><a href="http://www.shejidaren.com/" target="_blank" rel="noopener">设计达人</a></td>
+<td>★★★★☆</td>
+<td>★★★☆☆</td>
+<td><a href="http://www.cssforest.org/blog/index.php?s=about" target="_blank" rel="noopener">#</a></td>
+<td>更新较频繁，但转载也较多</td>
+</tr>
+<tr>
+<td><a href="http://www.ruanyifeng.com/blog/" target="_blank" rel="noopener">阮一峰博客</a></td>
+<td>★★★★☆</td>
+<td>★★★☆☆</td>
+<td><a href="http://www.ruanyifeng.com/about.html" target="_blank" rel="noopener">#</a></td>
+<td>牛人一个</td>
+</tr>
+<tr>
+<td><a href="http://beforweb.com/" target="_blank" rel="noopener">Be For Web - 为网而生 - 原创译文博客</a></td>
+<td>★★★★☆</td>
+<td>★★★★☆</td>
+<td><a href="http://weibo.com/c7210" target="_blank" rel="noopener">@C7210</a></td>
+<td>关注移动应用及互联网产品、用户体验设计、前端开发</td>
+</tr>
+</tbody>
+</table>
+<h6 id="国外博客"><a href="#国外博客" class="headerlink" title="国外博客"></a>国外博客</h6><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>活跃度</th>
+<th>原创度</th>
+<th>维护者</th>
+<th>其他</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://www.smashingmagazine.com/" target="_blank" rel="noopener">Smashing Magazine</a></td>
+<td>★★★★★</td>
+<td>★★★★★</td>
+<td>#</td>
+<td>业界权威，web 设计很赞</td>
+</tr>
+<tr>
+<td><a href="http://hub.tutsplus.com/" target="_blank" rel="noopener">Tuts</a></td>
+<td>★★★★★</td>
+<td>★★★★★</td>
+<td>-</td>
+<td>国外知名开发者网站</td>
+</tr>
+<tr>
+<td><a href="http://www.developerdrive.com/" target="_blank" rel="noopener">DeveloperDrive</a></td>
+<td>★★★★★</td>
+<td>★★★★★</td>
+<td>-</td>
+<td>优质前端技术信息</td>
+</tr>
+<tr>
+<td><a href="http://css-tricks.com/" target="_blank" rel="noopener">CSS-TRICKS</a></td>
+<td>★★★★★</td>
+<td>★★★★★</td>
+<td>Chris Coyier</td>
+<td>左边这位是大神</td>
+</tr>
+<tr>
+<td><a href="http://webdesignerwall.com/" target="_blank" rel="noopener">Web Designer Wall</a></td>
+<td>★★★★★</td>
+<td>★★★★★</td>
+<td>Nick La.</td>
+<td>优质 Html5,CSS3等教程</td>
+</tr>
+<tr>
+<td><a href="http://tutorialzine.com/" target="_blank" rel="noopener">Tutorialzine</a></td>
+<td>★★★★★</td>
+<td>★★★★★</td>
+<td>#</td>
+<td>大量 web 教程和资源</td>
+</tr>
+<tr>
+<td><a href="http://inspectelement.com/" target="_blank" rel="noopener">Inspect Element</a></td>
+<td>★★★★★</td>
+<td>★★★★★</td>
+<td>#</td>
+<td>CSS,wordpress 相关教程挺多</td>
+</tr>
+<tr>
+<td><a href="http://tympanus.net/codrops/" target="_blank" rel="noopener">Codrops</a></td>
+<td>★★★★★</td>
+<td>★★★★★</td>
+<td>#</td>
+<td>设计、交互、CSS</td>
+</tr>
+<tr>
+<td><a href="http://www.onerutter.com/" target="_blank" rel="noopener">Jake Rutter</a></td>
+<td>★★★★★</td>
+<td>★★★★★</td>
+<td>Jake Rutter</td>
+<td>Jquery 作者，不解释了</td>
+</tr>
+<tr>
+<td><a href="http://www.paulirish.com/" target="_blank" rel="noopener">Paul Irish</a></td>
+<td>★★★★★</td>
+<td>★★★★★</td>
+<td>Paul Irish</td>
+<td>大神,Google Chrome团队,Yeoman</td>
+</tr>
+<tr>
+<td><a href="http://krasimirtsonev.com/blog" target="_blank" rel="noopener">Krasimir Tsonev</a></td>
+<td>★★★★★</td>
+<td>★★★★★</td>
+<td>Krasimir Tsonev</td>
+<td>html5,ccs3,javascript</td>
+</tr>
+<tr>
+<td><a href="http://www.nczonline.net/" target="_blank" rel="noopener">NCZOnline</a></td>
+<td>★★★★★</td>
+<td>★★★★★</td>
+<td>Nicholas C. Zakas</td>
+<td>html5,ccs3,javascript</td>
+</tr>
+<tr>
+<td><a href="http://www.html5rocks.com/en/" target="_blank" rel="noopener">HTML5 Rocks</a></td>
+<td>★★★★★</td>
+<td>★★★★★</td>
+<td>#</td>
+<td>html5权威网站</td>
+</tr>
+<tr>
+<td><a href="http://alistapart.com/" target="_blank" rel="noopener">A List Apart</a></td>
+<td>★★★★★</td>
+<td>★★★★★</td>
+<td>#</td>
+<td>可以改变世界的文章</td>
+</tr>
+<tr>
+<td><a href="http://hakim.se/" target="_blank" rel="noopener">hakim</a></td>
+<td>★★★★★</td>
+<td>★★★★★</td>
+<td>HAKIM EL HATTAB</td>
+<td>ccs3,javascript</td>
+</tr>
+<tr>
+<td><a href="http://dailyjs.com/" target="_blank" rel="noopener">DailyJS</a></td>
+<td>★★★★★</td>
+<td>★★★★★</td>
+<td>#</td>
+<td>javascript</td>
+</tr>
+</tbody>
+</table>
+<h5 id="活跃微博"><a href="#活跃微博" class="headerlink" title="活跃微博"></a>活跃微博</h5><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>公司</th>
+<th>简介</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://weibo.com/w3cchina" target="_blank" rel="noopener">@w3c中国</a></td>
+<td>#</td>
+<td>万维网联盟中国办事处官方微博</td>
+</tr>
+<tr>
+<td><a href="http://weibo.com/javascriptdev" target="_blank" rel="noopener">@TheFrontEnd</a></td>
+<td>#</td>
+<td>JavaScript技术资讯、新闻、教程、深度文章。</td>
+</tr>
+<tr>
+<td><a href="http://weibo.com/fekb" target="_blank" rel="noopener">@前端快爆</a></td>
+<td>阿里巴巴</td>
+<td>有HTML5、CSS3、JS</td>
+</tr>
+<tr>
+<td><a href="http://e.weibo.com/html5cn" target="_blank" rel="noopener">@HTML5中国</a></td>
+<td>#</td>
+<td>中国<a href="http://www.html5cn.org官方微博" target="_blank" rel="noopener">www.html5cn.org官方微博</a></td>
+</tr>
+<tr>
+<td><a href="http://weibo.com/developerworks" target="_blank" rel="noopener">@developerWorks</a></td>
+<td>#</td>
+<td>#</td>
+</tr>
+</tbody>
+</table>
+<h4 id="开发者博客"><a href="#开发者博客" class="headerlink" title="开发者博客"></a>开发者博客</h4><p>微博微信流行后，明显感觉到写博客的人还是越来越少了，下面推荐的这些开发者属于在网上比较活跃的，或者博客积累了大量优质资源的。</p>
+<h6 id="国内开发者"><a href="#国内开发者" class="headerlink" title="国内开发者"></a>国内开发者</h6><p>国内开发者一块欢迎大家 <code>Fork</code>提交推荐，最好能推荐一些在前端界较活跃的的开发者。</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>博客</th>
+<th>微博</th>
+<th>Github</th>
+<th>Twitter</th>
+<th>公司</th>
+<th>关键字</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>阮一峰</td>
+<td><a href="http://www.ruanyifeng.com/blog/" target="_blank" rel="noopener">阮一峰博客</a></td>
+<td><a href="http://weibo.com/ruanyf" target="_blank" rel="noopener">@ruanyf</a></td>
+<td>#</td>
+<td><a href="https://twitter.com/ruanyf" target="_blank" rel="noopener">@ruanyf</a></td>
+<td>上海金融学院国际金融学院</td>
+<td>教师，博客写作人，翻译人，《黑客与画家》的译者</td>
+</tr>
+<tr>
+<td>老赵</td>
+<td><a href="http://blog.zhaojie.me/" target="_blank" rel="noopener">http://blog.zhaojie.me/</a></td>
+<td><a href="http://weibo.com/jeffz" target="_blank" rel="noopener">@老赵</a></td>
+<td>#</td>
+<td><a href="">#</a></td>
+<td>摩根大通（香港）</td>
+<td>资深码农</td>
+</tr>
+<tr>
+<td>玉伯</td>
+<td><a href="http://lifesinger.wordpress.com/" target="_blank" rel="noopener">岁月如歌</a></td>
+<td><a href="http://weibo.com/lifesinger" target="_blank" rel="noopener">@玉伯也叫射雕</a></td>
+<td><a href="https://github.com/lifesinger" target="_blank" rel="noopener">@lifesinger</a></td>
+<td><a href="https://twitter.com/lifesinger" target="_blank" rel="noopener">@lifesinger</a></td>
+<td>支付宝</td>
+<td>大牛</td>
+</tr>
+<tr>
+<td>kejun</td>
+<td><a href="http://hikejun.com/" target="_blank" rel="noopener">http://hikejun.com/</a></td>
+<td><a href="http://weibo.com/kejunz" target="_blank" rel="noopener">@kejunz</a></td>
+<td>#</td>
+<td><a href="https://github.com/kejun" target="_blank" rel="noopener">@kejunz</a></td>
+<td>豆瓣</td>
+<td>前端大神</td>
+</tr>
+<tr>
+<td>寒冬winter</td>
+<td><a href="http://winter-cn.cnblogs.com/" target="_blank" rel="noopener">winter-cn</a></td>
+<td><a href="http://weibo.com/wintercn" target="_blank" rel="noopener">@寒冬winter</a></td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+</tr>
+<tr>
+<td>左耳朵耗子</td>
+<td><a href="http://coolshell.cn/" target="_blank" rel="noopener">酷壳</a></td>
+<td><a href="http://weibo.com/haoel" target="_blank" rel="noopener">@左耳朵耗子</a></td>
+<td>#</td>
+<td><a href="https://twitter.com/haoel" target="_blank" rel="noopener">@haoel</a></td>
+<td>淘宝</td>
+<td>#</td>
+</tr>
+<tr>
+<td>fool2fish</td>
+<td>#</td>
+<td><a href="http://weibo.com/fool2fish" target="_blank" rel="noopener">@fool2fish</a></td>
+<td>#</td>
+<td>#</td>
+<td>支付宝</td>
+<td>#</td>
+</tr>
+<tr>
+<td>朴灵</td>
+<td><a href="http://html5ify.com/" target="_blank" rel="noopener">Html5fiy</a></td>
+<td><a href="http://weibo.com/shyvo" target="_blank" rel="noopener">@朴灵</a></td>
+<td><a href="https://github.com/JacksonTian" target="_blank" rel="noopener">JacksonTian</a></td>
+<td>#</td>
+<td>阿里巴巴</td>
+<td>《深入浅出Node.js》作者,大牛</td>
+</tr>
+<tr>
+<td>Cat Chen</td>
+<td><a href="http://catchen.biz/home.zh-CN.html" target="_blank" rel="noopener">陈广琛</a></td>
+<td><a href="http://weibo.com/u/1640352230" target="_blank" rel="noopener">@CatChen</a></td>
+<td><a href="https://github.com/CatChen" target="_blank" rel="noopener">@CatChen</a></td>
+<td><a href="https://twitter.com/CatChen" target="_blank" rel="noopener">@CatChen</a></td>
+<td>Facebook</td>
+<td>大牛</td>
+</tr>
+<tr>
+<td>BYVod</td>
+<td><a href="https://www.byvoid.com/" target="_blank" rel="noopener">Beyond the Void</a></td>
+<td><a href="http://weibo.com/byvoid" target="_blank" rel="noopener">@BYVoid</a></td>
+<td><a href="https://github.com/BYVoid" target="_blank" rel="noopener">@byvoid</a></td>
+<td><a href="https://twitter.com/byvoid" target="_blank" rel="noopener">@BYVoid</a></td>
+<td>Facebook 英国</td>
+<td>《Node.js 开发指南》作者,大牛</td>
+</tr>
+<tr>
+<td>郭宇</td>
+<td><a href="http://blog.guoyu.me/" target="_blank" rel="noopener">Einmal ist keinmal</a></td>
+<td><a href="http://weibo.com/137601206" target="_blank" rel="noopener">@郭宇</a></td>
+<td><a href="https://github.com/turingou" target="_blank" rel="noopener">@turingou</a></td>
+<td><a href="https://twitter.com/turingou" target="_blank" rel="noopener">@turingou</a></td>
+<td>糗事百科,原支付宝</td>
+<td>Node.js</td>
+</tr>
+<tr>
+<td>勾三股四</td>
+<td><a href="http://jiongks.name/" target="_blank" rel="noopener">勾三股四博客</a></td>
+<td><a href="http://weibo.com/mx006" target="_blank" rel="noopener">@勾三股四</a></td>
+<td>#</td>
+<td>#</td>
+<td>淘宝</td>
+<td>#</td>
+</tr>
+<tr>
+<td>cnberg</td>
+<td><a href="http://cnberg.com" target="_blank" rel="noopener">冰山一角</a></td>
+<td><a href="http://weibo.com/berg" target="_blank" rel="noopener">@berg</a></td>
+<td>@cnberg</td>
+<td><a href="">@cnberg</a></td>
+<td>百度</td>
+<td>骑行</td>
+</tr>
+<tr>
+<td>大猫</td>
+<td><a href="http://bigc.at" target="_blank" rel="noopener">意淫笔记</a></td>
+<td><a href="http://weibo.com/daemao" target="_blank" rel="noopener">@daemao</a></td>
+<td><a href="https://github.com/Damao" target="_blank" rel="noopener">@Damao</a></td>
+<td><a href="https://twitter.com/13igcat" target="_blank" rel="noopener">@13igcat</a></td>
+<td>腾讯</td>
+<td><a href="http://www.zhihu.com/people/13igcat" target="_blank" rel="noopener">知乎</a></td>
+</tr>
+<tr>
+<td>hzlzh</td>
+<td><a href="https://zlz.im" target="_blank" rel="noopener">自力博客</a></td>
+<td><a href="http://weibo.com/hzlzh" target="_blank" rel="noopener">@hzlzh</a></td>
+<td><a href="http://github.com/hzlzh" target="_blank" rel="noopener">@hzlzh</a></td>
+<td><a href="http://twitter.com/hzlzh" target="_blank" rel="noopener">@hzlzh</a></td>
+<td>腾讯</td>
+<td>前端开发</td>
+</tr>
+<tr>
+<td>C7210</td>
+<td>beforweb.com/</td>
+<td><a href="http://weibo.com/c7210" target="_blank" rel="noopener">@C7210</a></td>
+<td><a href="http://twittercom/hzlzh" target="_blank" rel="noopener">@C7210</a></td>
+<td><a href="http://github.com/hzlzh" target="_blank" rel="noopener">@C7210</a></td>
+<td>#</td>
+<td>UX、交互设计师、视觉与前端</td>
+</tr>
+<tr>
+<td>kejun</td>
+<td><a href="http://hikejun.com/" target="_blank" rel="noopener">http://hikejun.com/</a></td>
+<td><a href="http://weibo.com/kejun" target="_blank" rel="noopener">#</a></td>
+<td><a href="http://twittercom/kejun" target="_blank" rel="noopener">#</a></td>
+<td><a href="http://github.com/hzlzh" target="_blank" rel="noopener">#</a></td>
+<td>腾讯</td>
+<td>前端开发</td>
+</tr>
+<tr>
+<td>张鑫旭</td>
+<td><a href="http://www.zhangxinxu.com/wordpress/" target="_blank" rel="noopener">张鑫旭博客</a></td>
+<td><a href="http://weibo.com/zhangxinxu" target="_blank" rel="noopener">@张鑫旭</a></td>
+<td><a href="https://github.com/zhangxinxu" target="_blank" rel="noopener">@zhangxinxu</a></td>
+<td><a href="https://twitter.com/zhangxinxu" target="_blank" rel="noopener">@zhangxinxu</a></td>
+<td>腾讯 上海 ISUX</td>
+<td>前端开发</td>
+</tr>
+<tr>
+<td>lucifr</td>
+<td><a href="http://lucifr.com/" target="_blank" rel="noopener">http://lucifr.com/</a></td>
+<td><a href="http://weibo.com/lucifr" target="_blank" rel="noopener">@lucifr</a></td>
+<td><a href="http://twittercom/lucifr" target="_blank" rel="noopener">@lucifr</a></td>
+<td><a href="http://github.com/lucifr" target="_blank" rel="noopener">@lucifr</a></td>
+<td>#</td>
+<td>Mac,ios</td>
+</tr>
+<tr>
+<td>smallni</td>
+<td><a href="http://www.smallni.com/" target="_blank" rel="noopener">http://www.smallni.com/</a></td>
+<td><a href="http://weibo.com/hzlzh" target="_blank" rel="noopener">#</a></td>
+<td><a href="https://twitter.com/smallniding/" target="_blank" rel="noopener">@Smallni</a></td>
+<td><a href="http://github.com/hzlzh" target="_blank" rel="noopener">#</a></td>
+<td>腾讯</td>
+<td>前端开发</td>
+</tr>
+<tr>
+<td>TQ</td>
+<td><a href="http://targetkiller.net/" target="_blank" rel="noopener">http://targetkiller.net/</a></td>
+<td><a href="http://weibo.com/targetkiller" target="_blank" rel="noopener">@Piser-TQ</a></td>
+<td><a href="https://twitter.com/tqtan/" target="_blank" rel="noopener">@tqtan</a></td>
+<td><a href="https://github.com/targetkiller" target="_blank" rel="noopener">@targetkiller</a></td>
+<td>腾讯 ISUX</td>
+<td>网页重构</td>
+</tr>
+<tr>
+<td>LOO2K</td>
+<td><a href="http://loo2k.com/blog/" target="_blank" rel="noopener">LOO2K</a></td>
+<td><a href="http://weibo.com/loo2k" target="_blank" rel="noopener">@LOO2K</a></td>
+<td><a href="https://github.com/loo2k" target="_blank" rel="noopener">LOO2K</a></td>
+<td><a href="https://twitter.com/loo2k/" target="_blank" rel="noopener">LOO2K</a></td>
+<td>墨筹网</td>
+<td>少年才俊</td>
+</tr>
+<tr>
+<td>qiqiboy</td>
+<td><a href="http://www.qiqiboy.com/" target="_blank" rel="noopener">qiqiboy</a></td>
+<td><a href="http://weibo.com/qiqiboy" target="_blank" rel="noopener">@qiqiboy</a></td>
+<td>#</td>
+<td>#</td>
+<td>金山网络 UX</td>
+<td>吐槽清理大师开发者</td>
+</tr>
+<tr>
+<td>foru17</td>
+<td><a href="http://luolei.org" target="_blank" rel="noopener">罗磊的独立博客</a></td>
+<td><a href="http://weibo.com/foru17" target="_blank" rel="noopener">@罗罗磊磊</a></td>
+<td><a href="https://github.com/foru17" target="_blank" rel="noopener">@foru17</a></td>
+<td><a href="https://twitter.com/foru17" target="_blank" rel="noopener">@foru17</a></td>
+<td>金山网络 UX</td>
+<td>打酱油的</td>
+</tr>
+<tr>
+<td>周爱民</td>
+<td><a href="http://blog.csdn.net/aimingoo/" target="_blank" rel="noopener">aimingoo专栏</a></td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>支付宝</td>
+<td>JavaScript语言精髓与编程实践作者</td>
+</tr>
+<tr>
+<td>hax</td>
+<td><a href="http://hax.iteye.com/" target="_blank" rel="noopener">hax的技术部落格</a></td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>前端大牛</td>
+</tr>
+<tr>
+<td>三生石上</td>
+<td><a href="http://www.cnblogs.com/sanshi" target="_blank" rel="noopener">三生石上</a></td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>js秘密花园译者</td>
+</tr>
+<tr>
+<td>司徒正美</td>
+<td><a href="http://www.cnblogs.com/rubylouvre" target="_blank" rel="noopener">Ruby’s Louvre</a></td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>前端开发</td>
+</tr>
+<tr>
+<td>叶小钗</td>
+<td><a href="http://www.cnblogs.com/yexiaochai" target="_blank" rel="noopener">叶小钗</a></td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>前端开发</td>
+</tr>
+<tr>
+<td>聂微东</td>
+<td><a href="http://www.cnblogs.com/Darren_code/" target="_blank" rel="noopener">Darren</a></td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>百度移动云</td>
+<td>前端开发</td>
+</tr>
+<tr>
+<td>当耐特</td>
+<td><a href="http://www.cnblogs.com/iamzhanglei/" target="_blank" rel="noopener">iamzhanglei</a></td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>HTML5实验室作者</td>
+</tr>
+<tr>
+<td>教主</td>
+<td><a href="http://www.cnblogs.com/_franky" target="_blank" rel="noopener">_frank</a></td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>又一牛</td>
+</tr>
+<tr>
+<td>typeof</td>
+<td><a href="http://typeof.net/" target="_blank" rel="noopener">typeof</a></td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>又一牛</td>
+</tr>
+<tr>
+<td>Gray Zhang</td>
+<td><a href="http://www.cnblogs.com/GrayZhang" target="_blank" rel="noopener">Gray Zhang</a></td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>百度一牛</td>
+</tr>
+<tr>
+<td>李松峰</td>
+<td><a href="http://www.cn-cuckoo.com" target="_blank" rel="noopener">为之漫笔</a></td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>高程2等书的译者</td>
+</tr>
+<tr>
+<td>小鱼</td>
+<td><a href="http://sofish.de/" target="_blank" rel="noopener">sofish</a></td>
+<td><a href="http://weibo.com/sofish" target="_blank" rel="noopener">@sofish</a></td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>百姓网一牛</td>
+</tr>
+<tr>
+<td>vilic</td>
+<td><a href="http://vilic.info/" target="_blank" rel="noopener">vilic</a></td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>年轻一牛</td>
+</tr>
+<tr>
+<td>彬Go</td>
+<td><a href="http://blog.bingo929.com/" target="_blank" rel="noopener">彬Go</a></td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>人人网一牛</td>
+</tr>
+<tr>
+<td>PuterJam</td>
+<td><a href="http://www.pjhome.net" target="_blank" rel="noopener">PuterJam’s Blog</a></td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>腾讯一牛</td>
+</tr>
+<tr>
+<td>css森林</td>
+<td><a href="http://www.cssforest.org" target="_blank" rel="noopener">cssforest</a></td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>前端博客</td>
+</tr>
+<tr>
+<td>99css</td>
+<td><a href="http://www.99css.com/" target="_blank" rel="noopener">99css</a></td>
+<td><a href="http://weibo.com/ytzong" target="_blank" rel="noopener">@ytzong</a></td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>腾讯一牛</td>
+</tr>
+<tr>
+<td>秦歌</td>
+<td><a href="http://dancewithnet.com/" target="_blank" rel="noopener">Kaven</a></td>
+<td>#</td>
+<td><a href="http://twitter.com/kavenyan" target="_blank" rel="noopener">@kavenyan</a></td>
+<td>#</td>
+<td>#</td>
+<td>js语言精粹译者</td>
+</tr>
+<tr>
+<td>linxz</td>
+<td><a href="http://www.linxz.de/" target="_blank" rel="noopener">linxz</a></td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>css那些事儿的作者</td>
+</tr>
+<tr>
+<td>米随随</td>
+<td><a href="http://s5s5.me/" target="_blank" rel="noopener">米随随</a></td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>腾讯ISUX 一牛</td>
+</tr>
+<tr>
+<td>飘飘</td>
+<td><a href="http://pufen.net/" target="_blank" rel="noopener">飘飘</a></td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>腾讯一牛</td>
+</tr>
+<tr>
+<td>Along</td>
+<td><a href="http://jinlong.github.io/" target="_blank" rel="noopener">Along’s Blog</a></td>
+<td><a href="http://weibo.com/newwave" target="_blank" rel="noopener">@newwave</a></td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>Opera 欧朋一牛</td>
+</tr>
+<tr>
+<td>安记</td>
+<td><a href="http://www.cssha.com/" target="_blank" rel="noopener">cssha</a></td>
+<td><a href="http://weibo.com/hanan321" target="_blank" rel="noopener">@hanan321</a></td>
+<td><a href="https://github.com/hanan198501" target="_blank" rel="noopener">hanan198501</a></td>
+<td>#</td>
+<td>#</td>
+<td>去哪网一牛</td>
+</tr>
+<tr>
+<td>余弦</td>
+<td><a href="http://evilcos.me/" target="_blank" rel="noopener">EVILCOS</a></td>
+<td><a href="http://weibo.com/evilcos" target="_blank" rel="noopener">余弦</a></td>
+<td><a href="https://github.com/evilcos" target="_blank" rel="noopener">evilcos</a></td>
+<td>#</td>
+<td><a href="http://www.knownsec.com/" target="_blank" rel="noopener">知道创宇</a></td>
+<td>安全（黑客）、架构、团队的各种观点与分享</td>
+<td>#</td>
+<td><a href="http://dbanotes.net/" target="_blank" rel="noopener">冯大辉</a></td>
+<td>现在就职于丁香园 (<a href="http://dxy.cn" target="_blank" rel="noopener">http://dxy.cn</a>) ，担任技术团队负责人.</td>
+</tr>
+<tr>
+<td>汤姆大叔</td>
+<td><a href="http://www.cnblogs.com/TomXu/" target="_blank" rel="noopener">汤姆大叔的博客</a></td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>#</td>
+<td>《深入理解Bootstrap》、《JavaScript启示录》、《JavaScript设计模式》等多本前端书籍翻译作者</td>
+</tr>
+</tbody>
+</table>
+<h4 id="一些社区"><a href="#一些社区" class="headerlink" title="一些社区"></a>一些社区</h4><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>地址</th>
+<th>介绍</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>V2EX</td>
+<td><a href="http://v2ex.com/" target="_blank" rel="noopener">http://v2ex.com/</a></td>
+<td>小众活跃社区</td>
+</tr>
+<tr>
+<td>知乎</td>
+<td><a href="http://www.zhihu.com/" target="_blank" rel="noopener">http://www.zhihu.com/</a></td>
+<td>综合问答社区</td>
+</tr>
+<tr>
+<td>前端乱炖</td>
+<td><a href="http://www.html-js.com/" target="_blank" rel="noopener">http://www.html-js.com/</a></td>
+<td>专业的前端知识平台</td>
+</tr>
+<tr>
+<td>segmentfault</td>
+<td><a href="http://segmentfault.com/" target="_blank" rel="noopener">http://segmentfault.com/</a></td>
+<td>综合问答社区</td>
+</tr>
+<tr>
+<td>果壳问答</td>
+<td><a href="http://www.guokr.com/ask/pending/" target="_blank" rel="noopener">http://www.guokr.com/ask/pending/</a></td>
+<td>综合问答社区</td>
+</tr>
+<tr>
+<td>Ruby</td>
+<td><a href="http://ruby-china.org/" target="_blank" rel="noopener">http://ruby-china.org/</a></td>
+<td>同 V2EX 氛围类似，不局限于Ruby</td>
+</tr>
+<tr>
+<td>Node.js 中文社区</td>
+<td><a href="http://cnodejs.org/" target="_blank" rel="noopener">http://cnodejs.org/</a></td>
+<td>Node.js 国内最活跃的社区</td>
+</tr>
+<tr>
+<td>Code Wall</td>
+<td><a href="https://coderwall.com/" target="_blank" rel="noopener">https://coderwall.com/</a></td>
+<td>国外技术社区</td>
+</tr>
+<tr>
+<td>DIV.IO</td>
+<td><a href="http://div.io/" target="_blank" rel="noopener">http://div.io/</a></td>
+<td>国内前端技术社区</td>
+</tr>
+<tr>
+<td>稀土掘金</td>
+<td><a href="http://gold.xitu.io/" target="_blank" rel="noopener">http://gold.xitu.io/</a></td>
+<td>中国高质量的技术分享社区</td>
+</tr>
+</tbody>
+</table>
+<h5 id="企业官方博客"><a href="#企业官方博客" class="headerlink" title="企业官方博客"></a>企业官方博客</h5><p>在开头我的 Feedly 订阅 opml 文件里比较全面。</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>公司</th>
+<th>部门</th>
+<th>活跃度</th>
+<th>简介</th>
+<th>微博</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://isux.tencent.com/" target="_blank" rel="noopener">ISUX 社交用户体验设计</a></td>
+<td>腾讯</td>
+<td>ISUX</td>
+<td>★★★★☆</td>
+<td>负责腾讯的社交网络相关产品的用户体验设计与研究。</td>
+<td>#</td>
+</tr>
+<tr>
+<td><a href="http://cdc.tencent.com/" target="_blank" rel="noopener">腾讯 CDC</a></td>
+<td>腾讯</td>
+<td>CDC</td>
+<td>★★★★☆</td>
+<td>简介</td>
+<td>#</td>
+</tr>
+<tr>
+<td><a href="http://www.alloyteam.com/" target="_blank" rel="noopener">腾讯Web前端 Alloy 团队 Blog</a></td>
+<td>腾讯</td>
+<td>SNG</td>
+<td>★★★★☆</td>
+<td>主要负责手机QQ、QQ互联、腾讯Q+、WebQQ项目的团队。</td>
+<td><a href="http://weibo.com/alloyteam" target="_blank" rel="noopener">alloyteam</a></td>
+</tr>
+<tr>
+<td><a href="http://tid.tenpay.com/" target="_blank" rel="noopener">TID-财付通设计中心</a></td>
+<td>腾讯</td>
+<td>TID</td>
+<td>★★★★☆</td>
+<td>简介</td>
+<td>#</td>
+</tr>
+<tr>
+<td><a href="http://mxd.tencent.com/" target="_blank" rel="noopener">腾讯MXD移动互联网设计中心</a></td>
+<td>腾讯</td>
+<td>MXD</td>
+<td>★★★★☆</td>
+<td>简介</td>
+<td><a href="http://e.t.qq.com/tencent_mxd" target="_blank" rel="noopener">@腾讯MXD</a></td>
+</tr>
+<tr>
+<td><a href="http://tid.tenpay.com/" target="_blank" rel="noopener">人人网FED Team</a></td>
+<td>人人网</td>
+<td>FED</td>
+<td>★★★★☆</td>
+<td>简介</td>
+<td>#</td>
+</tr>
+<tr>
+<td><a href="http://udc.weibo.com/" target="_blank" rel="noopener">微博UDC</a></td>
+<td>新浪</td>
+<td>UDC</td>
+<td>★★★★☆</td>
+<td>简介</td>
+<td><a href="http://weibo.com/sudc" target="_blank" rel="noopener">@微博UDC设计中心</a></td>
+</tr>
+<tr>
+<td><a href="http://ued.sina.com.cn/" target="_blank" rel="noopener">新浪UED</a></td>
+<td>新浪</td>
+<td>UED</td>
+<td>★★★★☆</td>
+<td>简介</td>
+<td><a href="http://weibo.com/sudc" target="_blank" rel="noopener">#</a></td>
+</tr>
+<tr>
+<td><a href="http://uedc.163.com/" target="_blank" rel="noopener">网易用户体验设计中心</a></td>
+<td>网易</td>
+<td>UED</td>
+<td>★★★★☆</td>
+<td>简介</td>
+<td><a href="http://weibo.com/sudc" target="_blank" rel="noopener">#</a></td>
+</tr>
+<tr>
+<td><a href="http://www.aliued.cn/" target="_blank" rel="noopener">阿里巴巴（中国站）用户体验设计部博客</a></td>
+<td>阿里巴巴</td>
+<td>UED</td>
+<td>★★★★☆</td>
+<td>简介</td>
+<td><a href="http://weibo.com/aliued" target="_blank" rel="noopener">@Alibaba-UED</a></td>
+</tr>
+<tr>
+<td><a href="http://ued.ctrip.com/blog/" target="_blank" rel="noopener">携程UED-携程旅行前端开发团队</a></td>
+<td>携程网</td>
+<td>UED</td>
+<td>★★★☆☆</td>
+<td>携程UED,携程前端开发团队,UED,Javascript,重构,ux</td>
+<td>#</td>
+</tr>
+<tr>
+<td><a href="http://fex.baidu.com/" target="_blank" rel="noopener">百度FEX</a></td>
+<td>百度</td>
+<td>FEX</td>
+<td>★★★★☆</td>
+<td>百度前端团队Blog,关注前端技术，还更重视全端及全栈的能力。</td>
+<td>#</td>
+</tr>
+<tr>
+<td><a href="http://ued.taobao.org/blog/" target="_blank" rel="noopener">淘宝UED</a></td>
+<td>淘宝网</td>
+<td>UED</td>
+<td>★★★★☆</td>
+<td>用户体验、交互设计、视觉设计、前端技术博客</td>
+<td><a href="http://weibo.com/taobaoued" target="_blank" rel="noopener">@淘宝UED</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="知名个人博客"><a href="#知名个人博客" class="headerlink" title="知名个人博客"></a>知名个人博客</h2><ul>
+<li><a href="http://www.zhangxinxu.com/wordpress/2014/12/css3-animation-dotting-loading/" target="_blank" rel="noopener">【张鑫旭】的个人博客</a></li>
+<li><a href="http://www.cnblogs.com/aaronjs/p/3279314.html" target="_blank" rel="noopener">【艾伦】- 博客园 - jQuery源码分析系列</a></li>
+<li><a href="http://www.w3cplus.com/w3cplus-2014.html" target="_blank" rel="noopener">【大漠】 W3CPLUS是一个前端爱好者的家园</a></li>
+<li><a href="http://www.cnblogs.com/rubylouvre/archive/2009/09/15/1566722.html" target="_blank" rel="noopener">【司徒正美】 - 博客园</a></li>
+<li><a href="http://hemin.cn/jq/" target="_blank" rel="noopener">【Hemin】jQuery API 中文手册</a></li>
+<li><a href="http://weibo.com/p/1001603794538257899132" target="_blank" rel="noopener">【鸟哥】Laruence</a></li>
+<li><a href="http://www.hcharts.cn/about/donate.php" target="_blank" rel="noopener">【Highcharts】Highcharts中文赞助</a></li>
+<li><a href="http://wwhttp://kalcaddle.com/about.html" target="_blank" rel="noopener">【芒果云】 在线资源管理器</a></li>
+<li><a href="http://www.wangeditor.com/contact.html" target="_blank" rel="noopener">wangeditor 轻量级web富文本编辑器</a></li>
+<li><a href="http://www.youmeek.com/donate/" target="_blank" rel="noopener">YouMeek - IntelliJ-IDEA-Tutorial</a></li>
+</ul>
+<h2 id="大漠分享"><a href="#大漠分享" class="headerlink" title="大漠分享"></a><a href="http://www.w3cplus.com" target="_blank" rel="noopener">大漠</a>分享</h2><h3 id="性能优化优秀教程"><a href="#性能优化优秀教程" class="headerlink" title="性能优化优秀教程"></a>性能优化优秀教程</h3><ul>
+<li><a href="http://ued.5173.com/?p=1731" target="_blank" rel="noopener">5173首页前端性能优化实践</a></li>
+<li><a href="http://www.uisdc.com/front-end-performance-for-web-designers-and-front-end-developers" target="_blank" rel="noopener">给网页设计师和前端开发者看的前端性能优化</a></li>
+<li><a href="http://www.orzpoint.com/profiling-css-and-optimization-notes/" target="_blank" rel="noopener">复杂应用的 CSS 性能分析和优化建议</a></li>
+<li><a href="http://www.zhangxinxu.com/wordpress/tag/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD/" target="_blank" rel="noopener">张鑫旭——前端性能</a></li>
+<li><a href="http://www.xiaoqiang.org/javascript/font-end-performance-monitor.html" target="_blank" rel="noopener">前端性能监控总结</a></li>
+<li><a href="http://udc.weibo.com/2013/05/%E7%BD%91%E7%AB%99%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E4%B9%8Bcss%E6%97%A0%E5%9B%BE%E7%89%87%E6%8A%80%E6%9C%AF/" target="_blank" rel="noopener">网站性能优化之CSS无图片技术</a></li>
+<li><a href="http://www.aliued.cn/2013/01/20/web%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E8%BF%9B%E9%98%B6%E8%B7%AF.html" target="_blank" rel="noopener">web前端性能优化进阶路</a></li>
+<li><a href="http://my.eoe.cn/tuwandou/archive/4544.html" target="_blank" rel="noopener">前端技术：网站性能优化之CSS无图片技术</a></li>
+<li><a href="http://www.baiduux.com/blog/2011/02/15/browser-loading/" target="_blank" rel="noopener">浏览器的加载与页面性能优化</a></li>
+<li><a href="http://www.w3ctech.com/p/1503" target="_blank" rel="noopener">页面加载中的图片性能优化</a></li>
+<li><a href="http://www.feelcss.com/tag/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD" target="_blank" rel="noopener">Hey——前端性能</a></li>
+<li><a href="http://www.baiduux.com/blog/2010/03/15/html%E4%BC%98%E5%8C%96-2/" target="_blank" rel="noopener">html优化</a></li>
+<li><a href="http://www.99css.com/archives/tag/%E6%80%A7%E8%83%BD" target="_blank" rel="noopener">99css——性能</a></li>
+<li><a href="http://www.yslow.net/category.php?cid=20" target="_blank" rel="noopener">Yslow——性能优化</a></li>
+<li><a href="http://www.cnblogs.com/yslow/" target="_blank" rel="noopener">YSLOW中文介绍</a></li>
+<li><a href="http://www.360ito.com/article/40.html" target="_blank" rel="noopener">转一篇Yahoo关于网站性能优化的文章，兼谈本站要做的优化</a></li>
+<li><a href="http://www.360doc.com/content/10/0928/09/2588264_56971287.shtml" target="_blank" rel="noopener">Yahoo!团队实践分享：网站性能</a></li>
+<li><a href="http://blog.jiasule.com/i/153" target="_blank" rel="noopener">网站性能优化指南：什么使我们的网站变慢？</a></li>
+<li><a href="http://www.powereasy.net/helpyou/knowledge/ecommerce/9593.html" target="_blank" rel="noopener">网站性能优化实践，减少加载时间，提高用户体验</a></li>
+<li><a href="http://www.umtry.com/archives/747.html" target="_blank" rel="noopener">浅谈网站性能优化 前端篇</a></li>
+<li><a href="http://www.adinnet.cn/blog/designview/2012-7-12/678.html" target="_blank" rel="noopener">前端重构实践之如何对网站性能优化？</a></li>
+<li><a href="http://www.gbin1.com/technology/javascript/20130708-front-end-performance-optimization-9/" target="_blank" rel="noopener">前端性能优化：使用媒体查询加载指定大小的背景图片</a></li>
+<li><a href="http://www.mykuer.com/post/factors-that-affect-the-speed-of-web-site-open.html" target="_blank" rel="noopener">网站性能系列博文</a></li>
+<li><a href="http://tgideas.qq.com/webplat/info/news_version3/804/808/811/m579/201109/41355.shtml" target="_blank" rel="noopener">加载，不只是少一点点</a></li>
+<li><a href="http://mzhou.me/article/95310/" target="_blank" rel="noopener">前端性能的测试与优化</a></li>
+<li><a href="http://www.gbin1.com/technology/html/20130217-tips-for-speed-up-page-loading/" target="_blank" rel="noopener">分享网页加载速度优化的一些技巧？</a></li>
+<li><a href="http://www.f2es.com/images-bytes-opt/" target="_blank" rel="noopener">页面加载中的图片性能优化</a></li>
+<li><a href="http://www.tcreator.info/webSchool/website/Front-end-Opt-Yslow.html" target="_blank" rel="noopener">web前端优化(基于Yslow)</a></li>
+<li><a href="http://www.qianduan.net/website-performance-optimization-tool.html" target="_blank" rel="noopener">网站性能优化工具大全</a></li>
+<li><a href="http://www.alloyteam.com/2012/10/high-performance-html/" target="_blank" rel="noopener">【高性能前端1】高性能HTML</a></li>
+<li><a href="http://www.alloyteam.com/2012/10/high-performance-css/" target="_blank" rel="noopener">【高性能前端2】高性能CSS</a></li>
+<li><a href="http://coolshell.cn/articles/6470.html" target="_blank" rel="noopener">由12306谈谈网站前端性能和后端性能优化</a></li>
+<li><a href="http://www.alloyteam.com/category/webfrontend/%E5%89%8D%E7%AB%AF%E4%BC%98%E5%8C%96/" target="_blank" rel="noopener">AlloyTeam——前端优化</a></li>
+<li><a href="http://www.cnblogs.com/developersupport/p/3248695.html" target="_blank" rel="noopener">毫秒必争，前端网页性能最佳实践</a></li>
+<li><a href="http://blog.sina.com.cn/s/blog_6e9d2e0701017kvu.html" target="_blank" rel="noopener">网站性能工具Yslow的使用方法</a></li>
+<li><a href="http://www.infoq.com/cn/articles/front-end-engineering-and-performance-optimization-part1" target="_blank" rel="noopener">前端工程与性能优化（上）：静态资源版本更新与缓存</a></li>
+<li><a href="http://www.infoq.com/cn/articles/front-end-engineering-and-performance-optimization-part2" target="_blank" rel="noopener">前端工程与性能优化（下）：静态资源管理与模板框架</a></li>
+<li><a href="http://blog.jobbole.com/48369/" target="_blank" rel="noopener">HTTPS连接的前几毫秒发生了什么</a></li>
+<li><a href="http://uicss.cn/yslow/#more-12319" target="_blank" rel="noopener">Yslow</a></li>
+<li><a href="http://blog.smartbear.com/web-performance/essential-web-performance-metrics-a-primer-part-1/" target="_blank" rel="noopener">Essential Web Performance Metrics — A Primer, Part 1</a></li>
+<li><a href="http://blog.smartbear.com/performance/essential-web-performance-metrics-part-2/" target="_blank" rel="noopener">Essential Web Performance Metrics — Part 2</a></li>
+<li><a href="http://jayli.github.io/blog/data/2011/12/23/yuislide.html" target="_blank" rel="noopener">YUISlide,针对移动设备的动画性能优化</a></li>
+<li><a href="http://joelglovier.com/improving-site-performance/" target="_blank" rel="noopener">Improving Site Performance</a></li>
+<li><a href="http://blog.segmentfault.com/laopopo/1190000000367899" target="_blank" rel="noopener">让网站提速的最佳前端实践</a></li>
+<li><a href="http://sixrevisions.com/web-development/why-website-speed-is-important/" target="_blank" rel="noopener">Why Website Speed is Important</a></li>
+<li><a href="http://www.devbridge.com/articles/need-for-speed-how-to-improve-your-website-performance/" target="_blank" rel="noopener">Need for Speed – How to Improve your Website Performance</a></li>
+</ul>
+
+    </div>
+
+    <div class="post-footer">   
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="http://wangyongjie.top/" target="_blank">前端美男子</a>
+            
+        </div>
+        <div>
+            
+        </div>  
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2017/05/17/006-知乎日报的问题分析/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
+    
+    
+        <a href="/2017/03/04/004-ES6之-字符串的新特性/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zNDc5OS8xMTMzNg==">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+         if (typeof LivereTower === 'function') { return; }
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+</div>
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+    <aside class="col-md-4 sidebar">
+        
+        
+    <div class="widget">    
+        <h3 class="title">搜索</h3>
+        <div id="search-form">
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
+                    <button type="button" class="search-form-submit" id="search-local">站内搜索</button>
+                
+                
+                    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Google Search"><button type="submit" class="search-form-submit">谷歌搜索</button><input type="hidden" name="sitesearch" value="http://wangyongjie2017.github.com"></form>
+                
+            </div>
+            <div id="result-wrap" class="hide">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget notification">
+        <h3 class="title">网站公告</h3>
+        <div>
+            <p>我的 vue 项目已经上线！欢迎浏览：<a href="http://wangyongjie2017.coding.me/" title="fork me" target="_blank">Vue 搭建知乎日报</a></p>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget">
+      <h3 class="title">社交</h3> 
+        <div class="content social">
+            
+	            <a href="//github.com/wangyongjie2017" rel="external nofollow" title="Github" target="_blank">
+			    	<i class="git fa fa-git"></i>
+			    </a>
+            
+	            <a href="//mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=wfj09fj29ffz9IGwsO_irqw" rel="external nofollow" title="邮箱" target="_blank">
+			    	<i class="envelope-o fa fa-envelope-o"></i>
+			    </a>
+            
+	            <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=954974625" rel="external nofollow" title="联系QQ" target="_blank">
+			    	<i class="qq fa fa-qq"></i>
+			    </a>
+            
+	            <a href="//weibo.com/wangyongjie2017" rel="external nofollow" title="微博" target="_blank">
+			    	<i class="weibo fa fa-weibo"></i>
+			    </a>
+            
+        </div>
+    </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">分类</h3>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/前端/"><i class="fa" aria-hidden="true">前端</i></a><span class="category-list-count">21</span></li><li class="category-list-item"><a class="category-list-link current" href="/categories/后端/"><i class="fa" aria-hidden="true">后端</i></a><span class="category-list-count">1</span></li></ul>
+    </div>
+
+
+        
+        
+    <div class="widget">
+      <h3 class="title">归档</h3>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/"><i class="fa" aria-hidden="true">March 2018</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/"><i class="fa" aria-hidden="true">September 2017</i></a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/"><i class="fa" aria-hidden="true">August 2017</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/"><i class="fa" aria-hidden="true">July 2017</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/"><i class="fa" aria-hidden="true">June 2017</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/"><i class="fa" aria-hidden="true">May 2017</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/"><i class="fa" aria-hidden="true">April 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/"><i class="fa" aria-hidden="true">March 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/"><i class="fa" aria-hidden="true">February 2017</i></a><span class="archive-list-count">3</span></li></ul>
+    </div>
+
+
+        
+        
+  <div class="widget">
+    <h3 class="title">标签云</h3>
+    <div class="content tag-cloud">
+        <a href="/tags/AJAX/" style="font-size: 15px;">AJAX</a> <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/CSS3/" style="font-size: 10px;">CSS3</a> <a href="/tags/ES6/" style="font-size: 15px;">ES6</a> <a href="/tags/Git/" style="font-size: 15px;">Git</a> <a href="/tags/Vue-js/" style="font-size: 20px;">Vue.js</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a> <a href="/tags/前端总结/" style="font-size: 15px;">前端总结</a> <a href="/tags/后端起步/" style="font-size: 10px;">后端起步</a> <a href="/tags/布局/" style="font-size: 10px;">布局</a> <a href="/tags/跨域问题/" style="font-size: 10px;">跨域问题</a> <a href="/tags/遇到的问题/" style="font-size: 10px;">遇到的问题</a> <a href="/tags/面试题/" style="font-size: 15px;">面试题</a>
+    </div>
+  </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">友链</h3>
+        <div class="content friends-link">
+        
+            <a href="http://wangyongjie.top" class="fa" target="_blank">个人博客</a>
+        
+            <a href="https://coding.net/u/wangyongjie2017" class="fa" target="_blank">coding</a>
+        
+            <a href="http://blog.csdn.net/wangyongjie2017" class="fa" target="_blank">CSDN</a>
+        
+            <a href="https://developer.mozilla.org/zh-CN" class="fa" target="_blank">MDN</a>
+        
+            <a href="http://www.w3cplus.com" class="fa" target="_blank">w3cplus</a>
+        
+            <a href="http://www.runoob.com" class="fa" target="_blank">菜鸟教程</a>
+        
+            <a href="https://cn.vuejs.org" class="fa" target="_blank">Vue.js</a>
+        
+            <a href="http://www.tuhaokuai.com" class="fa" target="_blank">在线图片压缩</a>
+        
+            <a href="https://www.codewars.com" class="fa" target="_blank">codewars</a>
+        
+        </div>
+    </div>
+
+
+        
+    </aside>
+
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"> 
+                <span>Copyright &copy; 2018
+                </span> | 
+                <span>
+                    <a href="//wangyongjie.top" class="copyright-links" target="_blank" rel="nofollow">王永杰的博客</a>
+                </span> | 
+                <span>
+                    <a href="//weibo.com/wangyongjie2017" class="copyright-links" target="_blank" rel="nofollow">前端美男子</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+	<script src="/js/search.js?rev=@@hash"></script>
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>

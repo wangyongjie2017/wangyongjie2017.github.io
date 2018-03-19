@@ -1,0 +1,427 @@
+<!DOCTYPE HTML>
+<html lang="">
+<head>
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="前端美男子 王永杰">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://wangyongjie2017.github.com">
+    <!--SEO-->
+
+<meta name="description" content="前端美男子王永杰个人博客 | 程序员 | 前端知识 丨 wangyongjie"/>
+
+
+
+
+
+<meta name="robots" content="all" />
+<meta name="google" content="all" />
+<meta name="googlebot" content="all" />
+<meta name="verify" content="all" />
+    <!--Title-->
+
+
+<title>分布式版本控制系统1 | 前端美男子 王永杰</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="前端美男子 王永杰" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css?rev=3.3.4">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?f42ffe5fed856accbf91820f137dab46";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+
+    
+</head>
+
+
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header"  style="background-image:url(https://ws1.sinaimg.cn/large/93838f95ly1fpgvnfwrkpg205a064dhr.jpg)"  >
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="">
+            <img src="/img/avatar.jpg" alt="logo头像">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> 因为折腾,所以有趣 </h2>
+             
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
+                    </span>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation"><a href="/"><i class="fa fa-fw "></i>主页</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/前端/"><i class="fa fa-fw "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/后端/"><i class="fa fa-fw "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/工具/"><i class="fa fa-fw "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation"><a href="/categories/资源/"><i class="fa fa-fw "></i>资源</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="分布式版本控制系统1">
+            
+	            分布式版本控制系统1
+            
+        </h1>
+        <div class="post-meta">
+    
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/前端">
+            前端
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a href="/tags/Git">
+               Git
+            </a>
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/09/16</span>
+    </span>
+</div>
+
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h2 id="分布式版本控制系统1"><a href="#分布式版本控制系统1" class="headerlink" title="分布式版本控制系统1"></a>分布式版本控制系统1</h2><blockquote>
+<p>如果你是一个开发人员，想用上这个世界上目前最先进的分布式版本控制系统，那么，赶快开始学习吧！<br><a id="more"></a></p>
+</blockquote>
+<h2 id="1-Git"><a href="#1-Git" class="headerlink" title="1 Git"></a>1 Git</h2><p>Git是目前世界上最先进的分布式版本控制系统（没有之一）。<br>github：全球最大的同性交友网站。</p>
+<h2 id="2-创建ssh公钥"><a href="#2-创建ssh公钥" class="headerlink" title="2. 创建ssh公钥"></a>2. 创建ssh公钥</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C &quot;user-E-mail&quot;;</span><br></pre></td></tr></table></figure>
+<p>使用这条命令判断是否连接到github<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br></pre></td></tr></table></figure></p>
+<h2 id="3-配置个人信息"><a href="#3-配置个人信息" class="headerlink" title="3. 配置个人信息"></a>3. 配置个人信息</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;userName&quot;;</span><br><span class="line">$ git config --global user.email &quot;userEmail&quot;;</span><br></pre></td></tr></table></figure>
+<p>可以使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name</span><br><span class="line">$ git config --global user.email</span><br></pre></td></tr></table></figure></p>
+<p>这两条命令来查看刚才设置的个人信息<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config --list</span><br></pre></td></tr></table></figure></p>
+<h2 id="4-创建"><a href="#4-创建" class="headerlink" title="4. 创建"></a>4. 创建</h2><h3 id="4-1-clone"><a href="#4-1-clone" class="headerlink" title="4.1 clone"></a>4.1 clone</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone git@orgin master address</span><br></pre></td></tr></table></figure>
+<p><code>orgin master address</code>是仓库的地址</p>
+<h3 id="4-2-添加，提交"><a href="#4-2-添加，提交" class="headerlink" title="4.2 添加，提交"></a>4.2 添加，提交</h3><p>添加文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//提交文件到暂存区</span><br><span class="line">$ git add fileName（文件名）</span><br><span class="line">$ git add .(将文件中所有内容添加到暂存区)</span><br><span class="line">//提交文件到本地版本库</span><br><span class="line">$ git commit -m &quot;这个提交信息&quot;</span><br></pre></td></tr></table></figure></p>
+<p>从工作区直接添加到版本库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$git commit -a -m &quot;提交信息&quot;</span><br></pre></td></tr></table></figure></p>
+<p>提交改动到服务器版本库<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push (可以增加要提交的地址，比如orgin master)</span><br></pre></td></tr></table></figure></p>
+<h3 id="4-3-查看状态，对比"><a href="#4-3-查看状态，对比" class="headerlink" title="4.3 查看状态，对比"></a>4.3 查看状态，对比</h3><p>查看工作区（红色标识）和暂存区（绿色标识）的状态<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br></pre></td></tr></table></figure></p>
+<p>查看版本库信息<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git log</span><br></pre></td></tr></table></figure></p>
+<p>bash进入一个文件，如果要退出，使用<code>q</code>是不保存退出，使用<code>wq</code>是保存退出，使用<code>ctrl+z</code>是强制退出(不建议使用，如果使用这个退出文本类文件会生成几个错误文件)</p>
+<p>查看工作区与暂存区的改动<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git diff</span><br></pre></td></tr></table></figure></p>
+<p>可以查看目前工作区和暂存区的差异，新增内容使用绿色文字标识，删减内容使用红色标识</p>
+<p>查看暂存区与版本区的区别<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git diff --cached</span><br></pre></td></tr></table></figure></p>
+<p>查看工作区与版本区的区别<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git diff master</span><br></pre></td></tr></table></figure></p>
+<h3 id="4-4-文件退回"><a href="#4-4-文件退回" class="headerlink" title="4.4 文件退回"></a>4.4 文件退回</h3><p>从暂存区退回到工作区<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset HEAD fileName（文件名）</span><br></pre></td></tr></table></figure></p>
+<p>从版本区或暂存区退回到工作区<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout -- fileName(文件名)</span><br></pre></td></tr></table></figure></p>
+<p>当某个文件已经提交之后，发现同一组的文件有没有提交的，可以执行以下命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git add fileName</span><br><span class="line">$ git commit -m &quot;提交信息&quot; --amend</span><br></pre></td></tr></table></figure></p>
+<p>这样可以把版本库中的最后一个版本退回早暂存区，然后和暂存区的内容合并为一个新版本，在提交到版本库</p>
+<h3 id="4-5-删除"><a href="#4-5-删除" class="headerlink" title="4.5 删除"></a>4.5 删除</h3><p>当某个文件提交到暂存区了，而本地的这个文件被手动删除了（暂存区并没有删除），既要删除工作区文件，又要删除暂存区文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git rm fileName(文件名)</span><br></pre></td></tr></table></figure></p>
+<p>删除工作区和暂存区的文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git rm -f fileName(文件名)</span><br></pre></td></tr></table></figure></p>
+<p>删除暂存区的文件（不删除工作区的文件）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git rm --cached fileName(文件名)</span><br></pre></td></tr></table></figure></p>
+<h3 id="4-6-版本退回"><a href="#4-6-版本退回" class="headerlink" title="4.6 版本退回"></a>4.6 版本退回</h3><p>使用log信息进行退回整个版本</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reset --hard logMessage(git log 获取到的版本编码)</span><br></pre></td></tr></table></figure>
+<p>通过log信息进行单个文件的还原<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout logMessage(git log 获取到的版本编码) flieName（要恢复的文件名）</span><br></pre></td></tr></table></figure></p>
+<p>退回到上一个版本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//退回一个版本</span><br><span class="line">$ git reset --hard HEAD^</span><br><span class="line">//回退上2个版本</span><br><span class="line">$ git reset --hard HEAD^^</span><br><span class="line">//回退到从当前版本起到前面的第N个版本</span><br><span class="line">$ git reset --hard HEAD~N</span><br></pre></td></tr></table></figure></p>
+<p>快速查看版本信息<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git reflog</span><br></pre></td></tr></table></figure></p>
+<h2 id="5-同步到远程仓库"><a href="#5-同步到远程仓库" class="headerlink" title="5 同步到远程仓库"></a>5 同步到远程仓库</h2><p>查看远程仓库的名字<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote</span><br></pre></td></tr></table></figure></p>
+<p>查看远程仓库的地址<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote -v</span><br></pre></td></tr></table></figure></p>
+<p>创建远程仓库的名字<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git remote add Name</span><br></pre></td></tr></table></figure></p>
+<p>推送到远程仓库的master分支<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin master</span><br></pre></td></tr></table></figure></p>
+
+    </div>
+
+    <div class="post-footer">   
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="http://wangyongjie.top/" target="_blank">前端美男子</a>
+            
+        </div>
+        <div>
+            
+        </div>  
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/2017/09/22/021-分布式版本控制系统2/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
+    
+    
+        <a href="/2017/09/10/019-关于Flex/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zNDc5OS8xMTMzNg==">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+         if (typeof LivereTower === 'function') { return; }
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+</div>
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+    <aside class="col-md-4 sidebar">
+        
+        
+    <div class="widget">    
+        <h3 class="title">搜索</h3>
+        <div id="search-form">
+            <div id="result-mask" class="hide"></div>
+            <div class="search-area">
+                
+                    <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
+                    <button type="button" class="search-form-submit" id="search-local">站内搜索</button>
+                
+                
+                    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Google Search"><button type="submit" class="search-form-submit">谷歌搜索</button><input type="hidden" name="sitesearch" value="http://wangyongjie2017.github.com"></form>
+                
+            </div>
+            <div id="result-wrap" class="hide">
+                <div id="search-result"></div>
+            </div>
+            <div class="hide">
+                <template id="search-tpl">
+                    <div class="item">
+                        <a href="/{path}" title="{title}">
+                            <div class="title">{title}</div>
+                            <div class="content">{content}</div>
+                        </a>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget notification">
+        <h3 class="title">网站公告</h3>
+        <div>
+            <p>我的 vue 项目已经上线！欢迎浏览：<a href="http://wangyongjie2017.coding.me/" title="fork me" target="_blank">Vue 搭建知乎日报</a></p>
+        </div>
+    </div>
+
+        
+        
+    <div class="widget">
+      <h3 class="title">社交</h3> 
+        <div class="content social">
+            
+	            <a href="//github.com/wangyongjie2017" rel="external nofollow" title="Github" target="_blank">
+			    	<i class="git fa fa-git"></i>
+			    </a>
+            
+	            <a href="//mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=wfj09fj29ffz9IGwsO_irqw" rel="external nofollow" title="邮箱" target="_blank">
+			    	<i class="envelope-o fa fa-envelope-o"></i>
+			    </a>
+            
+	            <a href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=954974625" rel="external nofollow" title="联系QQ" target="_blank">
+			    	<i class="qq fa fa-qq"></i>
+			    </a>
+            
+	            <a href="//weibo.com/wangyongjie2017" rel="external nofollow" title="微博" target="_blank">
+			    	<i class="weibo fa fa-weibo"></i>
+			    </a>
+            
+        </div>
+    </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">分类</h3>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/前端/"><i class="fa" aria-hidden="true">前端</i></a><span class="category-list-count">21</span></li><li class="category-list-item"><a class="category-list-link current" href="/categories/后端/"><i class="fa" aria-hidden="true">后端</i></a><span class="category-list-count">1</span></li></ul>
+    </div>
+
+
+        
+        
+    <div class="widget">
+      <h3 class="title">归档</h3>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/"><i class="fa" aria-hidden="true">March 2018</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/"><i class="fa" aria-hidden="true">September 2017</i></a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/"><i class="fa" aria-hidden="true">August 2017</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/"><i class="fa" aria-hidden="true">July 2017</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/"><i class="fa" aria-hidden="true">June 2017</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/"><i class="fa" aria-hidden="true">May 2017</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/"><i class="fa" aria-hidden="true">April 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/"><i class="fa" aria-hidden="true">March 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/"><i class="fa" aria-hidden="true">February 2017</i></a><span class="archive-list-count">3</span></li></ul>
+    </div>
+
+
+        
+        
+  <div class="widget">
+    <h3 class="title">标签云</h3>
+    <div class="content tag-cloud">
+        <a href="/tags/AJAX/" style="font-size: 15px;">AJAX</a> <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/CSS3/" style="font-size: 10px;">CSS3</a> <a href="/tags/ES6/" style="font-size: 15px;">ES6</a> <a href="/tags/Git/" style="font-size: 15px;">Git</a> <a href="/tags/Vue-js/" style="font-size: 20px;">Vue.js</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a> <a href="/tags/前端总结/" style="font-size: 15px;">前端总结</a> <a href="/tags/后端起步/" style="font-size: 10px;">后端起步</a> <a href="/tags/布局/" style="font-size: 10px;">布局</a> <a href="/tags/跨域问题/" style="font-size: 10px;">跨域问题</a> <a href="/tags/遇到的问题/" style="font-size: 10px;">遇到的问题</a> <a href="/tags/面试题/" style="font-size: 15px;">面试题</a>
+    </div>
+  </div>
+
+
+        
+        
+    <div class="widget">
+        <h3 class="title">友链</h3>
+        <div class="content friends-link">
+        
+            <a href="http://wangyongjie.top" class="fa" target="_blank">个人博客</a>
+        
+            <a href="https://coding.net/u/wangyongjie2017" class="fa" target="_blank">coding</a>
+        
+            <a href="http://blog.csdn.net/wangyongjie2017" class="fa" target="_blank">CSDN</a>
+        
+            <a href="https://developer.mozilla.org/zh-CN" class="fa" target="_blank">MDN</a>
+        
+            <a href="http://www.w3cplus.com" class="fa" target="_blank">w3cplus</a>
+        
+            <a href="http://www.runoob.com" class="fa" target="_blank">菜鸟教程</a>
+        
+            <a href="https://cn.vuejs.org" class="fa" target="_blank">Vue.js</a>
+        
+            <a href="http://www.tuhaokuai.com" class="fa" target="_blank">在线图片压缩</a>
+        
+            <a href="https://www.codewars.com" class="fa" target="_blank">codewars</a>
+        
+        </div>
+    </div>
+
+
+        
+    </aside>
+
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"> 
+                <span>Copyright &copy; 2018
+                </span> | 
+                <span>
+                    <a href="//wangyongjie.top" class="copyright-links" target="_blank" rel="nofollow">王永杰的博客</a>
+                </span> | 
+                <span>
+                    <a href="//weibo.com/wangyongjie2017" class="copyright-links" target="_blank" rel="nofollow">前端美男子</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+	<script src="/js/search.js?rev=@@hash"></script>
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+
+</body>
+</html>
