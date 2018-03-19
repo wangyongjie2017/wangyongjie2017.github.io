@@ -29,7 +29,7 @@
     <!--Title-->
 
 
-<title>解决跨域终极手段之服务器代理转发 | 前端美男子 王永杰</title>
+<title>分类: 前端 | 前端美男子 王永杰</title>
 
 
     <link rel="alternate" href="/atom.xml" title="前端美男子 王永杰" type="application/atom+xml">
@@ -127,103 +127,191 @@
     <section class="content-wrap">
         <div class="container">
             <div class="row">
-                <main class="col-md-8 main-content m-post">
-                    <p id="process"></p>
-<article class="post">
-    <div class="post-head">
-        <h1 id="解决跨域终极手段之服务器代理转发">
-            
-	            解决跨域终极手段之服务器代理转发
-            
-        </h1>
-        <div class="post-meta">
+                <main class="col-md-8 main-content ">
+                    <h3> 
     
+        前端 
     
-    <span class="categories-meta fa-wrap">
-        <i class="fa fa-folder-open-o"></i>
-        <a href="/categories/前端">
-            前端
-        </a>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-tags"></i>
-        <span class="tags-meta">
-            
-            <a href="/tags/跨域问题">
-               跨域问题
-            </a>
-            
-        </span>
-    </span>
-    
-    
-    <span class="fa-wrap">
-        <i class="fa fa-clock-o"></i>
-        <span class="date-meta">2017/06/13</span>
-    </span>
-</div>
+</h3>
 
-            
-            
-    </div>
-    
-    <div class="post-body post-content">
-        <h2 id="解决跨域问题"><a href="#解决跨域问题" class="headerlink" title="解决跨域问题"></a>解决跨域问题</h2><blockquote>
-<p>一般的说，我们GET请求跨域是用jsonp。但遇到一些其他情况(比如POST)或者因为API的其他原因无法进行跨域。我们可以使用转发的手段实现跨域。原理是服务器模拟浏览器正常访问之后转发给本机<br><a id="more"></a></p>
-</blockquote>
-<h4 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a><strong>代码实现</strong></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">//引入express框架</span><br><span class="line">let express = require(&apos;express&apos;)</span><br><span class="line">let app = express()</span><br><span class="line">//引入跨域中间件</span><br><span class="line">let proxy = require(&apos;http-proxy-middleware&apos;);</span><br><span class="line">//引入跨域资源共享</span><br><span class="line">var cors = require(&apos;cors&apos;)</span><br><span class="line">	</span><br><span class="line">app.use(cors())</span><br><span class="line">	</span><br><span class="line">app.use(&apos;/&apos;, proxy(&#123;</span><br><span class="line">//目标地址(拿知乎日报做测试)</span><br><span class="line">	target: &apos;https://news-at.zhihu.com/&apos;,</span><br><span class="line">	pathRewrite: &#123;</span><br><span class="line">	  &apos;^/&apos; : &apos;&apos;</span><br><span class="line">	&#125;,</span><br><span class="line">	changeOrigin: true</span><br><span class="line">&#125;))</span><br><span class="line"></span><br><span class="line">app.listen(20000)</span><br><span class="line">console.log(&apos;server is running!&apos;)</span><br></pre></td></tr></table></figure>
-<h4 id="获取数据"><a href="#获取数据" class="headerlink" title="获取数据"></a><strong>获取数据</strong></h4><ol>
-<li>首先node环境下运行这段代码，node xxxx.js</li>
-<li>我们将目标地址替换为我们服务器地址用GET方式访问就可以了</li>
-</ol>
-<blockquote>
-<p> <font color="red">声明：这里以 <a href="https://github.com/izzyleung/ZhihuDailyPurify/wiki/%E7%9F%A5%E4%B9%8E%E6%97%A5%E6%8A%A5-API-%E5%88%86%E6%9E%90" target="_blank" rel="noopener">知乎日报API</a> 举例，此API非作者提供。<font></font></font></p>
-</blockquote>
-
-    </div>
-
-    <div class="post-footer">   
-        <div>
-            
-                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="http://wangyongjie.top/" target="_blank">前端美男子</a>
-            
-        </div>
-        <div>
-            
-        </div>  
-    </div>
-</article>
-
-<div class="article-nav prev-next-wrap clearfix">
-    
-        <a href="/2017/06/25/你不知道的Vue-js/" class="pre-post btn btn-default"><i class="fa fa-angle-left fa-fw"></i>上一篇</a>
-    
-    
-        <a href="/2017/06/10/Vue之组件之间的通讯/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
-    
-</div>
-
-
-    <div id="comments">
+    <article class="post">
         
-	
-<div id="lv-container" data-id="city" data-uid="MTAyMC8zNDc5OS8xMTMzNg==">
-  <script type="text/javascript">
-     (function(d, s) {
-         var j, e = d.getElementsByTagName(s)[0];
-         if (typeof LivereTower === 'function') { return; }
-         j = d.createElement(s);
-         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-         j.async = true;
-         e.parentNode.insertBefore(j, e);
-     })(document, 'script');
-  </script>
-</div>
+            <div class="post-media">
+                <a href="/2017/06/13/解决跨域终极手段之服务器代理转发/">
+                    <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/93838f95ly1fphym2r0y2j20g40am404.jpg"  alt="解决跨域终极手段之服务器代理转发"> 
+                </a>
+            </div>
+        
+        <div class="post-content">
+            <div class="post-head home-post-head">
+                <h1 class="post-title"> 
+                    <a href="/2017/06/13/解决跨域终极手段之服务器代理转发/">解决跨域终极手段之服务器代理转发</a>
+                </h1>
+                <div class="post-meta">  &bull;
+                    <time class="post-date" datetime="" title="">
+                        2017年06月13日
+                    </time>
+                </div>
+            </div>
+            <p class="brief">
+                
+                    解决跨域问题
+一般的说，我们GET请求跨域是用jsonp。但遇到一些其他情况(比如POST)或者因为API的其他原因无法进行跨域。我们可以使用转发的手段实现跨域。原理是服务器模拟浏览器正常访问之后转发给本机…
+                
+            </p> 
+        </div>
+    </article>
+ 
+    <article class="post">
+        
+            <div class="post-media">
+                <a href="/2017/05/20/前端开发遇到的一些问题及解决方案/">
+                    <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/93838f95ly1fphym2r0y2j20g40am404.jpg"  alt="前端开发遇到的一些问题及解决方案"> 
+                </a>
+            </div>
+        
+        <div class="post-content">
+            <div class="post-head home-post-head">
+                <h1 class="post-title"> 
+                    <a href="/2017/05/20/前端开发遇到的一些问题及解决方案/">前端开发遇到的一些问题及解决方案</a>
+                </h1>
+                <div class="post-meta">  &bull;
+                    <time class="post-date" datetime="" title="">
+                        2017年05月20日
+                    </time>
+                </div>
+            </div>
+            <p class="brief">
+                
+                    开发过程中的问题
+开发中遇到的问题及总结…
+                
+            </p> 
+        </div>
+    </article>
+ 
+    <article class="post">
+        
+            <div class="post-media">
+                <a href="/2017/05/17/知乎日报的问题分析/">
+                    <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/93838f95ly1fphypaf2voj20dw08o0t8.jpg"  alt="知乎日报的问题分析"> 
+                </a>
+            </div>
+        
+        <div class="post-content">
+            <div class="post-head home-post-head">
+                <h1 class="post-title"> 
+                    <a href="/2017/05/17/知乎日报的问题分析/">知乎日报的问题分析</a>
+                </h1>
+                <div class="post-meta">  &bull;
+                    <time class="post-date" datetime="" title="">
+                        2017年05月17日
+                    </time>
+                </div>
+            </div>
+            <p class="brief">
+                
+                    遇到问题的答案
+写知乎日报项目中所遇到的问题解决方法…
+                
+            </p> 
+        </div>
+    </article>
+ 
+    <article class="post">
+        
+            <div class="post-media">
+                <a href="/2017/04/15/前端经典总结（二）/">
+                    <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/93838f95ly1fphynqf59ij20az09agn9.jpg"  alt="前端经典总结（二）"> 
+                </a>
+            </div>
+        
+        <div class="post-content">
+            <div class="post-head home-post-head">
+                <h1 class="post-title"> 
+                    <a href="/2017/04/15/前端经典总结（二）/">前端经典总结（二）</a>
+                </h1>
+                <div class="post-meta">  &bull;
+                    <time class="post-date" datetime="" title="">
+                        2017年04月15日
+                    </time>
+                </div>
+            </div>
+            <p class="brief">
+                
+                    经典总结知识（二）
+前端路途漫远,学会分享:参考了别人的分享,增加了自己的分享,期待你的分享在前端路上摸索前行，在这里分享自己长期关注的前端开发相关的优秀网站、博客、以及活跃开发者。…
+                
+            </p> 
+        </div>
+    </article>
+ 
+    <article class="post">
+        
+            <div class="post-media">
+                <a href="/2017/02/23/前端经典总结（一）/">
+                    <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/93838f95ly1fphyogoh4ej20b407g0us.jpg"  alt="前端经典总结（一）"> 
+                </a>
+            </div>
+        
+        <div class="post-content">
+            <div class="post-head home-post-head">
+                <h1 class="post-title"> 
+                    <a href="/2017/02/23/前端经典总结（一）/">前端经典总结（一）</a>
+                </h1>
+                <div class="post-meta">  &bull;
+                    <time class="post-date" datetime="" title="">
+                        2017年02月23日
+                    </time>
+                </div>
+            </div>
+            <p class="brief">
+                
+                    经典总结知识（一）
+前端知识体系经典总结及汇总…
+                
+            </p> 
+        </div>
+    </article>
+ 
+    <article class="post">
+        
+            <div class="post-media">
+                <a href="/2017/02/20/神奇的BFC/">
+                    <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/93838f95ly1fphynqf59ij20az09agn9.jpg"  alt="神奇的BFC"> 
+                </a>
+            </div>
+        
+        <div class="post-content">
+            <div class="post-head home-post-head">
+                <h1 class="post-title"> 
+                    <a href="/2017/02/20/神奇的BFC/">神奇的BFC</a>
+                </h1>
+                <div class="post-meta">  &bull;
+                    <time class="post-date" datetime="" title="">
+                        2017年02月20日
+                    </time>
+                </div>
+            </div>
+            <p class="brief">
+                
+                    BFC神奇背后的原理
+BFC就是Box、Formatting Context 的概念。…
+                
+            </p> 
+        </div>
+    </article>
+ 
 
 
-    </div>
+    <nav class="pagination" role="navigation">
+        <div id="page-nav">
+            <a class="extend prev" rel="prev" href="/categories/前端/"><i class='fa fa-angle-left'></i></a><a class="page-number" href="/categories/前端/">1</a><span class="page-number current">2</span>
+        </div>
+    </nav>
+
+
+
 
 
 
