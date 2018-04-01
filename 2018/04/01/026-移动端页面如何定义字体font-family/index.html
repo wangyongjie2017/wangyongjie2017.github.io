@@ -29,7 +29,7 @@
     <!--Title-->
 
 
-<title>标签: CSS3 | 前端美男子 王永杰</title>
+<title>移动端页面如何定义字体font-family | 前端美男子 王永杰</title>
 
 
     <link rel="alternate" href="/atom.xml" title="前端美男子 王永杰" type="application/atom+xml">
@@ -130,44 +130,125 @@
     <section class="content-wrap">
         <div class="container">
             <div class="row">
-                <main class="col-md-8 main-content ">
-                    <h3> 
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="移动端页面如何定义字体font-family">
+            
+	            移动端页面如何定义字体font-family
+            
+        </h1>
+        <div class="post-meta">
     
-        CSS3 
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/前端">
+            前端
+        </a>
+    </span>
     
     
-</h3>
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a href="/tags/移动端">
+               移动端
+            </a>
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2018/04/01</span>
+    </span>
+</div>
 
-    <article class="post">
-        
-            <div class="post-media">
-                <a href="/2017/02/24/003-CSS3动画/">
-                    <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/93838f95ly1fphys4gqzsj20by064gmw.jpg"  alt="CSS3动画"> 
-                </a>
-            </div>
-        
-        <div class="post-content">
-            <div class="post-head home-post-head">
-                <h1 class="post-title"> 
-                    <a href="/2017/02/24/003-CSS3动画/">CSS3动画</a>
-                </h1>
-                <div class="post-meta">  &bull;
-                    <time class="post-date" datetime="" title="">
-                        2017年02月24日
-                    </time>
-                </div>
-            </div>
-            <p class="brief">
-                
-                    变形和动画
-引言：目前来说，我们使用css3加一些js可以实现一些简单的动画，复杂的动画我们可以用html5中的”canvas”标签来实现。对于大多数非游戏类的站点来说，他们需要的就是简单动画。今天我们就来学习css3的变换和动画。今天主要内容：变换（transform）属性 + 渐变（transtion）效果 + 帧动画（@keyframes）效果。…
-                
-            </p> 
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h3 id="移动端网站如何定义字体font-family"><a href="#移动端网站如何定义字体font-family" class="headerlink" title="移动端网站如何定义字体font-family"></a>移动端网站如何定义字体font-family</h3><p><img src="https://ws1.sinaimg.cn/large/93838f95ly1fpx2qogmv7j20c90dete2.jpg" alt=""></p>
+<blockquote>
+<p>很多懒友在使用自定义字体时候，很容易像PC端那样定义，其实安卓和ISO系统，对中文字体是不支持，所以定义以后看到效果不是直接定义字体效果，如果需要定义大家会想到<a href="https://www.w3cplus.com/content/css3-font-face" target="_blank" rel="noopener">@font-face</a> 定义为微软雅黑字体并存放到 web 服务器上，在需要使用时被自动下载</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">@font-face &#123;</span><br><span class="line">    font-family: &apos;MicrosoftYaHei&apos;;</span><br><span class="line">    src: url(&apos;MicrosoftYaHei.eot&apos;); /* IE9 Compat Modes */</span><br><span class="line">    src: url(&apos;MicrosoftYaHei.eot?#iefix&apos;) format(&apos;embedded-opentype&apos;), /* IE6-IE8 */</span><br><span class="line">             url(&apos;MicrosoftYaHei.woff&apos;) format(&apos;woff&apos;), /* Modern Browsers */</span><br><span class="line">             url(&apos;MicrosoftYaHei.ttf&apos;)  format(&apos;truetype&apos;), /* Safari, Android, iOS */</span><br><span class="line">             url(&apos;MicrosoftYaHei.svg#MicrosoftYaHei&apos;) format(&apos;svg&apos;); /* Legacy iOS */</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>问题虽然解决了，但是这样操作很消耗用户流量，也对页面打开造成了很大延迟。<br>我们在一起看看三大主流系统他们字体到底支持哪些呢？</p>
+</blockquote>
+<h5 id="ios-系统"><a href="#ios-系统" class="headerlink" title="ios 系统"></a>ios 系统</h5><ul>
+<li>默认中文字体是<a href="https://stackoverflow.com/questions/9918421/what-is-the-default-font-in-chinese-environment" target="_blank" rel="noopener">Heiti SC</a></li>
+<li>默认英文字体是<a href="https://stackoverflow.com/questions/3838336/iphone-system-font" target="_blank" rel="noopener">Helvetica</a></li>
+<li>默认数字字体是HelveticaNeue</li>
+<li>无微软雅黑字体</li>
+</ul>
+<h5 id="android-系统"><a href="#android-系统" class="headerlink" title="android 系统"></a>android 系统</h5><ul>
+<li>默认中文字体是Droidsansfallback</li>
+<li>默认英文和数字字体是Droid Sans</li>
+<li>无微软雅黑字体</li>
+</ul>
+<h5 id="winphone-系统"><a href="#winphone-系统" class="headerlink" title="winphone 系统"></a>winphone 系统</h5><ul>
+<li>默认中文字体是Dengxian(方正等线体)</li>
+<li>默认英文和数字字体是Segoe</li>
+<li>无微软雅黑字体</li>
+</ul>
+<h6 id="附：ios7字体列表"><a href="#附：ios7字体列表" class="headerlink" title="附：ios7字体列表"></a>附：<a href="https://support.apple.com/en-us/HT202771" target="_blank" rel="noopener">ios7字体列表</a></h6><h6 id="并做了个小测试，下图为测试机-iphone-4s、三星-GT-N7000-android-2-3-6、HTC-windows-Phone-8-0-三种手机中的默认中文字体和英文字体展现："><a href="#并做了个小测试，下图为测试机-iphone-4s、三星-GT-N7000-android-2-3-6、HTC-windows-Phone-8-0-三种手机中的默认中文字体和英文字体展现：" class="headerlink" title="并做了个小测试，下图为测试机 iphone 4s、三星 GT-N7000 android 2.3.6、HTC windows Phone 8.0 三种手机中的默认中文字体和英文字体展现："></a>并做了个小测试，下图为测试机 iphone 4s、三星 GT-N7000 android 2.3.6、HTC windows Phone 8.0 三种手机中的默认中文字体和英文字体展现：</h6><p><img src="https://ws1.sinaimg.cn/large/93838f95ly1fpx301xceuj21gl0esk25.jpg" alt="image"></p>
+<h6 id="我们可以看出三种不同的中文字体和微软雅黑一样是无衬线字体，有无衬线只是一个小原因，而无论页面中使用哪种字体，肉眼很难看出它们的差异，对产品的体验几乎没有影响。"><a href="#我们可以看出三种不同的中文字体和微软雅黑一样是无衬线字体，有无衬线只是一个小原因，而无论页面中使用哪种字体，肉眼很难看出它们的差异，对产品的体验几乎没有影响。" class="headerlink" title="我们可以看出三种不同的中文字体和微软雅黑一样是无衬线字体，有无衬线只是一个小原因，而无论页面中使用哪种字体，肉眼很难看出它们的差异，对产品的体验几乎没有影响。"></a>我们可以看出三种不同的中文字体和微软雅黑一样是无衬线字体，有无衬线只是一个小原因，而无论页面中使用哪种字体，肉眼很难看出它们的差异，对产品的体验几乎没有影响。</h6><h6 id="有关衬线字体和无衬线字体的差别，参考下图："><a href="#有关衬线字体和无衬线字体的差别，参考下图：" class="headerlink" title="有关衬线字体和无衬线字体的差别，参考下图："></a>有关衬线字体和无衬线字体的差别，参考下图：</h6><p><img src="https://ws1.sinaimg.cn/large/93838f95ly1fpx315ya82j20fd05eq4r.jpg" alt="image"></p>
+<h6 id="那么，使用系统默认的字体所达到的视觉效果跟使用微软雅黑字体没有明显的差别，权衡利弊，最终说服了产品经理放弃使用微软雅黑的想法。"><a href="#那么，使用系统默认的字体所达到的视觉效果跟使用微软雅黑字体没有明显的差别，权衡利弊，最终说服了产品经理放弃使用微软雅黑的想法。" class="headerlink" title="那么，使用系统默认的字体所达到的视觉效果跟使用微软雅黑字体没有明显的差别，权衡利弊，最终说服了产品经理放弃使用微软雅黑的想法。"></a>那么，<font color="red">使用系统默认的字体所达到的视觉效果跟使用微软雅黑字体没有明显的差别</font>，权衡利弊，最终说服了产品经理放弃使用微软雅黑的想法。</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">各个手机系统有自己的默认字体，一般不支持我们常用字体，例如微软雅黑等；</span><br><span class="line">如无特殊需求，手机端无需定义中文字体，使用系统默认即可。</span><br><span class="line">英文字体和数字字体可使用 Helvetica ，三种系统都支持。</span><br><span class="line">/* 移动端定义字体的代码 */</span><br><span class="line">body&#123;font-family:Helvetica;&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="评论："><a href="#评论：" class="headerlink" title="评论："></a>评论：</h5><blockquote>
+<p>使用默认的就行，一般特殊字体，你本地开发的话，你还可以自行安装对应字体包，但用户可不会安装什么字体包！所以，针对设计师给的特殊字体，要么弄成图片展示，以达到最好的设计效果，但这样就会增加请求数量，带来一定的性能损耗。要么，就是使用@font-face定义字体，但一般字体包都特别大，有的甚至以M计，而且也是需要下载，所以还不如直接切成图呢！</p>
+</blockquote>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><ul>
+<li>各个手机系统有自己的默认字体，且都不支持微软雅黑</li>
+<li>如无特殊需求，手机端无需定义中文字体，使用系统默认</li>
+<li>英文字体和数字字体可使用 Helvetica ，三种系统都支持</li>
+</ul>
+
+    </div>
+
+    <div class="post-footer">   
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="http://wangyongjie.top/" target="_blank">前端美男子</a>
+            
         </div>
-    </article>
- 
+        <div>
+            
+        </div>  
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+    
+        <a href="/2018/03/24/025-JS中关于clientWidth offsetWidth scrollWidth 等的含义/" class="next-post btn btn-default">下一篇<i class="fa fa-angle-right fa-fw"></i></a>
+    
+</div>
 
 
+    <div id="comments">
+        
+	
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zNDc5OS8xMTMzNg==">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+         if (typeof LivereTower === 'function') { return; }
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+</div>
+
+
+    </div>
 
 
 
