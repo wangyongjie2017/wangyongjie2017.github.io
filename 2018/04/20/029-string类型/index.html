@@ -188,7 +188,7 @@ console.log(testString,testString2);//王永杰 1
 <pre><code>var testString=new String(&quot;王永杰&quot;);
 </code></pre><p>是生成一个String的实例；我们可以通过dir打印出来看一下；</p>
 <pre><code>console.dir(new String(&quot;王永杰&quot;));
-</code></pre><p><img src="http://i.imgur.com/bk1wzI4.png" alt=""></p>
+</code></pre><p><img src="https://i.imgur.com/g4bGZ6O.png" alt=""></p>
 <p>打开chrome的控制台；可以看到上面这张图片;</p>
 <pre><code>String
 0: &quot;王&quot;
@@ -199,9 +199,7 @@ __proto__: String
 [[PrimitiveValue]]: &quot;王永杰&quot;
 </code></pre><p>数字的第0位是”王”，第1位是”永”，第2位是”杰”，它的length是3;它的默认值是”王永杰”,它的原型(<strong>proto</strong>)是String这个类；在最开始的时候总结是，JS中万物皆对象，字符串类型(string)是字符串类(String)的一员，是会继承字符串类的所有属性。就好比人属于人类的一员，人会继承人类的所有特征一样；</p>
 <p>点击[<strong>proto</strong>],打开它的原型，查看它继承String的哪些方法；String的默认值是【””】</p>
-<p><img src="http://i.imgur.com/nkvTqtf.png" alt=""></p>
-<p>继承了String这个类的这么多方法；其中就有indexOf这个方法；</p>
-<p><img src="http://i.imgur.com/YkVzNCd.png" alt=""></p>
+<p><img src="https://i.imgur.com/ku3QqSk.png" alt=""><br>继承了String这个类的这么多方法；其中就有indexOf这个方法；<br><img src="https://i.imgur.com/JHxD6Iv.png" alt=""><br><img src="http://i.imgur.com/YkVzNCd.png" alt=""></p>
 <p>这个方法的原型，指向了Function的prototype(注意constructor这个属性,默认会指向Function本身)，再次打开<strong>proto</strong>，会打开继承的Object这个基类；之所以说是基类，是因为Object.<strong>proto</strong>是null，已经到顶了；</p>
 <p>可以输出看一下</p>
 <pre><code>console.dir((new String(&quot;王永杰&quot;)).__proto__);//String
