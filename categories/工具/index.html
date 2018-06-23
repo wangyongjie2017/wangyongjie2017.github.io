@@ -29,7 +29,7 @@
     <!--Title-->
 
 
-<title>分类: 工具 | 前端美男子 王永杰</title>
+<title>Category: 工具 | 前端美男子 王永杰</title>
 
 
     <link rel="alternate" href="/atom.xml" title="前端美男子 王永杰" type="application/atom+xml">
@@ -41,7 +41,7 @@
 
 
 
-<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css?rev=3.3.4">
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
 <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/css/style.css?rev=@@hash">
 
@@ -80,14 +80,14 @@
 <body>
     <header class="main-header"  style="background-image:url(https://ws1.sinaimg.cn/large/93838f95ly1fpgvnfwrkpg205a064dhr.jpg)"  >
     <div class="main-header-box">
-        <a class="header-avatar" href="/" title="">
-            <img src="/img/avatar.jpg" alt="logo头像">
+        <a class="header-avatar" href="/" title='Wang YongJie'>
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
         </a>
         <div class="branding">
         	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
             
                 <h2> 因为折腾,所以有趣 </h2>
-             
+            
     	</div>
     </div>
 </header>
@@ -95,30 +95,37 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <div class="navbar-header"><span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu" id="mnav">
-                    <span class="sr-only">Toggle navigation</span>
-                    <i class="fa fa-bars"></i>
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
                     </span>
+                    <a class="navbar-brand" href="http://wangyongjie.top">前端美男子 王永杰</a>
                 </div>
                 <div class="collapse navbar-collapse" id="main-menu">
                     <ul class="menu">
                         
-                            <li role="presentation"><a href="/"><i class="fa fa-fw "></i>主页</a>
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>主页</a>
                             </li>
                         
-                            <li role="presentation"><a href="/categories/前端/"><i class="fa fa-fw "></i>前端</a>
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/前端/"><i class="fa "></i>前端</a>
                             </li>
                         
-                            <li role="presentation"><a href="/categories/后端/"><i class="fa fa-fw "></i>后端</a>
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/后端/"><i class="fa "></i>后端</a>
                             </li>
                         
-                            <li role="presentation"><a href="/categories/工具/"><i class="fa fa-fw "></i>工具</a>
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/工具/"><i class="fa "></i>工具</a>
                             </li>
                         
-                            <li role="presentation"><a href="/categories/生活/"><i class="fa fa-fw "></i>生活</a>
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/生活/"><i class="fa "></i>生活</a>
                             </li>
                         
-                            <li role="presentation"><a href="/categories/JS课程"><i class="fa fa-fw "></i>JS课程</a>
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/JS课程"><i class="fa "></i>JS课程</a>
                             </li>
                         
                     </ul>
@@ -250,17 +257,18 @@ ss免费账号持续更新
 
                 </main>
                 
+                    
     <aside class="col-md-4 sidebar">
         
         
     <div class="widget">    
-        <h3 class="title">搜索</h3>
+        <h3 class="title">Search</h3>
         <div id="search-form">
             <div id="result-mask" class="hide"></div>
             <div class="search-area">
                 
                     <input id="search-key" type="search" autocomplete="off" placeholder="搜点什么呢?">
-                    <button type="button" class="search-form-submit" id="search-local">站内搜索</button>
+                    <button type="button" class="search-form-submit" id="search-local">localSearch</button>
                 
                 
                     <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Google Search"><button type="submit" class="search-form-submit">谷歌搜索</button><input type="hidden" name="sitesearch" value="http://wangyongjie.top"></form>
@@ -294,7 +302,7 @@ ss免费账号持续更新
         
         
     <div class="widget">
-      <h3 class="title">社交</h3> 
+      <h3 class="title">Social</h3> 
         <div class="content social">
             
 	            <a href="//github.com/wangyongjie2017" rel="external nofollow" title="Github" target="_blank">
@@ -324,23 +332,23 @@ ss免费账号持续更新
         
         
     <div class="widget">
-        <h3 class="title">分类</h3>
-        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JS课程/"><i class="fa" aria-hidden="true">JS课程</i></a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/"><i class="fa" aria-hidden="true">前端</i></a><span class="category-list-count">24</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/后端/"><i class="fa" aria-hidden="true">后端</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link current" href="/categories/工具/"><i class="fa" aria-hidden="true">工具</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活/"><i class="fa" aria-hidden="true">生活</i></a><span class="category-list-count">1</span></li></ul>
+        <h3 class="title">Categories</h3>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JS课程/"><i class="fa" aria-hidden="true">JS课程</i></a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/"><i class="fa" aria-hidden="true">前端</i></a><span class="category-list-count">24</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/后端/"><i class="fa" aria-hidden="true">后端</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/"><i class="fa" aria-hidden="true">工具</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活/"><i class="fa" aria-hidden="true">生活</i></a><span class="category-list-count">1</span></li></ul>
     </div>
 
 
         
         
     <div class="widget">
-      <h3 class="title">归档</h3>
-        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/"><i class="fa" aria-hidden="true">June 2018</i></a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/"><i class="fa" aria-hidden="true">May 2018</i></a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/"><i class="fa" aria-hidden="true">April 2018</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/"><i class="fa" aria-hidden="true">March 2018</i></a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/"><i class="fa" aria-hidden="true">October 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/"><i class="fa" aria-hidden="true">September 2017</i></a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/"><i class="fa" aria-hidden="true">August 2017</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/"><i class="fa" aria-hidden="true">July 2017</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/"><i class="fa" aria-hidden="true">June 2017</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/"><i class="fa" aria-hidden="true">May 2017</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/"><i class="fa" aria-hidden="true">April 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/"><i class="fa" aria-hidden="true">March 2017</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/"><i class="fa" aria-hidden="true">February 2017</i></a><span class="archive-list-count">3</span></li></ul>
+      <h3 class="title">Archives</h3>
+        <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/"><i class="fa" aria-hidden="true">2018年06月</i></a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/"><i class="fa" aria-hidden="true">2018年05月</i></a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/"><i class="fa" aria-hidden="true">2018年04月</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/"><i class="fa" aria-hidden="true">2018年03月</i></a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/"><i class="fa" aria-hidden="true">2017年10月</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/"><i class="fa" aria-hidden="true">2017年09月</i></a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/"><i class="fa" aria-hidden="true">2017年08月</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/"><i class="fa" aria-hidden="true">2017年07月</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/"><i class="fa" aria-hidden="true">2017年06月</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/"><i class="fa" aria-hidden="true">2017年05月</i></a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/"><i class="fa" aria-hidden="true">2017年04月</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/"><i class="fa" aria-hidden="true">2017年03月</i></a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/"><i class="fa" aria-hidden="true">2017年02月</i></a><span class="archive-list-count">3</span></li></ul>
     </div>
 
 
         
         
   <div class="widget">
-    <h3 class="title">标签云</h3>
+    <h3 class="title">Tag Cloud</h3>
     <div class="content tag-cloud">
         <a href="/tags/AJAX/" style="font-size: 12.5px;">AJAX</a> <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/CSS3/" style="font-size: 10px;">CSS3</a> <a href="/tags/ES6/" style="font-size: 12.5px;">ES6</a> <a href="/tags/Git/" style="font-size: 15px;">Git</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Vue-js/" style="font-size: 20px;">Vue.js</a> <a href="/tags/node-js/" style="font-size: 10px;">node.js</a> <a href="/tags/前端总结/" style="font-size: 12.5px;">前端总结</a> <a href="/tags/原生js知识/" style="font-size: 17.5px;">原生js知识</a> <a href="/tags/后端起步/" style="font-size: 10px;">后端起步</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/布局/" style="font-size: 10px;">布局</a> <a href="/tags/科学上网/" style="font-size: 10px;">科学上网</a> <a href="/tags/移动端/" style="font-size: 12.5px;">移动端</a> <a href="/tags/视口宽高/" style="font-size: 10px;">视口宽高</a> <a href="/tags/跨域问题/" style="font-size: 10px;">跨域问题</a> <a href="/tags/遇到的问题/" style="font-size: 10px;">遇到的问题</a> <a href="/tags/面试题/" style="font-size: 12.5px;">面试题</a>
     </div>
@@ -350,7 +358,7 @@ ss免费账号持续更新
         
         
     <div class="widget">
-        <h3 class="title">友链</h3>
+        <h3 class="title">Friends</h3>
         <div class="content friends-link">
         
             <a href="http://wangyongjie.top" class="fa" target="_blank">个人博客</a>
@@ -416,6 +424,7 @@ ss免费账号持续更新
         
     </aside>
 
+                
             </div>
         </div>
     </section>
@@ -426,7 +435,11 @@ ss免费账号持续更新
     </div>
 </footer>
 
-<a id="back-to-top" class="hide">
+<!--<a id="toc-btn">
+    <i class="fa fa-bars"></i>
+</a>-->
+
+<a id="back-to-top" class="icon-btn hide">
 	<i class="fa fa-chevron-up"></i>
 </a>
 
@@ -440,10 +453,10 @@ ss免费账号持续更新
                 <span>Copyright &copy; 2018
                 </span> | 
                 <span>
-                    <a href="//wangyongjie.top" class="copyright-links" target="_blank" rel="nofollow">王永杰的博客</a>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
                 </span> | 
                 <span>
-                    <a href="//weibo.com/wangyongjie2017" class="copyright-links" target="_blank" rel="nofollow">前端美男子</a>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
                 </span>
             </div>
         </div>
