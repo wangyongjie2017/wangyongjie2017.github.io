@@ -19,55 +19,13 @@
     }
     searchMask.style.width = winWidth + 'px';
     searchMask.style.height = winHeight + 'px';
-
-    function tpl(html, data) {
-        return html.replace(/\{\w+\}/g, function(str) {
-            var prop = str.replace(/\{|\}/g, '');
-            return data[prop] || '';
-        });
-    }
-
-    function hasClass(obj, cls) {
-        return obj.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
-    }
-
-    function addClass(obj, cls) {
-        if (!hasClass(obj, cls)) obj.className += " " + cls;
-    }
-
-    function removeClass(obj, cls) {
-        if (hasClass(obj, cls)) {
-            var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
-            obj.className = obj.className.replace(reg, ' ');
-        }
-    }
-
-    function matcher(post, regExp) {
-        return regtest(post.title, regExp) || regtest(post.text, regExp);
-    }
-
-    function regtest(raw, regExp) {
-        regExp.lastIndex = 0;
-        return regExp.test(raw);
-    }
-
-    function searchShow(){
-        removeClass(searchWrap, 'hide');
-        removeClass(searchMask, 'hide');
-    }
-
-    function searchHide(){
-        addClass(searchWrap, 'hide');
-        addClass(searchMask, 'hide');
-    }
-
     function loadData(success) {
         if (!searchData) {
             var xhr = new XMLHttpRequest();
             xhr.open('GET', '/content.json', true);
             xhr.onload = function() {
                 if (this.status >= 200 && this.status < 300) {
-                    var res = JSON.parse(this.response || this.responseText);
+                    var res = JSON.parse(this.response||this.responseText);
                     searchData = res instanceof Array ? res : res.posts;
                     success(searchData);
                 } else {
@@ -82,43 +40,58 @@
             success(searchData);
         }
     }
-
+    function matcher(post, regExp) {
+        return regtest(post.title, regExp) || regtest(post.text, regExp);
+    }
+    function regtest(raw, regExp) {
+        regExp.lastIndex = 0;
+        return regExp.test(raw);
+    }
     function render(data) {
         var html = '';
         if (data.length) {
             html = data.map(function(post) {
                 return tpl(searchTpl, {
-                    title: filter(post.title, 'title'),
+                    title: post.title,
                     path: post.path,
-                    content: filter(post.text, 'content')
+                    content: content(post.text)
                 });
             }).join('');
         } else {
-            if(searchWord.value == ''){
-                searchHide();
-            } else {
-                html = '<div class="tips"><p>没有找到相关结果!</p></div>';
-            }
+            html = '<div class="tips"><p>没有找到相关结果!</p></div>';
         }
         searchResult.innerHTML = html;
     }
-
-    function filter(art, type) {
-        var keyword = searchWord.value;
-        var index = art.indexOf(keyword);
-        var artRe = art.replace(keyword, '<b>' + keyword + '</b>');
-        if (type == 'title') {
-            return artRe
-        }
-        if (type == 'content' && index > 0) {
-            return artRe.substr(index - 15, 45);
+    function content(art){
+    	var keyword = searchWord.value;
+    	var index = art.indexOf(keyword);	
+    	var artRe = art.replace(keyword, '<b>' + keyword + '</b>');
+    	if (index > 0){
+            return artRe.substr(index-15, 45);
+    	}
+    }
+    function tpl(html, data) {
+        return html.replace(/\{\w+\}/g, function(str) {
+            var prop = str.replace(/\{|\}/g, '');
+            return data[prop] || '';
+        });
+    }
+    function hasClass(obj, cls) {
+        return obj.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));
+    }
+    function addClass(obj, cls) {
+        if (!hasClass(obj, cls)) obj.className += " " + cls;
+    }
+    function removeClass(obj, cls) {
+        if (hasClass(obj, cls)) {
+            var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');
+            obj.className = obj.className.replace(reg, ' ');
         }
     }
-
     function search(e) {
         var key = this.value.trim();
         if (!key) {
-            render('');
+        	render('');
             return;
         }
         var regExp = new RegExp(key.replace(/[ ]/g, '|'), 'gmi');
@@ -129,15 +102,20 @@
             render(result);
         });
         e.preventDefault();
-        searchShow();
-        searchWord.onfocus = function() {
-            searchShow();
+        removeClass(searchWrap, 'hide');
+        removeClass(searchMask, 'hide');
+        searchWord.onfocus=function() {
+            removeClass(searchWrap, 'hide');
+            removeClass(searchMask, 'hide');
         };
     }
-    searchWord.onfocus = function() {
+    searchWord.onfocus=function(){
         searchWord.addEventListener('input', search);
     };
-    searchMask.onclick = function() {
-        searchHide();
+    searchMask.onclick=function(){
+        addClass(searchWrap, 'hide');
+        addClass(searchMask, 'hide');
     };
+
+
 })();
