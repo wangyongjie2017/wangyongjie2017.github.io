@@ -233,7 +233,7 @@ pre {
   width: 100%;
 }
 /*====================================================
-    header 
+    header
 ====================================================*/
 .main-header {
   position: relative;
@@ -243,7 +243,7 @@ pre {
   width: 100%;
   background: #fff url(http://7xpw2b.com1.z0.glb.clouddn.com/hexo-sinppet/img/banner.jpg);
   background-repeat: repeat;
-  background-attachment: fixed;
+  overflow: hidden;
 }
 .main-header .banneriframe {
   width: 100%;
@@ -299,8 +299,21 @@ pre {
   text-align: center;
   background: #fff;
   border-top: 1px solid #ebebeb;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   border-bottom: 2px solid #e1e1e1;
+}
+.main-navigation .navbar-collapse {
+  border-top: 1px solid #ebebeb;
+}
+.main-navigation .navbar-brand {
+  max-width: 90%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 19px 0 0 0;
+  font-size: 14px;
+  color: #505050;
+  display: none;
 }
 .main-navigation .menu {
   padding: 0;
@@ -367,12 +380,16 @@ pre {
   font-size: 2em;
   cursor: pointer;
 }
+.main-navigation .navbar-header i:hover {
+  color: #e67e22;
+}
 /*====================================================
     main post area
 ====================================================*/
 #main {
   background: #fff;
   padding: 10px 0;
+  margin-bottom: 10px;
 }
 .post {
   padding: 20px;
@@ -429,6 +446,7 @@ pre {
 }
 .post .post-head .post-meta span a {
   color: #959595;
+  margin-left: 3px;
 }
 .post .post-head .post-meta span a:hover {
   color: #e67e22;
@@ -480,9 +498,11 @@ pre {
 .post .post-footer .tag-list .post-meta .fa-wrap {
   margin-right: 10px;
 }
+.post .post-footer .tag-list .tags-meta a:nth-child(n+2) {
+  margin-left: 4px;
+}
 .post .post-footer .tag-list a {
   color: #959595;
-  margin-left: 7px;
 }
 .post .post-footer .tag-list a:hover {
   color: #e67e22;
@@ -802,9 +822,13 @@ pre {
 .sidebar .widget ul li {
   list-style: none;
 }
+.sidebar .widget ul li.archive-list-item {
+  width: 50%;
+  display: inline-block;
+}
 .sidebar .widget .archive-list-count,
 .sidebar .widget .category-list-count {
-  margin-left: 5px;
+  margin-left: 4px;
 }
 .sidebar .widget .archive-list-count:before,
 .sidebar .widget .category-list-count:before {
@@ -977,6 +1001,10 @@ pre {
 .widget #search-form #result-wrap #search-result .item .title:hover {
   color: #e67e22;
 }
+.widget #search-form #result-wrap #search-result .item .title b {
+  margin: 0 2px;
+  color: #e67e22;
+}
 .widget #search-form #result-wrap #search-result .item .content {
   font-size: 14px;
   color: #666666;
@@ -1006,9 +1034,42 @@ pre {
   color: #666666;
 }
 /*====================================================
-   back-to-top 
+   toc
 ====================================================*/
-#back-to-top {
+#article-toc {
+  padding-top: 1em;
+  background-color: #fff;
+}
+#article-toc ol {
+  list-style: none;
+}
+#article-toc .toc {
+  overflow-y: auto;
+  padding-left: 2em;
+}
+#article-toc .toc .toc-item .toc-link {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  padding: 3px 0;
+  line-height: 1.25em;
+  position: relative;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#article-toc .toc .toc-item .toc-link:hover {
+  color: #e67e22;
+}
+#article-toc .toc .toc-item.toc-level-2 > .toc-link {
+  font-size: 15px;
+}
+/*====================================================
+   back-to-top and toc-btn
+====================================================*/
+#back-to-top,
+#toc-btn {
   position: fixed;
   right: 30px;
   bottom: 30px;
@@ -1019,16 +1080,106 @@ pre {
   -moz-border-radius: 2px;
   border-radius: 2px;
   z-index: 1;
+  cursor: pointer;
 }
-#back-to-top:hover {
+#back-to-top:hover,
+#toc-btn:hover {
   background: #e67e22;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
-#back-to-top i {
+#back-to-top i,
+#toc-btn i {
   width: 30px;
   height: 30px;
   line-height: 30px;
+}
+#toc-btn {
+  bottom: 65px;
+}
+/*====================================================
+    timeline
+====================================================*/
+.timebox {
+  position: relative;
+  width: 100%;
+  padding: 0 20px;
+  margin: 20px auto;
+  background: url(../img/timeline.gif) repeat-y 207px 0;
+  overflow: hidden;
+}
+.timeline h2 {
+  height: 60px;
+  line-height: 60px;
+  font-size: 30px;
+  color: #666666;
+  font-weight: bold;
+  padding-left: 65px;
+  margin-bottom: 30px;
+  background: url(../img/timeline-clock.gif) #fff no-repeat 158px 0;
+}
+.timeline h2 img {
+  vertical-align: -5px;
+}
+.timeline ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.timeline ul li {
+  background: url(../img/timeline-dot.gif) no-repeat 180px 5px;
+  padding-bottom: 20px;
+  zoom: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.timeline ul li:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.timeline ul li h3 {
+  float: left;
+  width: 168px;
+  font-size: 20px;
+  color: #333;
+  text-align: right;
+  padding-right: 15px;
+  margin: 0;
+}
+.timeline ul li h3 span {
+  color: #666666;
+  font-size: 12px;
+  margin-left: 2px;
+}
+.timeline ul li a {
+  padding-left: 41px;
+  margin-top: -5px;
+  font-weight: normal;
+  font-size: 16px;
+  color: #505050;
+}
+.timeline ul li a:hover {
+  text-decoration: none;
+  color: #e67e22;
+}
+@media screen and (max-width: 500px) {
+  .timebox {
+    background-position: 97px 0;
+  }
+  .timeline h2 {
+    padding-left: 40%;
+    background-position: 48px 0;
+  }
+  .timeline ul li {
+    background-position: 70px 5px;
+  }
+  .timeline ul li h3 {
+    width: 68px;
+  }
 }
 /*====================================================
     highlight
@@ -1183,9 +1334,12 @@ pre .javascript .function {
 /*====================================================
     media
 ====================================================*/
-@media (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .main-navigation {
     text-align: left;
+  }
+  .main-navigation .navbar-brand {
+    display: block;
   }
   .main-navigation .menu li {
     display: block;
@@ -1195,6 +1349,9 @@ pre .javascript .function {
   .main-navigation .menu li:hover > a {
     color: #e67e22;
     text-decoration: none;
+  }
+  .main-navigation .menu li a {
+    padding: 0;
   }
   .main-navigation .menu li ul {
     visibility: visible;
@@ -1229,7 +1386,8 @@ pre .javascript .function {
     height: auto;
     margin: 0 0 1em 0;
   }
-  .post-footer {
+  .post-footer,
+  #article-toc {
     display: none;
   }
   .content-wrap .m-post {
@@ -1240,12 +1398,12 @@ pre .javascript .function {
     width: 100%;
   }
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .nav-toggle-button {
     display: none;
   }
 }
-@media (min-width: 1100px) {
+@media screen and (min-width: 1100px) {
   .post-content blockquote {
     padding-left: 20px;
     border-width: 4px;
