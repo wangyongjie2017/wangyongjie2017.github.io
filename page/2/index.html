@@ -41,7 +41,7 @@
 
 
 
-<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css?rev=3.3.4">
 <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/css/style.css?rev=@@hash">
 
@@ -80,14 +80,14 @@
 <body>
     <header class="main-header"  style="background-image:url(https://ws1.sinaimg.cn/large/93838f95ly1fpgvnfwrkpg205a064dhr.jpg)"  >
     <div class="main-header-box">
-        <a class="header-avatar" href="/" title='Wang YongJie'>
-            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        <a class="header-avatar" href="/" title="">
+            <img src="/img/avatar.jpg" alt="logo头像">
         </a>
         <div class="branding">
         	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
             
                 <h2> 因为折腾,所以有趣 </h2>
-            
+             
     	</div>
     </div>
 </header>
@@ -95,41 +95,33 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
-                    <span class="sr-only"></span>
-                        <i class="fa fa-bars"></i>
+                <div class="navbar-header"><span class="nav-toggle-button collapsed" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars"></i>
                     </span>
-                    <a class="navbar-brand" href="http://wangyongjie.top">前端美男子 王永杰</a>
                 </div>
                 <div class="collapse navbar-collapse" id="main-menu">
                     <ul class="menu">
                         
-                            <li role="presentation" class="text-center">
-                                <a href="/"><i class="fa "></i>主页</a>
+                            <li role="presentation"><a href="/"><i class="fa fa-fw "></i>主页</a>
                             </li>
                         
-                            <li role="presentation" class="text-center">
-                                <a href="/categories/前端/"><i class="fa "></i>前端</a>
+                            <li role="presentation"><a href="/categories/前端/"><i class="fa fa-fw "></i>前端</a>
                             </li>
                         
-                            <li role="presentation" class="text-center">
-                                <a href="/categories/后端/"><i class="fa "></i>后端</a>
+                            <li role="presentation"><a href="/categories/后端/"><i class="fa fa-fw "></i>后端</a>
                             </li>
                         
-                            <li role="presentation" class="text-center">
-                                <a href="/categories/工具/"><i class="fa "></i>工具</a>
+                            <li role="presentation"><a href="/categories/工具/"><i class="fa fa-fw "></i>工具</a>
                             </li>
                         
-                            <li role="presentation" class="text-center">
-                                <a href="/categories/生活/"><i class="fa "></i>生活</a>
+                            <li role="presentation"><a href="/categories/生活/"><i class="fa fa-fw "></i>生活</a>
                             </li>
                         
-                            <li role="presentation" class="text-center">
-                                <a href="/categories/JS课程"><i class="fa "></i>JS课程</a>
+                            <li role="presentation"><a href="/categories/JS课程"><i class="fa fa-fw "></i>JS课程</a>
                             </li>
                         
-                            <li role="presentation" class="text-center">
-                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            <li role="presentation"><a href="/archives/"><i class="fa fa-fw "></i>时间轴</a>
                             </li>
                         
                     </ul>
@@ -153,7 +145,7 @@
     
         <div class="post-media">
             <a href="/2018/03/14/023-Markdown 基本语法/">
-                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/93838f95ly1fpnzthm5twj20cu0gmqe9.jpg"   alt="Markdown 基本语法">
+                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/93838f95ly1fpnzthm5twj20cu0gmqe9.jpg"   alt="Markdown 基本语法"> 
             </a>
         </div>
     
@@ -174,9 +166,45 @@
 Markdown是什么？谁创造了它？为什么要使用它？怎么使用？谁在用？尝试一下
 正文1. Markdown是什么？Markdown是一种轻量级标记语言，它以纯文本形式(易读、易写、易更改)编写文档，并最终以HTML格式发布。...
             
-        </p>
+        </p> 
     </div>
+    <footer class="post-footer clearfix">
+        <div class="pull-left tag-list">
+            <div class="post-meta">
     
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/生活">
+            生活
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a href="/tags/Markdown">
+               Markdown
+            </a>
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2018/03/14</span>
+    </span>
+</div>
+
+        </div>
+
+        <div class="post-permalink"> 
+            <a href="/2018/03/14/023-Markdown 基本语法/" class="btn btn-default">阅读全文</a>
+        </div>
+    </footer>
 </article>
 
 
@@ -184,7 +212,7 @@ Markdown是什么？谁创造了它？为什么要使用它？怎么使用？谁
     
         <div class="post-media">
             <a href="/2017/10/15/027-Zepto≠ jQuery之差异总结/">
-                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/93838f95ly1fqd17n7w1hj20t807074j.jpg"   alt="Zepto ≠ jQuery之差异总结">
+                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/93838f95ly1fqd17n7w1hj20t807074j.jpg"   alt="Zepto ≠ jQuery之差异总结"> 
             </a>
         </div>
     
@@ -203,9 +231,45 @@ Markdown是什么？谁创造了它？为什么要使用它？怎么使用？谁
             
                 Zepto 是一个与 jQuery 高度相似的库，API 与 jQuery 一致，优点是体积小，核心模块压缩以后不到 10K。我们知道 jQuery 的缺点就是体积大，即便到了 2.x 版本，仍然有 80 多 K。而 Zepto 非常...
             
-        </p>
+        </p> 
     </div>
+    <footer class="post-footer clearfix">
+        <div class="pull-left tag-list">
+            <div class="post-meta">
     
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/前端">
+            前端
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a href="/tags/移动端">
+               移动端
+            </a>
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/10/15</span>
+    </span>
+</div>
+
+        </div>
+
+        <div class="post-permalink"> 
+            <a href="/2017/10/15/027-Zepto≠ jQuery之差异总结/" class="btn btn-default">阅读全文</a>
+        </div>
+    </footer>
 </article>
 
 
@@ -213,7 +277,7 @@ Markdown是什么？谁创造了它？为什么要使用它？怎么使用？谁
     
         <div class="post-media">
             <a href="/2017/09/22/021-分布式版本控制系统2/">
-                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/93838f95ly1fphyjpko07j20am075wgq.jpg"   alt="分布式版本控制系统2">
+                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/93838f95ly1fphyjpko07j20am075wgq.jpg"   alt="分布式版本控制系统2"> 
             </a>
         </div>
     
@@ -233,9 +297,45 @@ Markdown是什么？谁创造了它？为什么要使用它？怎么使用？谁
                 分布式版本控制系统2
 如果你是一个开发人员，想用上这个世界上目前最先进的分布式版本控制系统，那么，赶快开始学习吧！…
             
-        </p>
+        </p> 
     </div>
+    <footer class="post-footer clearfix">
+        <div class="pull-left tag-list">
+            <div class="post-meta">
     
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/前端">
+            前端
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a href="/tags/Git">
+               Git
+            </a>
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/09/22</span>
+    </span>
+</div>
+
+        </div>
+
+        <div class="post-permalink"> 
+            <a href="/2017/09/22/021-分布式版本控制系统2/" class="btn btn-default">阅读全文</a>
+        </div>
+    </footer>
 </article>
 
 
@@ -243,7 +343,7 @@ Markdown是什么？谁创造了它？为什么要使用它？怎么使用？谁
     
         <div class="post-media">
             <a href="/2017/09/16/020-分布式版本控制系统1/">
-                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/93838f95ly1fphyjpko07j20am075wgq.jpg"   alt="分布式版本控制系统1">
+                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/93838f95ly1fphyjpko07j20am075wgq.jpg"   alt="分布式版本控制系统1"> 
             </a>
         </div>
     
@@ -263,9 +363,45 @@ Markdown是什么？谁创造了它？为什么要使用它？怎么使用？谁
                 分布式版本控制系统1
 如果你是一个开发人员，想用上这个世界上目前最先进的分布式版本控制系统，那么，赶快开始学习吧！…
             
-        </p>
+        </p> 
     </div>
+    <footer class="post-footer clearfix">
+        <div class="pull-left tag-list">
+            <div class="post-meta">
     
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/前端">
+            前端
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a href="/tags/Git">
+               Git
+            </a>
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/09/16</span>
+    </span>
+</div>
+
+        </div>
+
+        <div class="post-permalink"> 
+            <a href="/2017/09/16/020-分布式版本控制系统1/" class="btn btn-default">阅读全文</a>
+        </div>
+    </footer>
 </article>
 
 
@@ -273,7 +409,7 @@ Markdown是什么？谁创造了它？为什么要使用它？怎么使用？谁
     
         <div class="post-media">
             <a href="/2017/09/10/019-关于Flex/">
-                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/93838f95ly1fphyiduxksj20hy0953zs.jpg"   alt="关于Flex">
+                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/93838f95ly1fphyiduxksj20hy0953zs.jpg"   alt="关于Flex"> 
             </a>
         </div>
     
@@ -293,9 +429,45 @@ Markdown是什么？谁创造了它？为什么要使用它？怎么使用？谁
                 Flex布局
 本文参考 阮一峰 Flex 布局教程：语法篇…
             
-        </p>
+        </p> 
     </div>
+    <footer class="post-footer clearfix">
+        <div class="pull-left tag-list">
+            <div class="post-meta">
     
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/前端">
+            前端
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a href="/tags/布局">
+               布局
+            </a>
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/09/10</span>
+    </span>
+</div>
+
+        </div>
+
+        <div class="post-permalink"> 
+            <a href="/2017/09/10/019-关于Flex/" class="btn btn-default">阅读全文</a>
+        </div>
+    </footer>
 </article>
 
 
@@ -303,7 +475,7 @@ Markdown是什么？谁创造了它？为什么要使用它？怎么使用？谁
     
         <div class="post-media">
             <a href="/2017/09/01/018-AJAX之跨域问题/">
-                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/93838f95ly1fphyqmg5u3j20dc07imyo.jpg"   alt="AJAX之跨域问题">
+                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/93838f95ly1fphyqmg5u3j20dc07imyo.jpg"   alt="AJAX之跨域问题"> 
             </a>
         </div>
     
@@ -323,9 +495,45 @@ Markdown是什么？谁创造了它？为什么要使用它？怎么使用？谁
                 啥是跨域？
 关于跨域……
             
-        </p>
+        </p> 
     </div>
+    <footer class="post-footer clearfix">
+        <div class="pull-left tag-list">
+            <div class="post-meta">
     
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/前端">
+            前端
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a href="/tags/AJAX">
+               AJAX
+            </a>
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/09/01</span>
+    </span>
+</div>
+
+        </div>
+
+        <div class="post-permalink"> 
+            <a href="/2017/09/01/018-AJAX之跨域问题/" class="btn btn-default">阅读全文</a>
+        </div>
+    </footer>
 </article>
 
 
@@ -333,7 +541,7 @@ Markdown是什么？谁创造了它？为什么要使用它？怎么使用？谁
     
         <div class="post-media">
             <a href="/2017/08/22/017-前端开发面试题2/">
-                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/93838f95ly1fphyndr3e1j20b40b4abg.jpg"   alt="前端开发面试题2">
+                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/93838f95ly1fphyndr3e1j20b40b4abg.jpg"   alt="前端开发面试题2"> 
             </a>
         </div>
     
@@ -353,9 +561,45 @@ Markdown是什么？谁创造了它？为什么要使用它？怎么使用？谁
                 web前端开发面试题
 前端一些基础的知识…
             
-        </p>
+        </p> 
     </div>
+    <footer class="post-footer clearfix">
+        <div class="pull-left tag-list">
+            <div class="post-meta">
     
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/前端">
+            前端
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a href="/tags/面试题">
+               面试题
+            </a>
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/08/22</span>
+    </span>
+</div>
+
+        </div>
+
+        <div class="post-permalink"> 
+            <a href="/2017/08/22/017-前端开发面试题2/" class="btn btn-default">阅读全文</a>
+        </div>
+    </footer>
 </article>
 
 
@@ -363,7 +607,7 @@ Markdown是什么？谁创造了它？为什么要使用它？怎么使用？谁
     
         <div class="post-media">
             <a href="/2017/08/10/016-nodejs和npm关系/">
-                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/93838f95ly1fphytiwl3wj20go08cdgn.jpg"   alt="nodejs和npm关系">
+                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/93838f95ly1fphytiwl3wj20go08cdgn.jpg"   alt="nodejs和npm关系"> 
             </a>
         </div>
     
@@ -383,9 +627,45 @@ Markdown是什么？谁创造了它？为什么要使用它？怎么使用？谁
                 什么是node.js？什么是npm？推荐资料
 Node.js是JavaScript的一种运行环境…
             
-        </p>
+        </p> 
     </div>
+    <footer class="post-footer clearfix">
+        <div class="pull-left tag-list">
+            <div class="post-meta">
     
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/前端">
+            前端
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a href="/tags/node.js">
+               node.js
+            </a>
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/08/10</span>
+    </span>
+</div>
+
+        </div>
+
+        <div class="post-permalink"> 
+            <a href="/2017/08/10/016-nodejs和npm关系/" class="btn btn-default">阅读全文</a>
+        </div>
+    </footer>
 </article>
 
 
@@ -393,7 +673,7 @@ Node.js是JavaScript的一种运行环境…
     
         <div class="post-media">
             <a href="/2017/08/05/015-使用vue路由做出一个可以切换的demo/">
-                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/93838f95ly1fphz4n5mpnj20e00b4wg1.jpg"   alt="使用vue路由做出一个可以切换的demo">
+                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/93838f95ly1fphz4n5mpnj20e00b4wg1.jpg"   alt="使用vue路由做出一个可以切换的demo"> 
             </a>
         </div>
     
@@ -413,9 +693,45 @@ Node.js是JavaScript的一种运行环境…
                 Vue.js小demo
 使用Vue.js做出的小demo…
             
-        </p>
+        </p> 
     </div>
+    <footer class="post-footer clearfix">
+        <div class="pull-left tag-list">
+            <div class="post-meta">
     
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/前端">
+            前端
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a href="/tags/Vue.js">
+               Vue.js
+            </a>
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/08/05</span>
+    </span>
+</div>
+
+        </div>
+
+        <div class="post-permalink"> 
+            <a href="/2017/08/05/015-使用vue路由做出一个可以切换的demo/" class="btn btn-default">阅读全文</a>
+        </div>
+    </footer>
 </article>
 
 
@@ -423,7 +739,7 @@ Node.js是JavaScript的一种运行环境…
     
         <div class="post-media">
             <a href="/2017/07/30/014-认识AJAX/">
-                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/93838f95ly1fphyqadqggj20dw0dwadw.jpg"   alt="认识AJAX">
+                <img class="img-ajax" src="/img/loading.gif"  data-src="https://ws1.sinaimg.cn/large/93838f95ly1fphyqadqggj20dw0dwadw.jpg"   alt="认识AJAX"> 
             </a>
         </div>
     
@@ -443,9 +759,45 @@ Node.js是JavaScript的一种运行环境…
                 认识AJAX
 不可忽视的ajax…
             
-        </p>
+        </p> 
     </div>
+    <footer class="post-footer clearfix">
+        <div class="pull-left tag-list">
+            <div class="post-meta">
     
+    
+    <span class="categories-meta fa-wrap">
+        <i class="fa fa-folder-open-o"></i>
+        <a href="/categories/前端">
+            前端
+        </a>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-tags"></i>
+        <span class="tags-meta">
+            
+            <a href="/tags/AJAX">
+               AJAX
+            </a>
+            
+        </span>
+    </span>
+    
+    
+    <span class="fa-wrap">
+        <i class="fa fa-clock-o"></i>
+        <span class="date-meta">2017/07/30</span>
+    </span>
+</div>
+
+        </div>
+
+        <div class="post-permalink"> 
+            <a href="/2017/07/30/014-认识AJAX/" class="btn btn-default">阅读全文</a>
+        </div>
+    </footer>
 </article>
 
 
@@ -461,7 +813,6 @@ Node.js是JavaScript的一种运行环境…
 
                 </main>
                 
-                    
     <aside class="col-md-4 sidebar">
         
         
@@ -537,7 +888,7 @@ Node.js是JavaScript的一种运行环境…
         
     <div class="widget">
         <h3 class="title">分类</h3>
-        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JS课程/"><i class="fa" aria-hidden="true">JS课程</i></a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/"><i class="fa" aria-hidden="true">前端</i></a><span class="category-list-count">24</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/后端/"><i class="fa" aria-hidden="true">后端</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/工具/"><i class="fa" aria-hidden="true">工具</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活/"><i class="fa" aria-hidden="true">生活</i></a><span class="category-list-count">1</span></li></ul>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JS课程/"><i class="fa" aria-hidden="true">JS课程</i></a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/"><i class="fa" aria-hidden="true">前端</i></a><span class="category-list-count">24</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/后端/"><i class="fa" aria-hidden="true">后端</i></a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link current" href="/categories/工具/"><i class="fa" aria-hidden="true">工具</i></a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活/"><i class="fa" aria-hidden="true">生活</i></a><span class="category-list-count">1</span></li></ul>
     </div>
 
 
@@ -628,7 +979,6 @@ Node.js是JavaScript的一种运行环境…
         
     </aside>
 
-                
             </div>
         </div>
     </section>
@@ -639,11 +989,7 @@ Node.js是JavaScript的一种运行环境…
     </div>
 </footer>
 
-<!--<a id="toc-btn">
-    <i class="fa fa-bars"></i>
-</a>-->
-
-<a id="back-to-top" class="icon-btn hide">
+<a id="back-to-top" class="hide">
 	<i class="fa fa-chevron-up"></i>
 </a>
 
