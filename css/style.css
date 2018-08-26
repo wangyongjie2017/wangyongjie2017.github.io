@@ -801,6 +801,44 @@ pre {
   padding: 20px;
   margin-bottom: 20px;
 }
+#comments .v .vheader .vinput {
+  border: none;
+  border-bottom: 1px solid #f0f0f0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  font-size: .9em;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+#comments .v .vheader .vinput:focus {
+  border-bottom: 1px solid #e67e22;
+}
+#comments .v .vheader .vinput:hover {
+  border-bottom: 1px solid #e67e22;
+}
+#comments .v .veditor {
+  font-size: 1em;
+}
+#comments .v .vcontrol .vbtn {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  padding: .5rem 2rem;
+  color: #808080;
+}
+#comments .v .vcontrol .vbtn:hover {
+  color: #e67e22;
+  border-color: #e67e22;
+}
+#comments .v .item3 input {
+  width: 31%;
+  margin: 0 1%;
+}
+#comments .v .item2 input {
+  width: 48%;
+  margin: 0 1%;
+}
 /* prev and next link */
 .prev-next-wrap {
   margin-bottom: 25px;
