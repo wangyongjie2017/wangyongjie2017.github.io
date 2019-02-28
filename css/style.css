@@ -1560,9 +1560,10 @@ pre .javascript .function {
     margin: 0 10px 0 auto;
     float: left;
   }
-  .post-footer,
+  
+  /* .post-footer, */
   #article-toc {
-    /* display: none; */
+    display: none;
   }
   .content-wrap .m-post {
     padding: 0px;
