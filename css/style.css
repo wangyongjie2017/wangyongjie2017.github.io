@@ -460,7 +460,7 @@ pre {
   position: relative;
   margin-right: 15px;
   width: 220px;
-  height: 160px;
+  height: 220px;
   float: left;
   overflow: hidden;
 }
@@ -1554,7 +1554,7 @@ pre .javascript .function {
   }
   .post .post-media {
     float: none;
-    width: 100%;
+    width: 30%;
     height: auto;
     margin: 0 0 1em 0;
   }
