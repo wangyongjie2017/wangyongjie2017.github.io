@@ -1556,11 +1556,13 @@ pre .javascript .function {
     float: none;
     width: 30%;
     height: auto;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    margin: 0 10px 0 auto;
+    float: left;
   }
   .post-footer,
   #article-toc {
-    display: none;
+    /* display: none; */
   }
   .content-wrap .m-post {
     padding: 0px;
