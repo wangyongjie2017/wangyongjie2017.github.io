@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>王永杰的个人博客</title>
+  <title>王永杰的网络日志</title>
   
   <subtitle>前端美男子</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wangyongjie.top/"/>
-  <updated>2019-02-28T12:19:48.260Z</updated>
+  <updated>2019-02-28T15:03:58.642Z</updated>
   <id>http://wangyongjie.top/</id>
   
   <author>
@@ -17,23 +17,30 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://wangyongjie.top/blog/16107/"/>
-    <id>http://wangyongjie.top/blog/16107/</id>
-    <published>2019-02-28T06:34:45.588Z</published>
-    <updated>2019-02-28T12:19:48.260Z</updated>
+    <title>在线系统UZER</title>
+    <link href="http://wangyongjie.top/blog/39858/"/>
+    <id>http://wangyongjie.top/blog/39858/</id>
+    <published>2016-07-22T15:13:38.000Z</published>
+    <updated>2019-02-28T15:03:58.642Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>无需安装不占内存，集合PPT、PS、AI等19个常用软件，最重要的还能翻墙</p></blockquote><h5 id="nbsp-nbsp-nbsp-nbsp-UZER-ME是一款云端超级应用空间，无需安装任何插件，不占用本地内存，打开浏览器登录网站，就能直接使用平台所有软件，几乎没有卡顿。"><a href="#nbsp-nbsp-nbsp-nbsp-UZER-ME是一款云端超级应用空间，无需安装任何插件，不占用本地内存，打开浏览器登录网站，就能直接使用平台所有软件，几乎没有卡顿。" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp; UZER.ME是一款云端超级应用空间，无需安装任何插件，不占用本地内存，打开浏览器登录网站，就能直接使用平台所有软件，几乎没有卡顿。"></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://uzer.me/" target="_blank" rel="noopener">UZER.ME</a>是一款云端超级应用空间，无需安装任何插件，不占用本地内存，打开浏览器登录网站，就能直接使用平台所有软件，几乎没有卡顿。</h5><h5 id="nbsp-nbsp-nbsp-nbsp-UZER-ME在云端空间部署了19个常用的大型软件，包括Phontoshop、Ai、CAD、Firefox、WPS-Word、WPS-PPT、WPS-Excel、pdf、Xmind、Project、MSOffice等。"><a href="#nbsp-nbsp-nbsp-nbsp-UZER-ME在云端空间部署了19个常用的大型软件，包括Phontoshop、Ai、CAD、Firefox、WPS-Word、WPS-PPT、WPS-Excel、pdf、Xmind、Project、MSOffice等。" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp; UZER.ME在云端空间部署了19个常用的大型软件，包括Phontoshop、Ai、CAD、Firefox、WPS Word、WPS PPT、WPS Excel、pdf、Xmind、Project、MSOffice等。"></a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://uzer.me/" target="_blank" rel="noopener">UZER.ME</a>在云端空间部署了19个常用的大型软件，包括Phontoshop、Ai、CAD、Firefox、WPS Word、WPS PPT、WPS Excel、pdf、Xmind、Project、MSOffice等。</h5><h5 id="nbsp-nbsp-nbsp-nbsp-无需安装不占内存，集合PPT、PS、AI等19个常用软件，国产良心！"><a href="#nbsp-nbsp-nbsp-nbsp-无需安装不占内存，集合PPT、PS、AI等19个常用软件，国产良心！" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp; 无需安装不占内存，集合PPT、PS、AI等19个常用软件，国产良心！"></a>&nbsp;&nbsp;&nbsp;&nbsp; 无需安装不占内存，集合PPT、PS、AI等19个常用软件，国产良心！</h5><h5 id="nbsp-nbsp-nbsp-nbsp-先来张自己翻的图："><a href="#nbsp-nbsp-nbsp-nbsp-先来张自己翻的图：" class="headerlink" title="&nbsp;&nbsp;&nbsp;&nbsp; 先来张自己翻的图："></a>&nbsp;&nbsp;&nbsp;&nbsp; 先来张自己翻的图：</h5><p><img src="https://ws1.sinaimg.cn/large/93838f95ly1fpnzioyxsmj210g0hxk30.jpg" alt></p><h6 id="包含如下超级功能："><a href="#包含如下超级功能：" class="headerlink" title="包含如下超级功能："></a>包含如下超级功能：</h6><p><img src="https://ws1.sinaimg.cn/large/93838f95ly1fpnzj2q01ej210j0ii0z3.jpg" alt></p><ol><li><p>多人在线协作平台所有软件都支持多人在不同设备上一起编辑文档，随时随地高效协作，只需一个链接分享，即可多人同时在线编辑。<br><img src="https://ws1.sinaimg.cn/large/93838f95ly1fpnzlfifa7j20i00cndhc.jpg" alt></p></li><li><p>运行流畅，占用内存小如果电脑配置很渣，只需一个浏览器和足够的网速，这些程序会比本地运行还要流畅。而且即使有突发情况下，自己电脑不方便用，用来救急也是不错的选择。</p></li><li>级文档库寻找编辑记录；文档隐私安全、支持下载、编辑、只读、限时功能的文档分享等。</li></ol><p><img src="https://ws1.sinaimg.cn/large/93838f95ly1fpnzlrbjxuj20jc06ijs3.jpg" alt></p><ol start="4"><li>访问浏览国外网站借助这款工具里的firefox浏览器，不用科学上网软件就能浏览国外的网站，这是给喜欢经常访问国外网站用户的一个惊喜！</li></ol><p><img src="https://ws1.sinaimg.cn/large/93838f95ly1fpnznduujtj20zv0hfapx.jpg" alt></p><h6 id="除了PC端的网页版，Uzer-me官方团队还开发出了IOS与Andriod版本的app，和网页版相比稍微逊色点。"><a href="#除了PC端的网页版，Uzer-me官方团队还开发出了IOS与Andriod版本的app，和网页版相比稍微逊色点。" class="headerlink" title="除了PC端的网页版，Uzer.me官方团队还开发出了IOS与Andriod版本的app，和网页版相比稍微逊色点。"></a>除了PC端的网页版，Uzer.me官方团队还开发出了IOS与Andriod版本的app，和网页版相比稍微逊色点。</h6>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+        &lt;blockquote&gt;
+&lt;p&gt;无需安装不占内存，集合PPT、PS、AI等19个常用软件，最重要的还能翻墙&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h5 id=&quot;nbsp-nbsp-nbsp-nbsp-UZER-ME是一款云端超级应用空间，无需安装任何插件，不占用本地内存，打开浏览
       
     
     </summary>
     
+      <category term="工具" scheme="http://wangyongjie.top/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="工具" scheme="http://wangyongjie.top/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
@@ -42,7 +49,7 @@
     <link href="http://wangyongjie.top/blog/43102/"/>
     <id>http://wangyongjie.top/blog/43102/</id>
     <published>2016-06-03T07:50:41.000Z</published>
-    <updated>2019-02-28T12:18:59.116Z</updated>
+    <updated>2019-02-28T14:57:21.139Z</updated>
     
     <content type="html"><![CDATA[<h2 id="一、科学上网工具："><a href="#一、科学上网工具：" class="headerlink" title="一、科学上网工具："></a>一、科学上网工具：</h2><h3 id="1-SwitchHosts"><a href="#1-SwitchHosts" class="headerlink" title="1. SwitchHosts"></a>1. <a href="https://oldj.github.io/SwitchHosts/" target="_blank" rel="noopener">SwitchHosts</a></h3><h3 id="2-shadowsocks"><a href="#2-shadowsocks" class="headerlink" title="2. shadowsocks"></a>2. <a href="https://github.com/shadowsocks/shadowsocks/wiki/Shadowsocks-%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E" target="_blank" rel="noopener">shadowsocks</a></h3><h3 id="3-ios科学上网"><a href="#3-ios科学上网" class="headerlink" title="3. ios科学上网"></a>3. <a href="https://github.com/shadowsocks/shadowsocks-iOS/wiki/Help" target="_blank" rel="noopener">ios科学上网</a></h3><h3 id="4-其他"><a href="#4-其他" class="headerlink" title="4. 其他"></a>4. <a href="http://baijiahao.baidu.com/s?id=1600201810616865311&amp;wfr=spider&amp;for=pc" target="_blank" rel="noopener">其他</a></h3><h2 id="二、科学上网工具帐号："><a href="#二、科学上网工具帐号：" class="headerlink" title="二、科学上网工具帐号："></a>二、科学上网工具帐号：</h2><h3 id="1-hosts-文件持续更新"><a href="#1-hosts-文件持续更新" class="headerlink" title="1. hosts 文件持续更新"></a>1. <a href="https://laod.cn/hosts/2018-google-hosts.html" target="_blank" rel="noopener">hosts 文件持续更新</a></h3><h3 id="2-ss免费账号持续更新"><a href="#2-ss免费账号持续更新" class="headerlink" title="2. ss免费账号持续更新"></a>2. <a href="https://github.com/Alvin9999/new-pac/wiki/ss%E5%85%8D%E8%B4%B9%E8%B4%A6%E5%8F%B7" target="_blank" rel="noopener">ss免费账号持续更新</a></h3><h2 id="三、科学上网方法："><a href="#三、科学上网方法：" class="headerlink" title="三、科学上网方法："></a>三、科学上网方法：</h2><h3 id="1-苹果各国id共享你懂得"><a href="#1-苹果各国id共享你懂得" class="headerlink" title="1. 苹果各国id共享你懂得"></a>1. <a href="https://tieba.baidu.com/p/5496214213?pn=9" target="_blank" rel="noopener">苹果各国id共享你懂得</a></h3><p><img src="https://i.imgur.com/cRtVkpA.jpg" alt="app id"></p><h2 id="四、科学上网博客："><a href="#四、科学上网博客：" class="headerlink" title="四、科学上网博客："></a>四、科学上网博客：</h2><h3 id="1-老D博客"><a href="#1-老D博客" class="headerlink" title="1. 老D博客"></a>1. <a href="https://laod.cn/" target="_blank" rel="noopener">老D博客</a></h3><h3 id="2-逗比根据地"><a href="#2-逗比根据地" class="headerlink" title="2. 逗比根据地"></a>2. <a href="https://doub.io/" target="_blank" rel="noopener">逗比根据地</a></h3><h3 id="3-科学上网"><a href="#3-科学上网" class="headerlink" title="3. 科学上网"></a>3. <a href="https://ssr.tips/" target="_blank" rel="noopener">科学上网</a></h3><h3 id="4-host文件"><a href="#4-host文件" class="headerlink" title="4. host文件"></a>4. <a href="http://htcui.com/hosts" target="_blank" rel="noopener">host文件</a></h3><h3 id="5-主机博客"><a href="#5-主机博客" class="headerlink" title="5. 主机博客"></a>5. <a href="https://www.zhujiboke.com/" target="_blank" rel="noopener">主机博客</a></h3><h2 id="五、MAC"><a href="#五、MAC" class="headerlink" title="五、MAC"></a>五、MAC</h2><h3 id="1-城通网盘"><a href="#1-城通网盘" class="headerlink" title="1. 城通网盘"></a>1. <a href="http://share.pipipan.com/" target="_blank" rel="noopener">城通网盘</a></h3><h3 id="2-史蒂芬周的博客"><a href="#2-史蒂芬周的博客" class="headerlink" title="2. 史蒂芬周的博客"></a>2. <a href="http://www.sdifen.com/" target="_blank" rel="noopener">史蒂芬周的博客</a></h3><h3 id="3-爱情守望者"><a href="#3-爱情守望者" class="headerlink" title="3. 爱情守望者"></a>3. <a href="https://www.waitsun.com/" target="_blank" rel="noopener">爱情守望者</a></h3><h3 id="4-拉普拉斯"><a href="#4-拉普拉斯" class="headerlink" title="4. 拉普拉斯"></a>4. <a href="http://www.lapulace.com/" target="_blank" rel="noopener">拉普拉斯</a></h3><h3 id="5-mac-bi"><a href="#5-mac-bi" class="headerlink" title="5. mac.bi"></a>5. <a href="https://mac.bi/" target="_blank" rel="noopener">mac.bi</a></h3><h3 id="6-MacGG"><a href="#6-MacGG" class="headerlink" title="6. MacGG"></a>6. <a href="https://www.macgg.com/" target="_blank" rel="noopener">MacGG</a></h3>]]></content>
     
