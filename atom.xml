@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wangyongjie.top/"/>
-  <updated>2019-02-28T07:37:31.271Z</updated>
+  <updated>2019-02-28T12:19:48.260Z</updated>
   <id>http://wangyongjie.top/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://wangyongjie.top/posts/16107/"/>
-    <id>http://wangyongjie.top/posts/16107/</id>
+    <link href="http://wangyongjie.top/archives/16107/"/>
+    <id>http://wangyongjie.top/archives/16107/</id>
     <published>2019-02-28T06:34:45.588Z</published>
-    <updated>2019-02-28T07:37:31.271Z</updated>
+    <updated>2019-02-28T12:19:48.260Z</updated>
     
     <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
     
@@ -39,10 +39,10 @@
   
   <entry>
     <title>科学上网</title>
-    <link href="http://wangyongjie.top/posts/43102/"/>
-    <id>http://wangyongjie.top/posts/43102/</id>
+    <link href="http://wangyongjie.top/archives/43102/"/>
+    <id>http://wangyongjie.top/archives/43102/</id>
     <published>2016-06-03T07:50:41.000Z</published>
-    <updated>2019-02-28T12:10:28.362Z</updated>
+    <updated>2019-02-28T12:18:59.116Z</updated>
     
     <content type="html"><![CDATA[<h2 id="一、科学上网工具："><a href="#一、科学上网工具：" class="headerlink" title="一、科学上网工具："></a>一、科学上网工具：</h2><h3 id="1-SwitchHosts"><a href="#1-SwitchHosts" class="headerlink" title="1. SwitchHosts"></a>1. <a href="https://oldj.github.io/SwitchHosts/" target="_blank" rel="noopener">SwitchHosts</a></h3><h3 id="2-shadowsocks"><a href="#2-shadowsocks" class="headerlink" title="2. shadowsocks"></a>2. <a href="https://github.com/shadowsocks/shadowsocks/wiki/Shadowsocks-%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E" target="_blank" rel="noopener">shadowsocks</a></h3><h3 id="3-ios科学上网"><a href="#3-ios科学上网" class="headerlink" title="3. ios科学上网"></a>3. <a href="https://github.com/shadowsocks/shadowsocks-iOS/wiki/Help" target="_blank" rel="noopener">ios科学上网</a></h3><h3 id="4-其他"><a href="#4-其他" class="headerlink" title="4. 其他"></a>4. <a href="http://baijiahao.baidu.com/s?id=1600201810616865311&amp;wfr=spider&amp;for=pc" target="_blank" rel="noopener">其他</a></h3><h2 id="二、科学上网工具帐号："><a href="#二、科学上网工具帐号：" class="headerlink" title="二、科学上网工具帐号："></a>二、科学上网工具帐号：</h2><h3 id="1-hosts-文件持续更新"><a href="#1-hosts-文件持续更新" class="headerlink" title="1. hosts 文件持续更新"></a>1. <a href="https://laod.cn/hosts/2018-google-hosts.html" target="_blank" rel="noopener">hosts 文件持续更新</a></h3><h3 id="2-ss免费账号持续更新"><a href="#2-ss免费账号持续更新" class="headerlink" title="2. ss免费账号持续更新"></a>2. <a href="https://github.com/Alvin9999/new-pac/wiki/ss%E5%85%8D%E8%B4%B9%E8%B4%A6%E5%8F%B7" target="_blank" rel="noopener">ss免费账号持续更新</a></h3><h2 id="三、科学上网方法："><a href="#三、科学上网方法：" class="headerlink" title="三、科学上网方法："></a>三、科学上网方法：</h2><h3 id="1-苹果各国id共享你懂得"><a href="#1-苹果各国id共享你懂得" class="headerlink" title="1. 苹果各国id共享你懂得"></a>1. <a href="https://tieba.baidu.com/p/5496214213?pn=9" target="_blank" rel="noopener">苹果各国id共享你懂得</a></h3><p><img src="https://i.imgur.com/cRtVkpA.jpg" alt="app id"></p><h2 id="四、科学上网博客："><a href="#四、科学上网博客：" class="headerlink" title="四、科学上网博客："></a>四、科学上网博客：</h2><h3 id="1-老D博客"><a href="#1-老D博客" class="headerlink" title="1. 老D博客"></a>1. <a href="https://laod.cn/" target="_blank" rel="noopener">老D博客</a></h3><h3 id="2-逗比根据地"><a href="#2-逗比根据地" class="headerlink" title="2. 逗比根据地"></a>2. <a href="https://doub.io/" target="_blank" rel="noopener">逗比根据地</a></h3><h3 id="3-科学上网"><a href="#3-科学上网" class="headerlink" title="3. 科学上网"></a>3. <a href="https://ssr.tips/" target="_blank" rel="noopener">科学上网</a></h3><h3 id="4-host文件"><a href="#4-host文件" class="headerlink" title="4. host文件"></a>4. <a href="http://htcui.com/hosts" target="_blank" rel="noopener">host文件</a></h3><h3 id="5-主机博客"><a href="#5-主机博客" class="headerlink" title="5. 主机博客"></a>5. <a href="https://www.zhujiboke.com/" target="_blank" rel="noopener">主机博客</a></h3><h2 id="五、MAC"><a href="#五、MAC" class="headerlink" title="五、MAC"></a>五、MAC</h2><h3 id="1-城通网盘"><a href="#1-城通网盘" class="headerlink" title="1. 城通网盘"></a>1. <a href="http://share.pipipan.com/" target="_blank" rel="noopener">城通网盘</a></h3><h3 id="2-史蒂芬周的博客"><a href="#2-史蒂芬周的博客" class="headerlink" title="2. 史蒂芬周的博客"></a>2. <a href="http://www.sdifen.com/" target="_blank" rel="noopener">史蒂芬周的博客</a></h3><h3 id="3-爱情守望者"><a href="#3-爱情守望者" class="headerlink" title="3. 爱情守望者"></a>3. <a href="https://www.waitsun.com/" target="_blank" rel="noopener">爱情守望者</a></h3><h3 id="4-拉普拉斯"><a href="#4-拉普拉斯" class="headerlink" title="4. 拉普拉斯"></a>4. <a href="http://www.lapulace.com/" target="_blank" rel="noopener">拉普拉斯</a></h3><h3 id="5-mac-bi"><a href="#5-mac-bi" class="headerlink" title="5. mac.bi"></a>5. <a href="https://mac.bi/" target="_blank" rel="noopener">mac.bi</a></h3><h3 id="6-MacGG"><a href="#6-MacGG" class="headerlink" title="6. MacGG"></a>6. <a href="https://www.macgg.com/" target="_blank" rel="noopener">MacGG</a></h3>]]></content>
     
