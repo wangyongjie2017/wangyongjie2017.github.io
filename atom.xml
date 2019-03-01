@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wangyongjie.top/"/>
-  <updated>2019-03-01T06:20:21.664Z</updated>
+  <updated>2019-03-01T05:58:15.805Z</updated>
   <id>http://wangyongjie.top/</id>
   
   <author>
@@ -15,49 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>留言板</title>
-    <link href="http://wangyongjie.top/blog/message/"/>
-    <id>http://wangyongjie.top/blog/message/</id>
-    <published>2019-03-01T05:48:23.710Z</published>
-    <updated>2019-03-01T06:20:21.664Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="留言板"><a href="#留言板" class="headerlink" title="留言板"></a>留言板</h1>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;留言板&quot;&gt;&lt;a href=&quot;#留言板&quot; class=&quot;headerlink&quot; title=&quot;留言板&quot;&gt;&lt;/a&gt;留言板&lt;/h1&gt;
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>关于我.md</title>
-    <link href="http://wangyongjie.top/blog/about/"/>
-    <id>http://wangyongjie.top/blog/about/</id>
-    <published>2019-03-01T05:31:38.389Z</published>
-    <updated>2019-03-01T06:26:10.950Z</updated>
-    
-    <content type="html"><![CDATA[<p>欢迎来到这里。</p><h2 id="关于博客"><a href="#关于博客" class="headerlink" title="关于博客"></a>关于博客</h2><p>本站采用<a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo3.8.0</a>框架，使用<a href="https://github.com/shenliyang/hexo-theme-snippet" target="_blank" rel="noopener">Snippet</a>主题，托管于GitHub。</p><p>搭建过程中按时做了笔记总结，并同步更新于<a href="https://www.wangyongjie.top" target="_blank" rel="noopener">hexo使用笔记（持续更新）</a>，作为日后参考查看。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;欢迎来到这里。&lt;/p&gt;
-&lt;h2 id=&quot;关于博客&quot;&gt;&lt;a href=&quot;#关于博客&quot; class=&quot;headerlink&quot; title=&quot;关于博客&quot;&gt;&lt;/a&gt;关于博客&lt;/h2&gt;&lt;p&gt;本站采用&lt;a href=&quot;https://hexo.io/zh-cn/&quot; target=&quot;_b
-      
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>在线系统UZER</title>
@@ -109,6 +66,49 @@
     
     
       <category term="科学上网" scheme="http://wangyongjie.top/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>留言板</title>
+    <link href="http://wangyongjie.top/blog/message/"/>
+    <id>http://wangyongjie.top/blog/message/</id>
+    <published>2014-10-02T11:22:18.000Z</published>
+    <updated>2019-03-01T07:00:39.643Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="留言板"><a href="#留言板" class="headerlink" title="留言板"></a>留言板</h1>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;留言板&quot;&gt;&lt;a href=&quot;#留言板&quot; class=&quot;headerlink&quot; title=&quot;留言板&quot;&gt;&lt;/a&gt;留言板&lt;/h1&gt;
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>关于我.md</title>
+    <link href="http://wangyongjie.top/blog/about/"/>
+    <id>http://wangyongjie.top/blog/about/</id>
+    <published>2014-10-01T14:34:51.000Z</published>
+    <updated>2019-03-01T07:01:00.149Z</updated>
+    
+    <content type="html"><![CDATA[<p>欢迎来到这里。</p><h2 id="关于博客"><a href="#关于博客" class="headerlink" title="关于博客"></a>关于博客</h2><p>本站采用<a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo3.8.0</a>框架，使用<a href="https://github.com/shenliyang/hexo-theme-snippet" target="_blank" rel="noopener">Snippet</a>主题，托管于GitHub。</p><p>搭建过程中按时做了笔记总结，并同步更新于<a href="https://www.wangyongjie.top" target="_blank" rel="noopener">hexo使用笔记（持续更新）</a>，作为日后参考查看。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;欢迎来到这里。&lt;/p&gt;
+&lt;h2 id=&quot;关于博客&quot;&gt;&lt;a href=&quot;#关于博客&quot; class=&quot;headerlink&quot; title=&quot;关于博客&quot;&gt;&lt;/a&gt;关于博客&lt;/h2&gt;&lt;p&gt;本站采用&lt;a href=&quot;https://hexo.io/zh-cn/&quot; target=&quot;_b
+      
+    
+    </summary>
+    
     
   </entry>
   
