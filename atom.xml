@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wangyongjie.top/"/>
-  <updated>2019-03-01T05:54:39.024Z</updated>
+  <updated>2019-03-01T06:20:05.644Z</updated>
   <id>http://wangyongjie.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://wangyongjie.top/message/"/>
     <id>http://wangyongjie.top/message/</id>
     <published>2019-03-01T05:48:23.710Z</published>
-    <updated>2019-03-01T05:54:39.024Z</updated>
+    <updated>2019-03-01T06:20:05.644Z</updated>
     
     <content type="html"><![CDATA[<h1 id="留言板"><a href="#留言板" class="headerlink" title="留言板"></a>留言板</h1>]]></content>
     
@@ -34,8 +34,6 @@
     
     </summary>
     
-      <category term="message" scheme="http://wangyongjie.top/categories/message/"/>
-    
     
   </entry>
   
@@ -44,7 +42,7 @@
     <link href="http://wangyongjie.top/about/"/>
     <id>http://wangyongjie.top/about/</id>
     <published>2019-03-01T05:31:38.389Z</published>
-    <updated>2019-03-01T05:50:28.858Z</updated>
+    <updated>2019-03-01T06:20:11.698Z</updated>
     
     <content type="html"><![CDATA[<p>欢迎来到这里。</p><h2 id="关于博客"><a href="#关于博客" class="headerlink" title="关于博客"></a>关于博客</h2><p>本站采用<a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo3.8.0</a>框架，使用<a href="https://github.com/shenliyang/hexo-theme-snippet" target="_blank" rel="noopener">Snippet</a>主题，托管于GitHub。</p><p>搭建过程中按时做了笔记总结，并同步更新于<a href="https://www.wangyongjie.top" target="_blank" rel="noopener">hexo使用笔记（持续更新）</a>，作为日后参考查看。</p>]]></content>
     
@@ -57,8 +55,6 @@
       
     
     </summary>
-    
-      <category term="about" scheme="http://wangyongjie.top/categories/about/"/>
     
     
   </entry>
