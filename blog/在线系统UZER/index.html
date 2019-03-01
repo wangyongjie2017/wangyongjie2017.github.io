@@ -248,7 +248,7 @@
 <div class="article-nav prev-next-wrap clearfix">
     
     
-        <a href="/科学上网/" class="next-post btn btn-default" title="科学上网">
+        <a href="/blog/科学上网/" class="next-post btn btn-default" title="科学上网">
             <span class="hidden-lg">下一篇</span>
             <span class="hidden-xs">科学上网</span><i class="fa fa-angle-right fa-fw"></i>
         </a>
@@ -259,18 +259,26 @@
     <div id="comments">
         
 	
-<div id="lv-container" data-id="city" data-uid="MTAyMC8zNDc5OS8xMTMzNg==">
-  <script type="text/javascript">
-     (function(d, s) {
-         var j, e = d.getElementsByTagName(s)[0];
-         if (typeof LivereTower === 'function') { return; }
-         j = d.createElement(s);
-         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-         j.async = true;
-         e.parentNode.insertBefore(j, e);
-     })(document, 'script');
-  </script>
-</div>
+    <div id="vcomments" class="valine"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="/assets/valine.min.js"></script>
+
+    <script>
+        new Valine({
+            av: AV,
+            el: '#vcomments',
+            appId: 'uhBnUsDTn7pw9t1ryNUbKCck-gzGzoHsz',
+            appKey: 'oihjqHLhGwddYQLHJ7zG3kdy',
+            placeholder: '点击这里,留下想对我说的话吧。',
+            notify: true,
+            verify: false,
+            avatar: 'mm',
+            meta: 'nick,mail'.split(','),
+            pageSize: '10',
+            path: window.location.pathname,
+            lang: 'zh-CN'.toLowerCase()
+        })
+    </script>
 
 
     </div>
