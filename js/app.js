@@ -120,6 +120,8 @@ new Valine({
     el: '#vcomments-message',
     appId: 'kUeSMaqt5bTNbbEJfWcRK0nU-gzGzoHsz',
     appKey: '4T2482n3l2F94os2LSrdDGGV',
+    meta: ['nick','mail'],
+    visitor: true, // 阅读量统计
     notify: true,   //邮件提醒
     verify: true,  //验证码服务
     avatar: 'monsterid',
