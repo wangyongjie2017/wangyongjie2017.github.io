@@ -2,7 +2,6 @@
 /* 导航标签样式--自定义部分 */
 #webnav {
     overflow: hidden;
-    margin-bottom: 50px;
 }
 
 #webnav br {
@@ -36,7 +35,6 @@
     #webnav a {
         padding: 2px 6px;
         font-size: 10px;
-        margin-bottom: 0px;
     }
 }
 
@@ -44,6 +42,5 @@
     #webnav a {
         padding: 2px 6px;
         font-size: 10px;
-        margin-bottom: 0px;
     }
 }
