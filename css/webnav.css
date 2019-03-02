@@ -1,0 +1,24 @@
+
+/* 导航标签样式--自定义部分 */
+#webnav {
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+#webnav br {
+    display: none;
+}
+
+#webnav a {
+    float: left;
+    width: auto;
+    padding: 5px 24px;
+    background: #808080;
+    margin: 4px 0 4px 4px;
+    color: #fff;
+    text-align: center;
+}
+
+#webnav:hover a {
+    background: #e87e01;
+}
