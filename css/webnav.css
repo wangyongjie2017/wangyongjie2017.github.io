@@ -17,8 +17,33 @@
     margin: 4px 0 4px 4px;
     color: #fff;
     text-align: center;
+    border-radius: 5px;
 }
 
-#webnav:hover a {
+#webnav a:hover {
     background: #e87e01;
+}
+
+@media (max-width:1280px) {
+    
+}
+
+@media (max-width:1024px) {
+
+}
+
+@media (max-width:640px) {
+    #webnav a {
+        padding: 2px 6px;
+        font-size: 10px;
+        margin-bottom: 0px;
+    }
+}
+
+@media (max-width:320px) {
+    #webnav a {
+        padding: 2px 6px;
+        font-size: 10px;
+        margin-bottom: 0px;
+    }
 }
