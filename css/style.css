@@ -1559,6 +1559,8 @@ pre .javascript .function {
     /* margin: 0 auto; */
     margin: 0 10px 0 auto;
     float: left;
+    /* 自定义 */
+    height: 92px;
   }
   
   /* .post-footer, */
