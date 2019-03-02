@@ -2,9 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://wangyongjie.top/blog/%E5%B8%B8%E7%94%A8%E5%AF%BC%E8%88%AA%E5%90%88%E9%9B%86/</loc>
+    
+    <lastmod>2019-03-02T08:03:39.927Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wangyongjie.top/nav/index.html</loc>
+    
+    <lastmod>2019-03-02T08:02:36.678Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wangyongjie.top/about/index.html</loc>
+    
+    <lastmod>2019-03-02T07:51:05.323Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://wangyongjie.top/message/index.html</loc>
+    
+    <lastmod>2019-03-02T07:50:58.933Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://wangyongjie.top/blog/hexo%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</loc>
     
-    <lastmod>2019-03-02T07:11:08.783Z</lastmod>
+    <lastmod>2019-03-02T07:19:02.282Z</lastmod>
     
   </url>
   
@@ -26,20 +54,6 @@
     <loc>http://wangyongjie.top/blog/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</loc>
     
     <lastmod>2019-03-02T03:30:38.140Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wangyongjie.top/message/index.html</loc>
-    
-    <lastmod>2019-03-02T02:39:01.252Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wangyongjie.top/about/index.html</loc>
-    
-    <lastmod>2019-03-01T09:55:39.628Z</lastmod>
     
   </url>
   
