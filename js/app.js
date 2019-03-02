@@ -125,6 +125,6 @@ new Valine({
     notify: true,   //邮件提醒
     verify: true,  //验证码服务
     avatar: 'monsterid',
-    placeholder: '说点什么吧...'    //占位符
+    placeholder: '路过此处,随便说点什么吧...😝'    //占位符
     
 })

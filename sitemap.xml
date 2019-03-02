@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://wangyongjie.top/message/index.html</loc>
+    
+    <lastmod>2019-03-02T10:23:42.104Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://wangyongjie.top/blog/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%88%9D%E8%AF%86/</loc>
     
-    <lastmod>2019-03-02T10:09:10.440Z</lastmod>
+    <lastmod>2019-03-02T10:18:51.041Z</lastmod>
     
   </url>
   
@@ -33,13 +40,6 @@
     <loc>http://wangyongjie.top/about/index.html</loc>
     
     <lastmod>2019-03-02T07:51:05.323Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://wangyongjie.top/message/index.html</loc>
-    
-    <lastmod>2019-03-02T07:50:58.933Z</lastmod>
     
   </url>
   
