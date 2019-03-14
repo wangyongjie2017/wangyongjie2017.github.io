@@ -1,0 +1,47 @@
+
+/* 导航标签样式--自定义部分 */
+#webnav {
+    overflow: hidden;
+}
+
+#webnav br {
+    display: none;
+}
+
+#webnav a {
+    float: left;
+    width: auto;
+    padding: 5px 24px;
+    background: #4cb7f4;
+    margin: 4px 0 4px 4px;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    font-style: normal;
+}
+
+#webnav a:hover {
+    background: #e87e01;
+}
+
+@media (max-width:1280px) {
+    
+}
+
+@media (max-width:1024px) {
+
+}
+
+@media (max-width:640px) {
+    #webnav a {
+        padding: 2px 6px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width:320px) {
+    #webnav a {
+        padding: 2px 6px;
+        font-size: 10px;
+    }
+}
