@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wangyongjie.top/"/>
-  <updated>2019-03-13T03:06:08.788Z</updated>
+  <updated>2019-03-14T14:39:38.689Z</updated>
   <id>http://wangyongjie.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Bootstrap 媒体查询</title>
+    <link href="http://wangyongjie.top/blog/12266/"/>
+    <id>http://wangyongjie.top/blog/12266/</id>
+    <published>2019-03-14T14:35:08.000Z</published>
+    <updated>2019-03-14T14:39:38.689Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> (max-width: <span class="number">767px</span>) &#123;  </span><br><span class="line">    <span class="comment">/*在小于768像素的屏幕里,这里的样式才生效*/</span>  </span><br><span class="line">&#125;  </span><br><span class="line">@<span class="keyword">media</span> (min-width: <span class="number">768px</span>) and (max-width: <span class="number">991px</span>) &#123;  </span><br><span class="line">    <span class="comment">/*在768和991像素之间的屏幕里,这里的样式才生效*/</span>  </span><br><span class="line">&#125;  </span><br><span class="line">@<span class="keyword">media</span> (min-width: <span class="number">992px</span>) and (max-width: <span class="number">1199px</span>) &#123;  </span><br><span class="line">    <span class="comment">/*在992和1199像素之间的屏幕里,这里的样式才生效*/</span>  </span><br><span class="line">&#125;  </span><br><span class="line">@<span class="keyword">media</span> (min-width: <span class="number">1200px</span>) &#123;  </span><br><span class="line">    <span class="comment">/*在大于1200像素的屏幕里,这里的样式才生效*/</span>  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><br><strong>本文作者</strong>：王永杰<br><strong>本文地址</strong>： <a href="http://wangyongjie.top/blog/12266/">http://wangyongjie.top/blog/12266/</a> <br><strong>版权声明</strong>：本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;
+      
+    
+    </summary>
+    
+      <category term="前端" scheme="http://wangyongjie.top/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="CSS" scheme="http://wangyongjie.top/tags/CSS/"/>
+    
+  </entry>
   
   <entry>
     <title>免费VPN</title>

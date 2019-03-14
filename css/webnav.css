@@ -1,5 +1,5 @@
- /* 格式化 */
- .webNav br {
+/* 格式化 */
+.webNav br {
     display: none;
 }
 
@@ -19,7 +19,7 @@
     padding: 3px 8px;
     margin: 0 10px;
     background: #e67e22;
-    width: 120px;
+    width: 150px;
     color: #fff;
 }
 
@@ -47,11 +47,13 @@
     font-size: 16px;
     font-weight: 900;
     color: #e47e30;
+    line-height: 10px;
 }
 
 .webNav ul li p {
     font-size: 10px;
     color: #aaa;
+    height: 40px;
     /* 省略号 */
     overflow: hidden;
     text-overflow: ellipsis;
@@ -74,15 +76,11 @@
     width: 100%;
 }
 
-
-
-/*  */
+/* 媒体查询 */
 
 
 @media (max-width: 767px) {
     .webNav ul li {
         width: 43%;
     }
-
-
 }
