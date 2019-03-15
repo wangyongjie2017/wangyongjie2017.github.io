@@ -17,7 +17,7 @@
 .webNav h3 {
     font-size: 18px;
     padding: 5px 6px;
-    margin: 0 10px;
+    margin: 0 10px 5px 9px;
     background: #e67e22;
     width: 100px;
     color: #fff;
@@ -40,12 +40,13 @@
 
 .webNav ul li {
     float: left;
-    width: 120px;
-    margin: 10px;
+    width: 132px;
+    margin: 5px;
     padding: 0 5px;
     box-shadow: 0 0 10px 0 #ebebeb;
     border: 1px solid #fff;
     overflow: hidden;
+    text-align: justify;
 }
 
 
@@ -76,7 +77,7 @@
 }
 
 .webNav ul li p {
-    font-size: 8px !important;
+    font-size: 9px !important;
     color: #aaa;
     height: 33px;
     -webkit-line-clamp: 2 !important;
@@ -99,7 +100,7 @@
     filter: grayscale(100%);
 }
 
-.webNav ul li:hover img {
+.webNav ul:hover li img {
     -webkit-filter: grayscale(0); /* Chrome, Safari, Opera */
     filter: grayscale(0);
 }
@@ -108,13 +109,17 @@
 
 
 @media (max-width: 767px) {
+    .webNav h3 {
+        margin: 0 10px 5px 5px;
+    }
+
     .webNav ul li {
-        width: 30%;
-        margin: 5px 5px 5px 5px;
+        width: 32%;
+        margin: 5px 2px;
     }
 
     .webNav ul li div {
-        height: 30px;
+        height: 24px;
     }
 
     .webNav ul li:hover h4,
