@@ -65,9 +65,14 @@
 .webNav ul li h4 {
     font-size: 14px;
     font-weight: 900;
-    color: #e47e30;
+    color: #848484;
     line-height: 17px;
     margin: 5px 0;
+}
+
+.webNav ul li:hover h4,
+.webNav ul li:hover p {
+    color: #e47e30;
 }
 
 .webNav ul li p {
@@ -79,7 +84,8 @@
 
 .webNav ul li div {
     width: 90%;
-    height: 35px;
+    /* height: 35px; */
+    height: 30px;
     margin: 5px auto;
     text-align: center;
     box-shadow: 0 0 10px #ccc;
@@ -89,6 +95,13 @@
 
 .webNav ul li div img {
     width: 100%;
+    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    filter: grayscale(100%);
+}
+
+.webNav ul li:hover img {
+    -webkit-filter: grayscale(0); /* Chrome, Safari, Opera */
+    filter: grayscale(0);
 }
 
 /* 媒体查询 */
@@ -111,5 +124,10 @@
     .webNav ul li h4  {
         font-size: 12px;
         margin: 0 !important;
+    }
+    .webNav ul li div img {
+        width: 100%;
+        -webkit-filter: grayscale(0); /* Chrome, Safari, Opera */
+        filter: grayscale(0);
     }
 }
