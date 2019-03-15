@@ -117,6 +117,11 @@
         height: 30px;
     }
 
+    .webNav ul li:hover h4,
+    .webNav ul li:hover p {
+        color: #e47e30;
+    }
+
     .webNav ul li p {
         height: 24px;
     }
@@ -125,6 +130,7 @@
         font-size: 12px;
         margin: 0 !important;
     }
+
     .webNav ul li div img {
         width: 100%;
         -webkit-filter: grayscale(0); /* Chrome, Safari, Opera */
