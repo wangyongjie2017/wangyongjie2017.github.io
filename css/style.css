@@ -1608,3 +1608,20 @@ pre .javascript .function {
     margin-bottom: 10px;
   }
 }
+
+
+/* 新增 */
+/* 新增 */
+/* 新增 */
+/* 新增 */
+
+.table_scoll~table {
+  display: block;
+  overflow: scroll;
+}
+
+
+/* 删除缩略图 */
+.post-media {
+  display: none;
+}

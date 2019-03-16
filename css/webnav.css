@@ -55,6 +55,7 @@
 }
 
 .webNav ul li .omit {
+    text-align: left;
     /* 省略号 */
     overflow: hidden;
     text-overflow: ellipsis;
