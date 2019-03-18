@@ -16,10 +16,17 @@
     <link rel="dns-prefetch" href="http://wangyongjie.top">
     <!--SEO-->
 
-    <meta name="keywords" content="CSS">
+    <meta name="keywords" content="JavaScript">
 
 
-    <meta name="description" content="123456789101112@media (max-width: 767px) &#123;      /*在小于768像素的屏幕里,这里的样式才生效*/  &#125;  @media (m...">
+    <meta name="description" content="
+js中三种定义变量的方式const， var， let的区别
+
+一、const
+定义的变量不可以修改，而且必须初始化。
+
+1const b = 2;    //正确
+123const a ; ...">
 
 
 
@@ -31,7 +38,7 @@
     <!--Title-->
 
 
-<title>Bootstrap 媒体查询 | 王永杰的网络日志</title>
+<title>js中三种定义变量的区别 | 王永杰的网络日志</title>
 
 
     <link rel="alternate" href="/atom.xml" title="王永杰的网络日志" type="application/atom+xml">
@@ -152,9 +159,9 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="Bootstrap 媒体查询">
+        <h1 id="js中三种定义变量的区别">
             
-	            Bootstrap 媒体查询
+	            js中三种定义变量的区别
             
         </h1>
         <div class="post-meta">
@@ -170,7 +177,7 @@
             <i class="fa fa-tags"></i>
             <span class="tags-meta">
                 
-                    <a class="tag-link" href="/tags/CSS/">CSS</a>
+                    <a class="tag-link" href="/tags/JavaScript/">JavaScript</a>
                 
             </span>
         </span>
@@ -180,7 +187,7 @@
         
         <span class="fa-wrap">
             <i class="fa fa-clock-o"></i>
-            <span class="date-meta">2018/01/14</span>
+            <span class="date-meta">2017/02/02</span>
         </span>
         
     
@@ -188,14 +195,40 @@
             
             
             <p class="fa fa-exclamation-triangle warning">
-                本文于<strong>427</strong>天之前发表，文中内容可能已经过时。
+                本文于<strong>774</strong>天之前发表，文中内容可能已经过时。
             </p>
         
     </div>
     
     <div class="post-body post-content">
-        <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> (max-width: <span class="number">767px</span>) &#123;  </span><br><span class="line">    <span class="comment">/*在小于768像素的屏幕里,这里的样式才生效*/</span>  </span><br><span class="line">&#125;  </span><br><span class="line">@<span class="keyword">media</span> (min-width: <span class="number">768px</span>) and (max-width: <span class="number">991px</span>) &#123;  </span><br><span class="line">    <span class="comment">/*在768和991像素之间的屏幕里,这里的样式才生效*/</span>  </span><br><span class="line">&#125;  </span><br><span class="line">@<span class="keyword">media</span> (min-width: <span class="number">992px</span>) and (max-width: <span class="number">1199px</span>) &#123;  </span><br><span class="line">    <span class="comment">/*在992和1199像素之间的屏幕里,这里的样式才生效*/</span>  </span><br><span class="line">&#125;  </span><br><span class="line">@<span class="keyword">media</span> (min-width: <span class="number">1200px</span>) &#123;  </span><br><span class="line">    <span class="comment">/*在大于1200像素的屏幕里,这里的样式才生效*/</span>  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><br><strong>本文作者</strong>：王永杰<br><strong>本文地址</strong>： <a href="http://wangyongjie.top/blog/12266/">http://wangyongjie.top/blog/12266/</a> <br><strong>版权声明</strong>：本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！</p>
+        <blockquote>
+<p>js中三种定义变量的方式const， var， let的区别</p>
+</blockquote>
+<h2 id="一、const"><a href="#一、const" class="headerlink" title="一、const"></a>一、const</h2><blockquote>
+<p>定义的变量不可以修改，而且必须初始化。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> b = <span class="number">2</span>;    <span class="comment">//正确</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a ;      <span class="comment">//错误，必须初始化  </span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 报错: Uncaught SyntaxError: Missing initializer in const declaration</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">'函数外const定义b：'</span> + b);      <span class="comment">//有输出值</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">'函数外修改const定义b：'</span> + b);      <span class="comment">//无法输出</span></span><br></pre></td></tr></table></figure>
+<h2 id="二、var"><a href="#二、var" class="headerlink" title="二、var"></a>二、var</h2><blockquote>
+<p>定义的变量可以修改，如果不初始化会输出undefined，不会报错。</p>
+</blockquote>
+<blockquote>
+<p>值得注意的一点是在for循环中要输入 a += “…”; a要先定义一个空值，否则会先输入一个undefined.</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'a:'</span> + a)       <span class="comment">// a: 1</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">2</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'a:'</span> + a)       <span class="comment">// a: 2</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> b;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'b:'</span> + b)       <span class="comment">// b: undefined</span></span><br></pre></td></tr></table></figure>
+<h2 id="三、let"><a href="#三、let" class="headerlink" title="三、let"></a>三、let</h2><blockquote>
+<p>是块级作用域，函数内部使用let定义后，对函数外部无影响。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'a:'</span> + a);      <span class="comment">// a: 1</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">lets</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> a = <span class="number">2</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'a:'</span> + a);      <span class="comment">// a: 2</span></span><br><span class="line">&#125;</span><br><span class="line">lets();</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'a:'</span> + a);      <span class="comment">// a: 1</span></span><br></pre></td></tr></table></figure>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
+<li><a href="http://www.cnblogs.com/thinkingthigh/p/8043030.html" target="_blank" rel="noopener">js中三种定义变量 const， var， let 的区别</a></li>
+<li><a href="https://blog.csdn.net/rachel_ruiqiu/article/details/79261687" target="_blank" rel="noopener">JS中三种定义变量的方式：var, let, const</a></li>
+</ol>
+<p><br><strong>本文作者</strong>：王永杰<br><strong>本文地址</strong>： <a href="http://wangyongjie.top/blog/2635/">http://wangyongjie.top/blog/2635/</a> <br><strong>版权声明</strong>：本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！</p>
 
     </div>
     
@@ -233,15 +266,15 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/blog/17102/" class="pre-post btn btn-default" title="元素宽高及浏览器视口参数">
+        <a href="/blog/12266/" class="pre-post btn btn-default" title="Bootstrap 媒体查询">
             <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
-            <span class="hidden-xs">元素宽高及浏览器视口参数</span>
+            <span class="hidden-xs">Bootstrap 媒体查询</span>
         </a>
     
     
-        <a href="/blog/2635/" class="next-post btn btn-default" title="js中三种定义变量的区别">
+        <a href="/blog/16311/" class="next-post btn btn-default" title="js中return的作用">
             <span class="hidden-lg">下一篇</span>
-            <span class="hidden-xs">js中三种定义变量的区别</span><i class="fa fa-angle-right fa-fw"></i>
+            <span class="hidden-xs">js中return的作用</span><i class="fa fa-angle-right fa-fw"></i>
         </a>
     
 </div>
@@ -276,7 +309,7 @@
     <div class="widget">
         <h3 class="title">文章目录</h3>
         
-            <p>暂无目录</p>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、const"><span class="toc-text">一、const</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、var"><span class="toc-text">二、var</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、let"><span class="toc-text">三、let</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
         
     </div>
 </aside>
