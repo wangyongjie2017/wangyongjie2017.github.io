@@ -16,10 +16,17 @@
     <link rel="dns-prefetch" href="http://wangyongjie.top">
     <!--SEO-->
 
-    <meta name="keywords" content="CSS">
+    <meta name="keywords" content="王永杰个人博客">
 
 
-    <meta name="description" content="123456789101112@media (max-width: 767px) &#123;      /*在小于768像素的屏幕里,这里的样式才生效*/  &#125;  @media (m...">
+    <meta name="description" content="
+attr()方法获取插入元素的属性值
+
+一、说明CSS2此方法已经存在，和CSS3有所区别：
+
+CSS2.1中attr()总是返回一个字符串。
+CSS3中attr()可以返回多种不同的类型。
+...">
 
 
 
@@ -31,7 +38,7 @@
     <!--Title-->
 
 
-<title>Bootstrap 媒体查询 | 王永杰的网络日志</title>
+<title>CSS3之attr() | 王永杰的网络日志</title>
 
 
     <link rel="alternate" href="/atom.xml" title="王永杰的网络日志" type="application/atom+xml">
@@ -152,16 +159,16 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="Bootstrap 媒体查询">
+        <h1 id="CSS3之attr()">
             
-	            Bootstrap 媒体查询
+	            CSS3之attr()
             
         </h1>
         <div class="post-meta">
     
         <span class="categories-meta fa-wrap">
             <i class="fa fa-folder-open-o"></i>
-            <a class="category-link" href="/categories/前端/">前端</a>
+            
         </span>
     
 
@@ -169,8 +176,6 @@
         <span class="fa-wrap">
             <i class="fa fa-tags"></i>
             <span class="tags-meta">
-                
-                    <a class="tag-link" href="/tags/CSS/">CSS</a>
                 
             </span>
         </span>
@@ -180,7 +185,7 @@
         
         <span class="fa-wrap">
             <i class="fa fa-clock-o"></i>
-            <span class="date-meta">2018/01/14</span>
+            <span class="date-meta">2017/05/17</span>
         </span>
         
     
@@ -188,14 +193,42 @@
             
             
             <p class="fa fa-exclamation-triangle warning">
-                本文于<strong>429</strong>天之前发表，文中内容可能已经过时。
+                本文于<strong>671</strong>天之前发表，文中内容可能已经过时。
             </p>
         
     </div>
     
     <div class="post-body post-content">
-        <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">media</span> (max-width: <span class="number">767px</span>) &#123;  </span><br><span class="line">    <span class="comment">/*在小于768像素的屏幕里,这里的样式才生效*/</span>  </span><br><span class="line">&#125;  </span><br><span class="line">@<span class="keyword">media</span> (min-width: <span class="number">768px</span>) and (max-width: <span class="number">991px</span>) &#123;  </span><br><span class="line">    <span class="comment">/*在768和991像素之间的屏幕里,这里的样式才生效*/</span>  </span><br><span class="line">&#125;  </span><br><span class="line">@<span class="keyword">media</span> (min-width: <span class="number">992px</span>) and (max-width: <span class="number">1199px</span>) &#123;  </span><br><span class="line">    <span class="comment">/*在992和1199像素之间的屏幕里,这里的样式才生效*/</span>  </span><br><span class="line">&#125;  </span><br><span class="line">@<span class="keyword">media</span> (min-width: <span class="number">1200px</span>) &#123;  </span><br><span class="line">    <span class="comment">/*在大于1200像素的屏幕里,这里的样式才生效*/</span>  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><br><strong>本文作者</strong>：王永杰<br><strong>本文地址</strong>： <a href="http://wangyongjie.top/blog/12266/">http://wangyongjie.top/blog/12266/</a> <br><strong>版权声明</strong>：本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！</p>
+        <blockquote>
+<p>attr()方法获取插入元素的属性值</p>
+</blockquote>
+<h2 id="一、说明"><a href="#一、说明" class="headerlink" title="一、说明"></a>一、说明</h2><p>CSS2此方法已经存在，和CSS3有所区别：</p>
+<ol>
+<li>CSS2.1中attr()总是返回一个字符串。</li>
+<li>CSS3中attr()可以返回多种不同的类型。</li>
+</ol>
+<h2 id="二、浏览器支持："><a href="#二、浏览器支持：" class="headerlink" title="二、浏览器支持："></a>二、浏览器支持：</h2><ol>
+<li>IE浏览器支持此属性。</li>
+<li>edge浏览器支持此属性。</li>
+<li>谷歌浏览器支持此属性。</li>
+<li>火狐浏览器支持此属性。</li>
+<li>opera浏览器支持此属性。</li>
+<li>safria浏览器支持此属性。</li>
+</ol>
+<blockquote>
+<p>特别说明：</p>
+<ol>
+<li>IE7和IE7以下的浏览器不支持此属性。</li>
+<li>CSS3 atrr()现在暂无浏览器支持。</li>
+</ol>
+</blockquote>
+<h2 id="三、代码实例"><a href="#三、代码实例" class="headerlink" title="三、代码实例"></a>三、代码实例</h2><iframe height="265" style="width: 100%;" scrolling="no" title="CSS3之attr()" src="//codepen.io/wangyongjie/embed/YgOJRr/?height=265&theme-id=dark&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true"><br>  See the Pen <a href="https://codepen.io/wangyongjie/pen/YgOJRr/" target="_blank" rel="noopener">CSS3之attr()</a> by 王永杰<br>  (<a href="https://codepen.io/wangyongjie" target="_blank" rel="noopener">@wangyongjie</a>) on <a href="https://codepen.io" target="_blank" rel="noopener">CodePen</a>.<br></iframe>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>CSS3之attr()<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">        .box a&#123;</span></span><br><span class="line"><span class="undefined">            color: #000;</span></span><br><span class="line"><span class="undefined">            text-decoration: none;</span></span><br><span class="line"><span class="undefined">            font-size: 20px;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined">        .box a::after &#123;</span></span><br><span class="line"><span class="undefined">            content: attr(href);</span></span><br><span class="line"><span class="undefined">            border-bottom: 2px solid red;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h2</span>&gt;</span>红线内容为attr()获取<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://wangyongjie.top"</span>&gt;</span></span><br><span class="line">            a链接指向：</span><br><span class="line">        <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="四、实例"><a href="#四、实例" class="headerlink" title="四、实例"></a>四、实例</h2><ol>
+<li><a href="http://wangyongjie.top/BlogDemo/CSS3之attr/">CSS3之attr()</a></li>
+</ol>
+<p><br><strong>本文作者</strong>：王永杰<br><strong>本文地址</strong>： <a href="http://wangyongjie.top/blog/12054/">http://wangyongjie.top/blog/12054/</a> <br><strong>版权声明</strong>：本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！</p>
 
     </div>
     
@@ -233,15 +266,15 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/blog/17102/" class="pre-post btn btn-default" title="元素宽高及浏览器视口参数">
+        <a href="/blog/12266/" class="pre-post btn btn-default" title="Bootstrap 媒体查询">
             <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
-            <span class="hidden-xs">元素宽高及浏览器视口参数</span>
+            <span class="hidden-xs">Bootstrap 媒体查询</span>
         </a>
     
     
-        <a href="/blog/12054/" class="next-post btn btn-default" title="CSS3之attr()">
+        <a href="/blog/61100/" class="next-post btn btn-default" title="CSS3之text-stroke">
             <span class="hidden-lg">下一篇</span>
-            <span class="hidden-xs">CSS3之attr()</span><i class="fa fa-angle-right fa-fw"></i>
+            <span class="hidden-xs">CSS3之text-stroke</span><i class="fa fa-angle-right fa-fw"></i>
         </a>
     
 </div>
@@ -276,7 +309,7 @@
     <div class="widget">
         <h3 class="title">文章目录</h3>
         
-            <p>暂无目录</p>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、说明"><span class="toc-text">一、说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、浏览器支持："><span class="toc-text">二、浏览器支持：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、代码实例"><span class="toc-text">三、代码实例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、实例"><span class="toc-text">四、实例</span></a></li></ol>
         
     </div>
 </aside>
