@@ -219,7 +219,7 @@
 </tbody>
 </table>
 <h2 id="2-相对长度单位"><a href="#2-相对长度单位" class="headerlink" title="2. 相对长度单位"></a>2. 相对长度单位</h2><p>是网页设计中使用最多的长度单位，包括<code>px、em、rem</code>等</p>
-<h2 id="3-屏幕尺寸"><a href="#3-屏幕尺寸" class="headerlink" title="3. 屏幕尺寸"></a>3. 屏幕尺寸</h2><p><img src="../../images/如何写一个适配iPhoneX的底部导航1.png" alt="image"></p>
+<h2 id="3-屏幕尺寸"><a href="#3-屏幕尺寸" class="headerlink" title="3. 屏幕尺寸"></a>3. 屏幕尺寸</h2><p><img src="../../images/如何写一个适配iPhoneX的底部导航/如何写一个适配iPhoneX的底部导航1.png" alt="image"></p>
 <blockquote>
 <p>指屏幕的对角线的长度，单位是英寸，1英寸=2.54厘米</p>
 </blockquote>
@@ -297,15 +297,15 @@
 </tr>
 </tbody>
 </table>
-<h2 id="5-屏幕像素密度"><a href="#5-屏幕像素密度" class="headerlink" title="5. 屏幕像素密度"></a>5. 屏幕像素密度</h2><p><img src="../../images/如何写一个适配iPhoneX的底部导航2.png" alt="image"></p>
+<h2 id="5-屏幕像素密度"><a href="#5-屏幕像素密度" class="headerlink" title="5. 屏幕像素密度"></a>5. 屏幕像素密度</h2><p><img src="../../images/如何写一个适配iPhoneX的底部导航/如何写一个适配iPhoneX的底部导航2.png" alt="image"></p>
 <p>屏幕上每英寸可以显示的像素点的数量，单位是<strong>ppi</strong>，即<strong>pixels per inch</strong>的缩写。屏幕像素密度与屏幕尺寸和屏幕分辨率有关，在单一变化条件下，屏幕尺寸越小、分辨率越高，像素密度越大，反之越小</p>
-<p><img src="../../images/如何写一个适配iPhoneX的底部导航3.png" alt="image"></p>
+<p><img src="../../images/如何写一个适配iPhoneX的底部导航/如何写一个适配iPhoneX的底部导航3.png" alt="image"></p>
 <ul>
 <li>屏幕上勾股定理算出对角线的分辨率：<strong>√(1920²+1080²)≈2203px</strong></li>
 <li>对角线分辨率除以屏幕尺寸：<strong>2203/5≈440dpi</strong></li>
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1920</span>^<span class="number">2</span> + <span class="number">1080</span>^<span class="number">2</span> ≈ <span class="number">2203</span>^<span class="number">2</span>  <span class="comment">//3686400 + 1166400 = 4852800</span></span><br><span class="line"><span class="number">2203</span> / <span class="number">5</span> ≈ <span class="number">440</span></span><br></pre></td></tr></table></figure>
-<h2 id="6-PPI与DPI"><a href="#6-PPI与DPI" class="headerlink" title="6. PPI与DPI"></a>6. PPI与DPI</h2><p><img src="../../images/如何写一个适配iPhoneX的底部导航4.png" alt="image"></p>
+<h2 id="6-PPI与DPI"><a href="#6-PPI与DPI" class="headerlink" title="6. PPI与DPI"></a>6. PPI与DPI</h2><p><img src="../../images/如何写一个适配iPhoneX的底部导航/如何写一个适配iPhoneX的底部导航4.png" alt="image"></p>
 <p>PPI（Pixel Per Inch by diagonal）：表示沿着对角线，每英寸所拥有的像素（Pixel）数目<br>PPI数值越高，代表显示屏能够以越高的密度显示图像，即通常所说的分辨率越高、颗粒感越弱</p>
 <table>
 <thead>
@@ -326,7 +326,7 @@
 </tbody>
 </table>
 <h2 id="7-Viewport"><a href="#7-Viewport" class="headerlink" title="7. Viewport"></a>7. Viewport</h2><p>移动端开发中，通常我们都会采用<code>meta</code>标签设置<code>viewport</code><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="1-viewport是什么"><a href="#1-viewport是什么" class="headerlink" title="1. viewport是什么?"></a>1. viewport是什么?</h3><p><img src="../../images/如何写一个适配iPhoneX的底部导航5.png" alt="image"></p>
+<h3 id="1-viewport是什么"><a href="#1-viewport是什么" class="headerlink" title="1. viewport是什么?"></a>1. viewport是什么?</h3><p><img src="../../images/如何写一个适配iPhoneX的底部导航/如何写一个适配iPhoneX的底部导航5.png" alt="image"></p>
 <p>通俗来讲，移动端的viewport就是我们所能看到的手机端浏览器的可视窗口大小，但viewport又不仅仅局限于可视窗口的大小，一般情况下，它是比默认窗口大小要大的，这是因为考虑到移动设备的分辨率相对于桌面电脑来说都比较小，所以为了能在移动端正常显示为桌面浏览器而设计的网页，移动端的浏览器都会默认把自己的默认的viewport设为980px到1024px不等，但其后果就是会出现横向滚动条，因为移动端浏览器可视区域的大小是比默认的viewport宽度要小的</p>
 <table>
 <thead>
@@ -496,16 +496,16 @@
 </tr>
 </tbody>
 </table>
-<p>设置auto前<br><img src="../../images/如何写一个适配iPhoneX的底部导航6.png" alt="image"><br>设置cover后<br><img src="../../images/如何写一个适配iPhoneX的底部导航7.png" alt="image"></p>
+<p>设置auto前<br><img src="../../images/如何写一个适配iPhoneX的底部导航/如何写一个适配iPhoneX的底部导航6.png" alt="image"><br>设置cover后<br><img src="../../images/如何写一个适配iPhoneX的底部导航/如何写一个适配iPhoneX的底部导航7.png" alt="image"></p>
 <h3 id="3-safe-area-inset"><a href="#3-safe-area-inset" class="headerlink" title="3. safe-area-inset-*"></a>3. safe-area-inset-*</h3><p>在设置<code>viewport-fit=cover</code>之后，Web中会新增四个常量<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">safe-area-inset-top</span></span><br><span class="line"><span class="selector-tag">safe-area-inset-right</span></span><br><span class="line"><span class="selector-tag">safe-area-inset-left</span></span><br><span class="line"><span class="selector-tag">safe-area-inset-bottom</span></span><br></pre></td></tr></table></figure></p>
 <p>分别表示safe area和可视窗口viewport顶部，右边，左边，底部的间距，可以用于设置margin和padding或者绝对定位时left和top</p>
 <blockquote>
 <p>注意：在横屏和竖屏状态下，safe-area-inset-*的值不同</p>
 </blockquote>
-<p><img src="../../images/如何写一个适配iPhoneX的底部导航8.png" alt="image"></p>
+<p><img src="../../images/如何写一个适配iPhoneX的底部导航/如何写一个适配iPhoneX的底部导航8.png" alt="image"></p>
 <p>为了解决应用<code>viewport-fit=cover</code>之后，有些显示内容被裁剪的问题，我们可以通过添加边距使得网页主要内容处于safe area中不被裁剪，解决方式如下</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">padding</span>: <span class="selector-tag">constant</span>(<span class="selector-tag">safe-area-inset-top</span>) <span class="selector-tag">constant</span>(<span class="selector-tag">safe-area-inset-right</span>) <span class="selector-tag">constant</span>(<span class="selector-tag">safe-area-inset-bottom</span>) <span class="selector-tag">constant</span>(<span class="selector-tag">safe-area-inset-left</span>);</span><br></pre></td></tr></table></figure>
-<p><img src="../../images/如何写一个适配iPhoneX的底部导航9.png" alt="image"></p>
+<p><img src="../../images/如何写一个适配iPhoneX的底部导航/如何写一个适配iPhoneX的底部导航9.png" alt="image"></p>
 <p>示例，比如下面是顶部导航条的适配，能让左上右都能出现padding来让元素保留在安全区域以内</p>
 <p>总结为，我们可以利用<code>safe-area-inset-*</code>做以下适配，详细请看<a href="https://wscats.github.io/iPhone-X/css-shape-iphoneX/iPhoneX5.html" target="_blank" rel="noopener">DEMO</a></p>
 <ul>
