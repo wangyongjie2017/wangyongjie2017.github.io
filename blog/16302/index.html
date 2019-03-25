@@ -216,7 +216,7 @@
 <p>$().append()与$().appendTo($())</p>
 </blockquote>
 <p>创建的元素后，将当作页面某一个元素的子元素放到其内部。针对这样的处理，jQuery定义了2个操作的方法</p>
-<p><a href="https://link.juejin.im/?target=http%3A%2F%2Fimg.mukewang.com%2F56cc12f800017b4104480146.jpg" target="_blank" rel="noopener"><img src="https://user-gold-cdn.xitu.io/2019/3/21/1699eff86ab7b996?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt></a></p>
+<p><img src="../../images/jQuery知识总结之DOM操作/1.jpg" alt></p>
 <p>append：这个操作与对指定的元素执行原生的appendChild方法，将它们添加到文档中的情况类似。</p>
 <p>appendTo：实际上，使用这个方法是颠倒了常规的$(A).append(B)的操作，即不是把B追加到A中，而是把A追加到B中。</p>
 <p>简单的总结就是：</p>
@@ -230,7 +230,7 @@
 </blockquote>
 <p>在元素内部进行操作的方法，除了在被选元素的结尾（仍然在内部）通过append与appendTo插入指定内容外，相应的还可以在被选元素之前插入，jQuery提供的方法是prepend与prependTo</p>
 <p>选择器的描述：</p>
-<p><a href="https://link.juejin.im/?target=http%3A%2F%2Fimg.mukewang.com%2F57481c3900013c6e05000193.jpg" target="_blank" rel="noopener"><img src="https://user-gold-cdn.xitu.io/2019/3/21/1699f0903296994b?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt></a></p>
+<p><img src="../../images/jQuery知识总结之DOM操作/2.jpg" alt></p>
 <p>prepend与prependTo的使用及区别：</p>
 <ul>
 <li>.prepend()方法将指定元素插入到匹配元素里面作为它的第一个子元素 (如果要作为最后一个子元素插入用.append()).</li>
@@ -250,7 +250,7 @@
 </blockquote>
 <p>节点与节点之前有各种关系，除了父子，祖辈关系，还可以是兄弟关系。Query引入了2个方法，可以用来在匹配I的元素前后插入内容。</p>
 <p>选择器描述：</p>
-<p><a href="https://link.juejin.im/?target=http%3A%2F%2Fimg.mukewang.com%2F57481b6b00018e3405210197.jpg" target="_blank" rel="noopener"><img src="data:image/svg+xml;utf8,&lt;?xml version=&quot;1.0&quot;?&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; version=&quot;1.1&quot; width=&quot;521&quot; height=&quot;197&quot;&gt;&lt;/svg" alt></a></p>
+<p><img src="../../images/jQuery知识总结之DOM操作/3.jpg" alt></p>
 <ul>
 <li>before与after都是用来对相对选中元素外部增加相邻的兄弟节点</li>
 <li>2个方法都是都可以接收HTML字符串，DOM 元素，元素数组，或者jQuery对象，用来插入到集合中每个匹配元素的前面或者后面</li>
@@ -265,7 +265,7 @@
 <p>insertAfter($())与insertBefore($())</p>
 </blockquote>
 <p>与内部插入处理一样，jQuery由于内容目标的位置不同，然增加了2个新的方法insertAfter与insertBefore</p>
-<p><a href="https://link.juejin.im/?target=http%3A%2F%2Fimg.mukewang.com%2F57481d230001b0f305170241.jpg" target="_blank" rel="noopener"><img src="data:image/svg+xml;utf8,&lt;?xml version=&quot;1.0&quot;?&gt;&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; version=&quot;1.1&quot; width=&quot;517&quot; height=&quot;241&quot;&gt;&lt;/svg" alt></a></p>
+<p><img src="../../images/jQuery知识总结之DOM操作/4.jpg" alt></p>
 <ul>
 <li>.before()和.insertBefore()实现同样的功能。主要的区别是语法——内容和目标的位置。 对于before()选择表达式在函数前面，内容作为参数，而.insertBefore()刚好相反，内容在方法前面，它将被放在参数里元素的前面</li>
 <li>.after()和.insertAfter() 实现同样的功能。主要的不同是语法——特别是（插入）内容和目标的位置。 对于after()选择表达式在函数的前面，参数是将要插入的内容。对于 .insertAfter(), 刚好相反，内容在方法前面，它将被放在参数里元素的后面</li>
