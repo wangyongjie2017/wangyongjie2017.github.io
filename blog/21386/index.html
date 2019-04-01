@@ -1,0 +1,382 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="王永杰的网络日志">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <link rel="dns-prefetch" href="http://wangyongjie.top">
+    <!--SEO-->
+
+    <meta name="keywords" content="HTML">
+
+
+    <meta name="description" content="
+HTML可以将元素分类方式分为行内元素、块状元素和行内块状元素三种。首先需要说明的是，这三者是可以互相转换的，使用display属性能够将三者任意转换：
+
+
+display:inline;转换...">
+
+
+
+<meta name="robots" content="all">
+<meta name="google" content="all">
+<meta name="googlebot" content="all">
+<meta name="verify" content="all">
+
+    <!--Title-->
+
+
+<title>行内元素and块状元素and行内块状元素 | 王永杰的网络日志</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="王永杰的网络日志" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?f42ffe5fed856accbf91820f137dab46";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+
+    
+
+</head>
+
+</html>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header" style="background-image:url(http://snippet.shenliyang.com/img/banner.jpg)">
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="wangyongjie">
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> 我是谁 我在哪 我在做什么 </h2>
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://wangyongjie.top">王永杰的网络日志</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/前端/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/后端/"><i class="fa "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/工具/"><i class="fa "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/webnav/"><i class="fa "></i>导航</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/message/"><i class="fa "></i>留言板</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/about/"><i class="fa "></i>关于</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="行内元素and块状元素and行内块状元素">
+            
+	            行内元素and块状元素and行内块状元素
+            
+        </h1>
+        <div class="post-meta">
+    
+        <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+            <a class="category-link" href="/categories/前端/">前端</a>
+        </span>
+    
+
+    
+        <span class="fa-wrap">
+            <i class="fa fa-tags"></i>
+            <span class="tags-meta">
+                
+                    <a class="tag-link" href="/tags/HTML/">HTML</a>
+                
+            </span>
+        </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2017/07/11</span>
+        </span>
+        
+    
+</div>
+            
+            
+            <p class="fa fa-exclamation-triangle warning">
+                本文于<strong>629</strong>天之前发表，文中内容可能已经过时。
+            </p>
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <blockquote>
+<p>HTML可以将元素分类方式分为<code>行内元素</code>、<code>块状元素</code>和<code>行内块状</code>元素三种。首先需要说明的是，这三者是可以互相转换的，使用display属性能够将三者任意转换：</p>
+</blockquote>
+<ul>
+<li><p>display:inline;转换为行内元素</p>
+</li>
+<li><p>display:block;转换为块状元素</p>
+</li>
+<li><p>display:inline-block;转换为行内块状元素</p>
+</li>
+</ul>
+<h2 id="一、行内元素"><a href="#一、行内元素" class="headerlink" title="一、行内元素"></a>一、行内元素</h2><p>行内元素最常使用的就是<code>span</code>，其他的只在特定功能下使用，修饰字体<code>&lt;b&gt;</code>和<code>&lt;i&gt;</code>标签，还有<code>&lt;sub&gt;</code>和<code>&lt;sup&gt;</code>这两个标签可以直接做出平方的效果，而不需要类似移动属性的帮助，很实用。</p>
+<h3 id="行内元素特征："><a href="#行内元素特征：" class="headerlink" title="行内元素特征："></a>行内元素特征：</h3><ul>
+<li>设置宽高无效</li>
+<li>对margin仅设置左右方向有效，上下无效；</li>
+<li>padding设置上下左右都有效，即会撑大空间,行内元素尺寸由内含的内容决定，盒模型中 padding, border 与块级元素并无差异，都是标准的盒模型，但是 margin却只有水平方向的值，垂直方向并没有起作用。</li>
+<li>行内元素的水平方向的padding-left,padding-right,margin-left,margin-right 都产生边距效果，但是竖直方向的padding-top,padding-bottom,margin-top,margin-bottom都不会产生边距效果。</li>
+<li>padding设置上下左右都有效，即会撑大空间但是不会产生边距效果。</li>
+<li>不会自动进行换行</li>
+</ul>
+<p>举例：<br><code>a</code> , <code>abbr</code> , <code>acronym</code> , <code>b</code> , <code>bdo</code> , <code>big</code> , <code>br</code> , <code>cite</code> , <code>code</code> , <code>dfn</code> , <code>em</code> , <code>font</code> , <code>i</code> , <code>img</code> , <code>input</code> , <code>kbd</code> , <code>label</code> , <code>q</code> , <code>s</code> , <code>samp</code> , <code>select</code> , <code>small</code> , <code>span</code> , <code>strike</code> , <code>strong</code> , <code>sub</code> , <code>sup</code> , <code>textarea</code> , <code>tt</code> , <code>u</code> , <code>var</code></p>
+<!-- 1.  [b](https://developer.mozilla.org/zh-CN/HTML/Element/b "zh-CN/HTML/Element/b"), [big](https://developer.mozilla.org/zh-CN/HTML/Element/big "zh-CN/HTML/Element/big"), [i](https://developer.mozilla.org/zh-CN/HTML/Element/i "zh-CN/HTML/Element/i"), [small](https://developer.mozilla.org/zh-CN/HTML/Element/small "zh-CN/HTML/Element/small"), [tt](https://developer.mozilla.org/zh-CN/HTML/Element/tt "zh-CN/HTML/Element/tt")
+2.  [abbr](https://developer.mozilla.org/zh-CN/HTML/Element/abbr "zh-CN/HTML/Element/abbr"), [acronym](https://developer.mozilla.org/zh-CN/HTML/Element/acronym "zh-CN/HTML/Element/acronym"), [cite](https://developer.mozilla.org/zh-CN/HTML/Element/cite "zh-CN/HTML/Element/cite"), [code](https://developer.mozilla.org/zh-CN/HTML/Element/code "zh-CN/HTML/Element/code"), [dfn](https://developer.mozilla.org/zh-CN/HTML/Element/dfn "zh-CN/HTML/Element/dfn"), [em](https://developer.mozilla.org/zh-CN/HTML/Element/em "zh-CN/HTML/Element/em"), [kbd](https://developer.mozilla.org/zh-CN/HTML/Element/kbd "zh-CN/HTML/Element/kbd"), [strong](https://developer.mozilla.org/zh-CN/HTML/Element/strong "zh-CN/HTML/Element/strong"), [samp](https://developer.mozilla.org/zh-CN/HTML/Element/samp "zh-CN/HTML/Element/samp"), [var](https://developer.mozilla.org/zh-CN/HTML/Element/var "zh-CN/HTML/Element/var")
+3.  [a](https://developer.mozilla.org/zh-CN/HTML/Element/a "zh-CN/HTML/Element/a"), [bdo](https://developer.mozilla.org/zh-CN/HTML/Element/bdo "zh-CN/HTML/Element/bdo"), [br](https://developer.mozilla.org/zh-CN/HTML/Element/br "zh-CN/HTML/Element/br"), [img](https://developer.mozilla.org/zh-CN/HTML/Element/Img "zh-CN/HTML/Element/Img"), [map](https://developer.mozilla.org/zh-CN/HTML/Element/map "zh-CN/HTML/Element/map"), [object](https://developer.mozilla.org/zh-CN/HTML/Element/object "zh-CN/HTML/Element/object"), [q](https://developer.mozilla.org/zh-CN/HTML/Element/q "zh-CN/HTML/Element/q"), [script](https://developer.mozilla.org/zh-CN/HTML/Element/Script "zh-CN/HTML/Element/Script"), [span](https://developer.mozilla.org/zh-CN/HTML/Element/span "zh-CN/HTML/Element/span"), [sub](https://developer.mozilla.org/zh-CN/HTML/Element/sub "zh-CN/HTML/Element/sub"), [sup](https://developer.mozilla.org/zh-CN/HTML/Element/sup "zh-CN/HTML/Element/sup")
+4.  [button](https://developer.mozilla.org/zh-CN/HTML/Element/button "zh-CN/HTML/Element/button"), [input](https://developer.mozilla.org/zh-CN/HTML/Element/Input "zh-CN/HTML/Element/Input"), [label](https://developer.mozilla.org/zh-CN/HTML/Element/label "zh-CN/HTML/Element/label"), [select](https://developer.mozilla.org/zh-CN/HTML/Element/select "zh-CN/HTML/Element/select"), [textarea](https://developer.mozilla.org/zh-CN/HTML/Element/textarea "zh-CN/HTML/Element/textarea") -->
+<h2 id="二、块状元素"><a href="#二、块状元素" class="headerlink" title="二、块状元素"></a>二、块状元素</h2><p>块状元素代表性的就是div，其他如p、nav、aside、header、footer、section、article、ul-li、address等等，都可以用div来实现。不过为了可以方便程序员解读代码，一般都会使用特定的语义化标签，使得代码可读性强，且便于查错。</p>
+<h3 id="块状元素特征："><a href="#块状元素特征：" class="headerlink" title="块状元素特征："></a>块状元素特征：</h3><ul>
+<li>能够识别宽高</li>
+<li>margin和padding的上下左右均对其有效</li>
+<li>可以自动换行</li>
+<li>多个块状元素标签写在一起，默认排列方式为从上至下</li>
+</ul>
+<p>举例：<br><code>address</code> , <code>blockquote</code> , <code>center</code> , <code>dir</code> , <code>div</code> , <code>dl</code> , <code>fieldset</code> , <code>form</code> , <code>h1</code> , <code>h2</code> , <code>h3</code> , <code>h4</code> , <code>h5</code> , <code>h6</code> , <code>hr</code> , <code>isindex</code> , <code>menu</code> , <code>noframes</code> , <code>noscript</code> , <code>ol</code> , <code>p</code> , <code>pre</code> , <code>table</code> , <code>ul</code></p>
+<h2 id="三、行内块状元素"><a href="#三、行内块状元素" class="headerlink" title="三、行内块状元素"></a>三、行内块状元素</h2><p>行内块状元素综合了行内元素和块状元素的特性，但是各有取舍。因此行内块状元素在日常的使用中，由于其特性，使用的次数也比较多。</p>
+<h3 id="行内块状元素特征："><a href="#行内块状元素特征：" class="headerlink" title="行内块状元素特征："></a>行内块状元素特征：</h3><ul>
+<li>不自动换行</li>
+<li>能够识别宽高</li>
+<li>默认排列方式为从左到右</li>
+</ul>
+<p>在HTML5中，程序员可以自定义标签，在任意定义标签中，加入display:block;即可，当然也可以是行内或行内块状。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
+<li><a href="https://blog.csdn.net/zhanglir333/article/details/79178370" target="_blank" rel="noopener">HTML行内元素、块状元素、行内块状元素的区别</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Block-level_elements" target="_blank" rel="noopener">块级元素</a></li>
+<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Inline_elemente" target="_blank" rel="noopener">行内元素</a></li>
+</ol>
+<p><br><strong>本文作者</strong>：王永杰<br><strong>本文地址</strong>： <a href="http://wangyongjie.top/blog/21386/">http://wangyongjie.top/blog/21386/</a> <br><strong>版权声明</strong>：本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！</p>
+
+    </div>
+    
+        <div class="reward" ontouchstart>
+    <div class="reward-wrap">赏
+        <div class="reward-box">
+            
+                <span class="reward-type">
+                    <img class="alipay" src="http://gfs13.gomein.net.cn/T1u5AbBTZT1RCvBVdK.jpg"><b>支付宝打赏</b>
+                </span>
+            
+            
+                <span class="reward-type">
+                    <img class="wechat" src="http://gfs13.gomein.net.cn/T1I6EbBTJ_1RCvBVdK.jpg"><b>微信打赏</b>
+                </span>
+            
+        </div>
+    </div>
+    <p class="reward-tip">一分也是爱</p>
+</div>
+
+
+    
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 <a href="http://wangyongjie.top" target="_blank"> http://wangyongjie.top</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/blog/4584/" class="pre-post btn btn-default" title="前端面试题目汇总">
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">前端面试题目汇总</span>
+        </a>
+    
+    
+        <a href="/blog/65291/" class="next-post btn btn-default" title="CSS3之文字渐变效果方法">
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">CSS3之文字渐变效果方法</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zNDc5OS8xMTMzNg==">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+         if (typeof LivereTower === 'function') { return; }
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+</div>
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">文章目录</h3>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、行内元素"><span class="toc-text">一、行内元素</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#行内元素特征："><span class="toc-text">行内元素特征：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、块状元素"><span class="toc-text">二、块状元素</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#块状元素特征："><span class="toc-text">块状元素特征：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、行内块状元素"><span class="toc-text">三、行内块状元素</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#行内块状元素特征："><span class="toc-text">行内块状元素特征：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2019
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+</body>
+</html>
