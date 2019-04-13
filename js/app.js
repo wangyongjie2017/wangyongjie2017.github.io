@@ -113,18 +113,27 @@ window.onload = function() {
 	    });
 	};
 
+    // 自定义视频托管
+    var player = polyvObject('#plv_cd1d907aa6097e73d7efb0e3096e4b5c_c').videoPlayer({
+        'width':'300',
+        'height':'169',
+        'vid' : 'cd1d907aa6097e73d7efb0e3096e4b5c_c' ,
+        'forceH5':true 
+    });
+    // 留言插件自定义
+    new Valine({
+        el: '#vcomments-message',
+        appId: 'kUeSMaqt5bTNbbEJfWcRK0nU-gzGzoHsz',
+        appKey: '4T2482n3l2F94os2LSrdDGGV',
+        meta: ['nick','mail'],
+        visitor: true, // 阅读量统计
+        notify: true,   //邮件提醒
+        verify: true,  //验证码服务
+        avatar: 'monsterid',
+        placeholder: '路过此处,随便说点什么吧...😝'    //占位符
+        
+    })
 };
 
-// 留言插件自定义
-new Valine({
-    el: '#vcomments-message',
-    appId: 'kUeSMaqt5bTNbbEJfWcRK0nU-gzGzoHsz',
-    appKey: '4T2482n3l2F94os2LSrdDGGV',
-    meta: ['nick','mail'],
-    visitor: true, // 阅读量统计
-    notify: true,   //邮件提醒
-    verify: true,  //验证码服务
-    avatar: 'monsterid',
-    placeholder: '路过此处,随便说点什么吧...😝'    //占位符
-    
-})
+
+
