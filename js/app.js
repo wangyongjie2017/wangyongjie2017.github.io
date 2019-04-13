@@ -115,8 +115,8 @@ window.onload = function() {
 
     // 自定义视频托管
     var player = polyvObject('#plv_cd1d907aa6097e73d7efb0e3096e4b5c_c').videoPlayer({
-        'width':'300',
-        'height':'169',
+        'width':'310',
+        'height':'180',
         'vid' : 'cd1d907aa6097e73d7efb0e3096e4b5c_c' ,
         'forceH5':true 
     });
