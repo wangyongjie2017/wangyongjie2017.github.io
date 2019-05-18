@@ -1,0 +1,421 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="王永杰的网络日志">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <!-- 自定义视频托管 -->
+    <script src="https://player.polyv.net/script/polyvplayer.min.js"></script>
+    <link rel="dns-prefetch" href="http://wangyongjie.top">
+    <!--SEO-->
+
+    <meta name="keywords" content="邮件">
+
+
+    <meta name="description" content="前言写过邮件的html的童学应该都知道，邮件的html一般都用table来布局，为什么呢？原因是大多数的邮件客户端（比如Outlook和Gmail），会过滤HTML设置，让邮件面目全非。
+经过多...">
+
+
+
+<meta name="robots" content="all">
+<meta name="google" content="all">
+<meta name="googlebot" content="all">
+<meta name="verify" content="all">
+
+    <!--Title-->
+
+
+<title>html邮件编写指南 | 王永杰的网络日志</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="王永杰的网络日志" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?f42ffe5fed856accbf91820f137dab46";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+
+    
+
+</head>
+
+</html>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header" style="background-image:url(http://snippet.shenliyang.com/img/banner.jpg)">
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="wangyongjie">
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> 我是谁 我在哪 我在做什么 </h2>
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://wangyongjie.top">王永杰的网络日志</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/前端/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/后端/"><i class="fa "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/工具/"><i class="fa "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/webnav/"><i class="fa "></i>导航</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/message/"><i class="fa "></i>留言板</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/生活/"><i class="fa "></i>生活</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/about/"><i class="fa "></i>关于</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="html邮件编写指南">
+            
+	            html邮件编写指南
+            
+        </h1>
+        <div class="post-meta">
+    
+        <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+            <a class="category-link" href="/categories/前端/">前端</a>
+        </span>
+    
+
+    
+        <span class="fa-wrap">
+            <i class="fa fa-tags"></i>
+            <span class="tags-meta">
+                
+                    <a class="tag-link" href="/tags/邮件/">邮件</a>
+                
+            </span>
+        </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2019/05/14</span>
+        </span>
+        
+    
+</div>
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>写过邮件的html的童学应该都知道，邮件的html一般都用table来布局，为什么呢？原因是大多数的邮件客户端（比如Outlook和Gmail），会过滤HTML设置，让邮件面目全非。</p>
+<p>经过多次的邮件编写实践及度娘的指导，我发现，编写HTML Email的窍门，就是使用15年前的网页制作方法。</p>
+<p><a href="https://github.com/laneyhui/html-email/tree/master" target="_blank" rel="noopener">自制兼容outlook与foxmail邮件模版</a></p>
+<h2 id="局部重点规则"><a href="#局部重点规则" class="headerlink" title="局部重点规则"></a>局部重点规则</h2><h3 id="1-Doctype"><a href="#1-Doctype" class="headerlink" title="1. Doctype"></a>1. Doctype</h3><blockquote>
+<p>目前，兼容性最好的Doctype是XHTML 1.0 Strict，事实上Gmail和Hotmail会删掉你的Doctype，换上下面这个Doctype（不能使用HTML5的语法）</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/1999/xhtml"</span>&gt;</span></span><br><span class="line">　<span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">　　<span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Type"</span> <span class="attr">content</span>=<span class="string">"text/html; charset=UTF-8"</span> /&gt;</span></span><br><span class="line">　　<span class="tag">&lt;<span class="name">title</span>&gt;</span>HTML Email编写指南<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">　　<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span>/&gt;</span></span><br><span class="line">　<span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="2-布局"><a href="#2-布局" class="headerlink" title="2. 布局"></a>2. 布局</h3><blockquote>
+<p>网页的布局（layout）必须使用表格（table）。首先，放置一个最外层的大表格，用来设置背景，具体内容再在里面嵌套表格（div、p等还是不要想了）。</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">style</span>=<span class="string">"margin: 0; padding: 0;"</span>&gt;</span></span><br><span class="line">　<span class="tag">&lt;<span class="name">table</span> <span class="attr">border</span>=<span class="string">"1"</span> <span class="attr">cellpadding</span>=<span class="string">"0"</span> <span class="attr">cellspacing</span>=<span class="string">"0"</span> <span class="attr">width</span>=<span class="string">"100%"</span>&gt;</span></span><br><span class="line">　　<span class="tag">&lt;<span class="name">tr</span>&gt;</span> </span><br><span class="line">　　　<span class="tag">&lt;<span class="name">td</span>&gt;</span> Hello! <span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">　　<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">　<span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-图片相关"><a href="#3-图片相关" class="headerlink" title="3. 图片相关"></a>3. 图片相关</h3><p>图片是唯一可以引用的外部资源。其他的外部资源，比如样式表文件、字体文件、视频文件等，一概不能引用。</p>
+<p>有些客户端会给图片链接加上边框，要去除边框。</p>
+<p>需要注意的是，不少客户端默认不显示图片（比如Gmail），所以要确保即使没有图片，主要内容也能被阅读。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">style</span>=<span class="string">"display:block;outline:none;text-decoration:none,-ms-interpolation-mode:bicubic;border:none;"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="1-img指定width-与-height"><a href="#1-img指定width-与-height" class="headerlink" title="1. img指定width 与 height"></a>1. img指定width 与 height</h4><p>因为在有些邮箱里，图片不是默认加载的，往往加载前需要用户的许可。那么高宽的指定可以使邮件在没有图片撑出样子前也能保持良好的大小结构，加上 alt 属性更可以明确告知图片的内容让用户选择是否下载它们。</p>
+<p>如果因为项目需要（比如需要适配 Retina 高分屏），width 和 height 属性更是必不可少的，并且由于一些 outlook 版本的奇葩表现，width 和 height 属性一定不要加上单位！一定不要加上单位！一定不要加上单位！重要的事情说三遍。</p>
+<p>因为加上单位会使一些版本的 OutLook 无法正确识别，导致图片显示使用实际的宽高而非我们设置的。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">width</span>=<span class="string">"10px"</span> <span class="attr">height</span>=<span class="string">"10px"</span> <span class="attr">src</span>=<span class="string">"*.png"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="2-img在outlook2013下有间距"><a href="#2-img在outlook2013下有间距" class="headerlink" title="2. img在outlook2013下有间距"></a>2. img在outlook2013下有间距</h4><p>outlook2013中，堆叠的图片会显示大概10px的间距</p>
+<p>这个问题只在图片高度小于20px的时候出现，开心的是通过简单的小技巧就可以解决：为td设置和图片高度一样的行高或image设为display：block；</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">td</span> <span class="attr">width</span>=<span class="string">"600"</span> <span class="attr">height</span>=<span class="string">"80"</span> <span class="attr">style</span>=<span class="string">"line-height: 80px;"</span> &gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">height</span>=<span class="string">"80"</span> <span class="attr">src</span>=<span class="string">"http://www.website.com/images/Nature_01.jpg"</span></span></span><br><span class="line"><span class="tag">        <span class="attr">width</span>=<span class="string">"600"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="3-背景图片"><a href="#3-背景图片" class="headerlink" title="3. 背景图片"></a>3. 背景图片</h4><p>style 内容里面 background 可以设置 color，但是 image 会被过滤，就是说不能通过 CSS 来设置背景图片了。但是有一个很有意思的元素属性，也叫 background，里面可以定义一个图片路径，但是功能有限，比如无法定位背景图片等。</p>
+<p>例如要给一个单元格加一个背景，必须这样写</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">td</span> <span class="attr">background</span>=<span class="string">"*.png"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- ... --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="4-margin-与-padding"><a href="#4-margin-与-padding" class="headerlink" title="4. margin 与 padding"></a>4. margin 与 padding</h4><p>Outlook 2007-2013 不支持图片的 margin 与 padding 样式，必要的时候可以尝试 hspace 和 vspace 属性：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">vspace</span>=<span class="string">"10"</span> <span class="attr">hspace</span>=<span class="string">"10"</span> <span class="attr">src</span>=<span class="string">"*.png"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="4-文字相关"><a href="#4-文字相关" class="headerlink" title="4. 文字相关"></a>4. 文字相关</h3><p>所有的CSS规则，最好都采用行内样式。因为放置在网页头部的样式，很可能会被客户端删除。客户端对CSS规则的支持情况，请看<a href="https://www.campaignmonitor.com/css/" target="_blank" rel="noopener">这里</a>。</p>
+<h4 id="1-字体"><a href="#1-字体" class="headerlink" title="1. 字体"></a>1. 字体</h4><p>在 HTML 邮件中，font-family 只支持系统字体，不支持自定义字体，也不支持 font 简写，color 尽可能也不要使用简写：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">"font: 8px/14px Arial, sans-serif;"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>要写成这样</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">"font-size: 8px;font-family: Arial, sans-serif;"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>对于加粗字体，我们可以使用 b 标签而不是 CSS 的 font-weight，前文说过，HTML 标签和属性能解决的样式决不使用 CSS 样式。</p>
+<h4 id="2-行高"><a href="#2-行高" class="headerlink" title="2. 行高"></a>2. 行高</h4><p>在 OutLook 中会有个默认的行高最小值，特别是当设置 font-family 为微软雅黑时，默认的行高差不多为 Word 中的两倍行距，如果 line-height 设置的值小于默认的行高，无论你设置的是多少，则始终使用默认值，在很多情况下这是不能忍的，好在有个神奇的 mso-line-height-rule，使用行高时添加 mso-line-height-rule:exactly; 就能使行高始终等于我们所设置的值。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">td</span> <span class="attr">style</span>=<span class="string">"mso-line-height-rule: exactly; line-height: 36px;"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- ... --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这只是微软的 CSS 属性，对其他客户端没影响。并且该属性只在块元素上有效，所以想在 font 和 span 中用就洗洗睡了吧。</p>
+<h3 id="5-W3C校验和测试工具"><a href="#5-W3C校验和测试工具" class="headerlink" title="5. W3C校验和测试工具"></a>5. W3C校验和测试工具</h3><p>要保证最终的代码，能够通过<a href="http://validator.w3.org/" target="_blank" rel="noopener">W3C</a>的校验，因为某些客户端会把不合格属性剥离。还要使用测试工具（<a href="https://mailchimp.com/features/inbox-preview/" target="_blank" rel="noopener">1</a>, <a href="https://www.emailonacid.com/" target="_blank" rel="noopener">2</a>, <a href="https://litmus.com/" target="_blank" rel="noopener">3</a>），查看在不同客户端的显示结果。</p>
+<p>发送HTML Email的时候，不要忘记MIME类型不能使用</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Content-Type: text/plain;</span><br></pre></td></tr></table></figure>
+<p>要使用</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Content-Type: Multipart/Alternative;</span><br></pre></td></tr></table></figure>
+<h3 id="6-模板"><a href="#6-模板" class="headerlink" title="6. 模板"></a>6. 模板</h3><p>使用别人已经做好的模板，是一个不错的选择（<a href="https://mailchimp.com/features/email-templates/" target="_blank" rel="noopener">这里</a>和<a href="https://www.campaignmonitor.com/email-templates/" target="_blank" rel="noopener">这里</a>），网上还可以搜到<a href="https://www.google.com.hk/search?q=email+template&amp;gws_rd=ssl" target="_blank" rel="noopener">更多</a>。</p>
+<p>自己开发的话，可以参考<a href="https://github.com/seanpowell/Email-Boilerplate" target="_blank" rel="noopener"><strong>HTML</strong> <strong>Email</strong> Boilerplate</a>和<a href="http://www.emailology.org/#1" target="_blank" rel="noopener">Emailology</a>。</p>
+<h2 id="全局规则"><a href="#全局规则" class="headerlink" title="全局规则"></a>全局规则</h2><ol>
+<li><p>页面宽度请设定在550到650px以内。  </p>
+</li>
+<li><p>使用table表格来布局。  </p>
+</li>
+<li><p>如果需要邮件居中显示，请在table里设定align=”center”。  </p>
+</li>
+<li><p>不要写<code>&lt;style&gt;</code>标签、不要写class，所有CSS都用style属性，什么元素需要什么样式就用style写内联的CSS。  </p>
+</li>
+<li><p>不要使用外链的css样式定义文字和图片（外链的css样式在邮件里将不能被读取，所以发送出去的邮件因为没有链接到样式，将会使你的邮件内容样式丢失），正确的写法：<code>&lt;td style=&quot;font-family:arial;font-size:12px;color:black&quot;&gt;文字&lt;/td&gt;</code>。  </p>
+</li>
+<li><p>不使用flash、java、javascript、frames、iframe、activeX以及DHTML，如果页面中的图片一定要动态的，请将flash文件转换成gif动画使用，但在outlook2007里，gif将不能正常显示，因为outlook2007限制gif动画。  </p>
+</li>
+<li><p>不要使用<code>&lt;table&gt;&lt;/table&gt;</code>以外的body、meta和<strong>html</strong>之类的标签，部分邮箱系统会把这些过滤掉。  </p>
+</li>
+<li><p>背景图片代码写法如下：<code>&lt;table background=&quot;background.gif&quot; cellspacing=&quot;0&quot; cellpadding=&quot;0&quot;&gt;&lt;/table&gt;</code>，但请注意，outlook对背景图片不识别。  </p>
+</li>
+<li><p>font-family属性不能为空，否则会被QQ屏蔽为垃圾邮件。  </p>
+</li>
+<li><p>若邮件模板内侧边或者上下有空白间距，不要用 padding，必须得用标准的 td 来设定空白间距，否则会导致各个邮箱解析不同。  </p>
+</li>
+<li><p>在 yahoo 邮箱里定义 line-height 的注意事项：需在块级元素里定义 line-height。如果 td 里有 p 标签，则 line-height 也必须在 p 中定义。无论是 td 还是 p，如果有超链接，则都必须在 a 标签里定义 line-height。如果只是在 td 或者 p 里面定义 line-height 的话，那 yahoo 邮箱将无法识别 a 里面的行高。  </p>
+</li>
+<li><p>少用float, margin,padding. 绝对定位不能用，清除浮动用<code>&lt;table style=&quot;clear:both&quot;&gt;&lt;/table&gt;</code> </p>
+</li>
+<li><p>如果 td 和 td 之间有间隔，使用<code>&lt;td style=&quot;border-bottom:10px solid #fff&quot;&gt;&lt;/td&gt;</code>，这样写的话 td 之间是不会有间隔的。使用<em><code>&lt;td style=&quot;margin-bottom: 10px&quot;&gt;&lt;/td&gt;</code></em>也是不会有空格的。如果 td 之间有间隙，必须用<code>&lt;td&gt;&lt;/td&gt;&lt;td height=&quot;10px&quot;&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;</code>来隔开。但是如果是 table，则<code>&lt;table style=&quot;border-top:10px solid #ffffff; border-bottom:20px solid #ffffff&quot;&gt;&lt;/table&gt;</code>里面的内容会在上下有空行。  </p>
+</li>
+<li><p>少用图片，邮箱不会过滤你的img标签，但是系统往往会默认不载入陌生来信的图片，如果用了很多图片的邮件，在片没有载入的情况下，丑陋无比甚至看不清内容，没耐心的用户直接就删除了。图片上务必加上alt。</p>
+</li>
+</ol>
+<h2 id="outlook-规则"><a href="#outlook-规则" class="headerlink" title="outlook 规则"></a>outlook 规则</h2><ol>
+<li><p>在<td>里设置 margin 是无效的，不论是 margin-left、margin-right、margin-top 或者 margin-boottom 都没有效果。</td></p>
+</li>
+<li><p>如果要使用</p><p>标签要考虑到</p><p>标签本身自带的上下行之间的行高。</p>
+</li>
+</ol>
+<h2 id="yahoo规则"><a href="#yahoo规则" class="headerlink" title="yahoo规则"></a>yahoo规则</h2><ol>
+<li>在table里设定align=”center”无法居中， 需要内联style=“margin：0 auto，width：XX”</li>
+</ol>
+<h2 id="foxmail-规则"><a href="#foxmail-规则" class="headerlink" title="foxmail 规则"></a>foxmail 规则</h2><ol>
+<li>foxmail中所有p标签的Margin:0; 使用p标签时需要设置margin</li>
+</ol>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
+<li><a href="http://www.ruanyifeng.com/blog/2013/06/html_email.html" target="_blank" rel="noopener">HTML Email 编写指南-阮一峰</a></li>
+<li><a href="https://www.jianshu.com/p/bfacee6c4624" target="_blank" rel="noopener">HTML Email 编写指南-简书</a></li>
+<li><a href="https://segmentfault.com/a/1190000008864116" target="_blank" rel="noopener">HTML 邮件兼容问题与解决方案</a></li>
+</ol>
+<p><br><strong>本文作者</strong>：王永杰<br><strong>本文地址</strong>： <a href="http://wangyongjie.top/blog/23389/">http://wangyongjie.top/blog/23389/</a> <br><strong>版权声明</strong>：本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！</p>
+
+    </div>
+    
+        <div class="reward" ontouchstart>
+    <div class="reward-wrap">赏
+        <div class="reward-box">
+            
+                <span class="reward-type">
+                    <img class="alipay" src="http://gfs13.gomein.net.cn/T1u5AbBTZT1RCvBVdK.jpg"><b>支付宝打赏</b>
+                </span>
+            
+            
+                <span class="reward-type">
+                    <img class="wechat" src="http://gfs13.gomein.net.cn/T1I6EbBTJ_1RCvBVdK.jpg"><b>微信打赏</b>
+                </span>
+            
+        </div>
+    </div>
+    <p class="reward-tip">一分也是爱</p>
+</div>
+
+
+    
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 <a href="http://wangyongjie.top" target="_blank"> http://wangyongjie.top</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+    
+        <a href="/blog/47208/" class="next-post btn btn-default" title="反击爬虫,前端工程师的脑洞可以有多大?">
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">反击爬虫,前端工程师的脑洞可以有多大?</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zNDc5OS8xMTMzNg==">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+         if (typeof LivereTower === 'function') { return; }
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+</div>
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">文章目录</h3>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#局部重点规则"><span class="toc-text">局部重点规则</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Doctype"><span class="toc-text">1. Doctype</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-布局"><span class="toc-text">2. 布局</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-图片相关"><span class="toc-text">3. 图片相关</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-img指定width-与-height"><span class="toc-text">1. img指定width 与 height</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-img在outlook2013下有间距"><span class="toc-text">2. img在outlook2013下有间距</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-背景图片"><span class="toc-text">3. 背景图片</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-margin-与-padding"><span class="toc-text">4. margin 与 padding</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-文字相关"><span class="toc-text">4. 文字相关</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-字体"><span class="toc-text">1. 字体</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-行高"><span class="toc-text">2. 行高</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-W3C校验和测试工具"><span class="toc-text">5. W3C校验和测试工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-模板"><span class="toc-text">6. 模板</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#全局规则"><span class="toc-text">全局规则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#outlook-规则"><span class="toc-text">outlook 规则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#yahoo规则"><span class="toc-text">yahoo规则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#foxmail-规则"><span class="toc-text">foxmail 规则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-text">参考</span></a></li></ol>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2019
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+</body>
+</html>
