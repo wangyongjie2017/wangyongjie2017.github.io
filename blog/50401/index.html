@@ -1,0 +1,438 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="王永杰的网络日志">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <!-- 自定义视频托管 -->
+    <script src="https://player.polyv.net/script/polyvplayer.min.js"></script>
+    <link rel="dns-prefetch" href="http://wangyongjie.top">
+    <!--SEO-->
+
+    <meta name="keywords" content="JavaScript">
+
+
+    <meta name="description" content="Number 对象Number 对象是原始数值的包装对象。
+创建 Number 对象的语法：
+var myNum=new Number(_value_);
+var myNum=Number(_v...">
+
+
+
+<meta name="robots" content="all">
+<meta name="google" content="all">
+<meta name="googlebot" content="all">
+<meta name="verify" content="all">
+
+    <!--Title-->
+
+
+<title>Number对象参考手册 | 王永杰的网络日志</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="王永杰的网络日志" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?f42ffe5fed856accbf91820f137dab46";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+
+    
+
+</head>
+
+</html>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header" style="background-image:url(http://snippet.shenliyang.com/img/banner.jpg)">
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="wangyongjie">
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> 我是谁 我在哪 我在做什么 </h2>
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://wangyongjie.top">王永杰的网络日志</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/前端/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/后端/"><i class="fa "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/工具/"><i class="fa "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/webnav/"><i class="fa "></i>导航</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/message/"><i class="fa "></i>留言板</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/生活/"><i class="fa "></i>生活</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/about/"><i class="fa "></i>关于</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="Number对象参考手册">
+            
+	            Number对象参考手册
+            
+        </h1>
+        <div class="post-meta">
+    
+        <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+            <a class="category-link" href="/categories/常用手册/">常用手册</a>
+        </span>
+    
+
+    
+        <span class="fa-wrap">
+            <i class="fa fa-tags"></i>
+            <span class="tags-meta">
+                
+                    <a class="tag-link" href="/tags/JavaScript/">JavaScript</a>
+                
+            </span>
+        </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2018/12/13</span>
+        </span>
+        
+    
+</div>
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h2 id="Number-对象"><a href="#Number-对象" class="headerlink" title="Number 对象"></a>Number 对象</h2><p>Number 对象是原始数值的包装对象。</p>
+<h3 id="创建-Number-对象的语法："><a href="#创建-Number-对象的语法：" class="headerlink" title="创建 Number 对象的语法："></a>创建 Number 对象的语法：</h3><pre>
+var myNum=new Number(_value_);
+var myNum=Number(_value_);
+</pre>
+
+<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><p>参数 <em>value</em> 是要创建的 Number 对象的数值，或是要转换成数字的值。</p>
+<h3 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h3><p>当 Number() 和运算符 new 一起作为构造函数使用时，它返回一个新创建的 Number 对象。如果不用 new 运算符，把 Number() 作为一个函数来调用，它将把自己的参数转换成一个原始的数值，并且返回这个值（如果转换失败，则返回 NaN）。</p>
+<h2 id="Number-对象属性"><a href="#Number-对象属性" class="headerlink" title="Number 对象属性"></a>Number 对象属性</h2><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述                     </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_constructor_number.asp" target="_blank" rel="noopener">constructor</a></td>
+<td>返回对创建此对象的 Number 函数的引用。</td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_max_value.asp" target="_blank" rel="noopener">MAX_VALUE</a></td>
+<td>可表示的最大的数。              </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_min_value.asp" target="_blank" rel="noopener">MIN_VALUE</a></td>
+<td>可表示的最小的数。              </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_nan_number.asp" target="_blank" rel="noopener">NaN</a></td>
+<td>非数字值。                  </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_negative_infinity.asp" target="_blank" rel="noopener">NEGATIVE_INFINITY</a></td>
+<td>负无穷大，溢出时返回该值。          </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_positive_infinity.asp" target="_blank" rel="noopener">POSITIVE_INFINITY</a></td>
+<td>正无穷大，溢出时返回该值。          </td>
+</tr>
+<tr>
+<td>prototype</td>
+<td>使您有能力向对象添加属性和方法。       </td>
+</tr>
+</tbody>
+</table>
+<h2 id="Number-对象方法"><a href="#Number-对象方法" class="headerlink" title="Number 对象方法"></a>Number 对象方法</h2><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述                        </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_tostring_number.asp" target="_blank" rel="noopener">toString</a></td>
+<td>把数字转换为字符串，使用指定的基数。        </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_tolocalestring_number.asp" target="_blank" rel="noopener">toLocaleString</a></td>
+<td>把数字转换为字符串，使用本地数字格式顺序。     </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_tofixed.asp" target="_blank" rel="noopener">toFixed</a></td>
+<td>把数字转换为字符串，结果的小数点后有指定位数的数字。</td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_toexponential.asp" target="_blank" rel="noopener">toExponential</a></td>
+<td>把对象的值转换为指数计数法。            </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_toprecision.asp" target="_blank" rel="noopener">toPrecision</a></td>
+<td>把数字格式化为指定的长度。             </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_valueof_number.asp" target="_blank" rel="noopener">valueOf</a></td>
+<td>返回一个 Number 对象的基本数字值。     </td>
+</tr>
+</tbody>
+</table>
+<h2 id="Number-对象描述"><a href="#Number-对象描述" class="headerlink" title="Number 对象描述"></a>Number 对象描述</h2><p>在 JavaScript 中，数字是一种基本的数据类型。JavaScript 还支持 Number 对象，该对象是原始数值的包装对象。在必要时，JavaScript 会自动地在原始数据和对象之间转换。在 JavaScript 1.1 中，可以用构造函数 Number() 明确地创建一个 Number 对象，尽管这样做并没有什么必要。</p>
+<p>构造函数 Number() 可以不与运算符 new 一起使用，而直接作为转化函数来使用。以这种方式调用 Number() 时，它会把自己的参数转化成一个数字，然后返回转换后的原始数值（或 NaN）。</p>
+<p>构造函数通常还用作 5 个有用的数字常量的占位符，这 5 个有用的数字常量分别是可表示的最大数、可表示的最小数、正无穷大、负无穷大和特殊的 NaN 值。<br>注意，这些值是构造函数 Number() 自身的属性，而不是单独的某个 Number 对象的属性。</p>
+<p>比如这样使用属性 MAX_VALUE 是正确的：</p>
+<pre>
+var big = Number.MAX_VALUE
+</pre>
+
+<p>但是这样是错误的：</p>
+<pre>
+var n= new Number(2);
+var big = n.MAX_VALUE
+</pre>
+
+<p>作为比较，我们看一下 toString() 和 Number 对象的其他方法，它们是每个 Number 对象的方法，而不是 Number() 构造函数的方法。前面提到过，在必要时，JavaScript 会自动地把原始数值转化成 Number 对象，调用 Number 方法的既可以是 Number 对象，也可以是原始数字值。</p>
+<pre>
+var n = 123;
+var binary_value = n.toString(2);
+</pre>
+
+<p><br><strong>本文作者</strong>：王永杰<br><strong>本文地址</strong>： <a href="http://wangyongjie.top/blog/50401/">http://wangyongjie.top/blog/50401/</a> <br><strong>版权声明</strong>：本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！</p>
+
+    </div>
+    
+        <div class="reward" ontouchstart>
+    <div class="reward-wrap">赏
+        <div class="reward-box">
+            
+                <span class="reward-type">
+                    <img class="alipay" src="http://gfs13.gomein.net.cn/T1u5AbBTZT1RCvBVdK.jpg"><b>支付宝打赏</b>
+                </span>
+            
+            
+                <span class="reward-type">
+                    <img class="wechat" src="http://gfs13.gomein.net.cn/T1I6EbBTJ_1RCvBVdK.jpg"><b>微信打赏</b>
+                </span>
+            
+        </div>
+    </div>
+    <p class="reward-tip">一分也是爱</p>
+</div>
+
+
+    
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 <a href="http://wangyongjie.top" target="_blank"> http://wangyongjie.top</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/blog/49453/" class="pre-post btn btn-default" title="请停止css-in-js的行为">
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">请停止css-in-js的行为</span>
+        </a>
+    
+    
+        <a href="/blog/47263/" class="next-post btn btn-default" title="驾照已拿到❤️">
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">驾照已拿到❤️</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zNDc5OS8xMTMzNg==">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+         if (typeof LivereTower === 'function') { return; }
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+</div>
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">文章目录</h3>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Number-对象"><span class="toc-text">Number 对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建-Number-对象的语法："><span class="toc-text">创建 Number 对象的语法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参数"><span class="toc-text">参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#返回值"><span class="toc-text">返回值</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Number-对象属性"><span class="toc-text">Number 对象属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Number-对象方法"><span class="toc-text">Number 对象方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Number-对象描述"><span class="toc-text">Number 对象描述</span></a></li></ol>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2019
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+</body>
+</html>

@@ -1,0 +1,592 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="王永杰的网络日志">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <!-- 自定义视频托管 -->
+    <script src="https://player.polyv.net/script/polyvplayer.min.js"></script>
+    <link rel="dns-prefetch" href="http://wangyongjie.top">
+    <!--SEO-->
+
+    <meta name="keywords" content="jQuery">
+
+
+    <meta name="description" content="jQuery 选择器
+
+
+选择器
+实例
+选取                                 
+
+
+
+
+*
+$(“*”)
+所有元素                        ...">
+
+
+
+<meta name="robots" content="all">
+<meta name="google" content="all">
+<meta name="googlebot" content="all">
+<meta name="verify" content="all">
+
+    <!--Title-->
+
+
+<title>jQuery选择器参考手册 | 王永杰的网络日志</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="王永杰的网络日志" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?f42ffe5fed856accbf91820f137dab46";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+
+    
+
+</head>
+
+</html>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header" style="background-image:url(http://snippet.shenliyang.com/img/banner.jpg)">
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="wangyongjie">
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> 我是谁 我在哪 我在做什么 </h2>
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://wangyongjie.top">王永杰的网络日志</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/前端/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/后端/"><i class="fa "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/工具/"><i class="fa "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/webnav/"><i class="fa "></i>导航</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/message/"><i class="fa "></i>留言板</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/生活/"><i class="fa "></i>生活</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/about/"><i class="fa "></i>关于</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="jQuery选择器参考手册">
+            
+	            jQuery选择器参考手册
+            
+        </h1>
+        <div class="post-meta">
+    
+        <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+            <a class="category-link" href="/categories/常用手册/">常用手册</a>
+        </span>
+    
+
+    
+        <span class="fa-wrap">
+            <i class="fa fa-tags"></i>
+            <span class="tags-meta">
+                
+                    <a class="tag-link" href="/tags/jQuery/">jQuery</a>
+                
+            </span>
+        </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2018/07/30</span>
+        </span>
+        
+    
+</div>
+            
+            
+            <p class="fa fa-exclamation-triangle warning">
+                本文于<strong>304</strong>天之前发表，文中内容可能已经过时。
+            </p>
+        
+    </div>
+    
+    <div class="post-body post-content">
+        <h2 id="jQuery-选择器"><a href="#jQuery-选择器" class="headerlink" title="jQuery 选择器"></a>jQuery 选择器</h2><table>
+<thead>
+<tr>
+<th>选择器</th>
+<th>实例</th>
+<th>选取                                 </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://www.w3school.com.cn/jquery/selector_all.asp" title="jQuery * 选择器" target="_blank" rel="noopener">*</a></td>
+<td>$(“*”)</td>
+<td>所有元素                               </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jquery/selector_id.asp" title="jQuery # 选择器" target="_blank" rel="noopener">#_id_</a></td>
+<td>$(“#lastname”)</td>
+<td><code>id=&quot;lastname&quot;</code> 的元素                  </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jquery/selector_class.asp" title="jQuery . 选择器" target="_blank" rel="noopener">.<em>class</em></a></td>
+<td>$(“.intro”)</td>
+<td>所有 <code>class=&quot;intro&quot;</code> 的元素               </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jquery/selector_element.asp" title="jQuery element 选择器" target="_blank" rel="noopener"><em>element</em></a></td>
+<td>$(“p”)</td>
+<td>所有 <code>&lt;p&gt;</code> 元素                          </td>
+</tr>
+<tr>
+<td>.<em>class</em>.<em>class</em></td>
+<td>$(“.intro.demo”)</td>
+<td>所有 <code>class=&quot;intro&quot;</code> 且 <code>class=&quot;demo&quot;</code> 的元素</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jquery/selector_first.asp" title="jQuery :first 选择器" target="_blank" rel="noopener">:first</a></td>
+<td>$(“p:first”)</td>
+<td>第一个 <code>&lt;p&gt;</code> 元素                         </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jquery/selector_last.asp" title="jQuery :last 选择器" target="_blank" rel="noopener">:last</a></td>
+<td>$(“p:last”)</td>
+<td>最后一个 <code>&lt;p&gt;</code> 元素                        </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jquery/selector_even.asp" title="jQuery :even 选择器" target="_blank" rel="noopener">:even</a></td>
+<td>$(“tr:even”)</td>
+<td>所有偶数 <code>&lt;tr&gt;</code> 元素                       </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jquery/selector_odd.asp" title="jQuery :odd 选择器" target="_blank" rel="noopener">:odd</a></td>
+<td>$(“tr:odd”)</td>
+<td>所有奇数 <code>&lt;tr&gt;</code> 元素                       </td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jquery/selector_eq.asp" title="jQuery :eq() 选择器" target="_blank" rel="noopener">:eq(<em>index</em>)</a></td>
+<td>$(“ul li:eq(3)”)</td>
+<td>列表中的第四个元素（<code>index</code> 从 0 开始）            </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jquery/selector_gt.asp" title="jQuery :gt 选择器" target="_blank" rel="noopener">:gt(_no_)</a></td>
+<td>$(“ul li:gt(3)”)</td>
+<td>列出 <code>index</code> 大于 3 的元素                  </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jquery/selector_lt.asp" title="jQuery :lt 选择器" target="_blank" rel="noopener">:lt(_no_)</a></td>
+<td>$(“ul li:lt(3)”)</td>
+<td>列出 <code>index</code> 小于 3 的元素                  </td>
+</tr>
+<tr>
+<td>:not(<em>selector</em>)</td>
+<td>$(“input:not(:empty)”)</td>
+<td>所有不为空的 input 元素                    </td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jquery/selector_header.asp" title="jQuery :header 选择器" target="_blank" rel="noopener">:header</a></td>
+<td>$(“:header”)</td>
+<td>所有标题元素 <code>&lt;h1&gt; - &lt;h6&gt;</code>                 </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jquery/selector_animated.asp" title="jQuery :animated 选择器" target="_blank" rel="noopener">:animated</a></td>
+<td></td>
+<td>所有动画元素                             </td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jquery/selector_contains.asp" title="jQuery :contains 选择器" target="_blank" rel="noopener">:contains(<em>text</em>)</a></td>
+<td>$(“:contains(‘W3School’)”)</td>
+<td>包含指定字符串的所有元素                       </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jquery/selector_empty.asp" title="jQuery :empty 选择器" target="_blank" rel="noopener">:empty</a></td>
+<td>$(“:empty”)</td>
+<td>无子（元素）节点的所有元素                      </td>
+</tr>
+<tr>
+<td>:hidden</td>
+<td>$(“p:hidden”)</td>
+<td>所有隐藏的 <code>&lt;p&gt;</code> 元素                       </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jquery/selector_visible.asp" title="jQuery :visible 选择器" target="_blank" rel="noopener">:visible</a></td>
+<td>$(“table:visible”)</td>
+<td>所有可见的表格                            </td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>s1,s2,s3</td>
+<td>$(“th,td,.intro”)</td>
+<td>所有带有匹配选择的元素                        </td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jquery/selector_attribute.asp" title="jQuery [attribute] 选择器" target="_blank" rel="noopener">[<em>attribute</em>]</a></td>
+<td>$(“[href]”)</td>
+<td>所有带有 <code>href</code> 属性的元素                    </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jquery/selector_attribute_equal_value.asp" title="jQuery [attribute=value] 选择器" target="_blank" rel="noopener">[<em>attribute</em>=<em>value</em>]</a></td>
+<td>$(“[href=’#’]”)</td>
+<td>所有 <code>href</code> 属性的值等于 <code>&quot;#&quot;</code> 的元素             </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jquery/selector_attribute_notequal_value.asp" title="jQuery [attribute!=value] 选择器" target="_blank" rel="noopener">[<em>attribute</em>!=<em>value</em>]</a></td>
+<td>$(“[href!=’#’]”)</td>
+<td>所有 <code>href</code> 属性的值不等于 <code>&quot;#&quot;</code> 的元素            </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jquery/selector_attribute_end_value.asp" title="jQuery [attribute$=value] 选择器" target="_blank" rel="noopener">[<em>attribute</em>$=<em>value</em>]</a></td>
+<td>$(“[href$=’.jpg’]”)</td>
+<td>所有 <code>href</code> 属性的值包含以 <code>&quot;.jpg&quot;</code> 结尾的元素       </td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jquery/selector_input.asp" title="jQuery :input 选择器" target="_blank" rel="noopener">:input</a></td>
+<td>$(“:input”)</td>
+<td>所有 <code>&lt;input&gt;</code> 元素                      </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jquery/selector_input_text.asp" title="jQuery :text 选择器" target="_blank" rel="noopener">:text</a></td>
+<td>$(“:text”)</td>
+<td>所有 <code>type=&quot;text&quot;</code> 的 <code>&lt;input&gt;</code> 元素        </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jquery/selector_input_password.asp" title="jQuery :password 选择器" target="_blank" rel="noopener">:password</a></td>
+<td>$(“:password”)</td>
+<td>所有 <code>type=&quot;password&quot;</code> 的 <code>&lt;input&gt;</code> 元素    </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jquery/selector_input_radio.asp" title="jQuery :radio 选择器" target="_blank" rel="noopener">:radio</a></td>
+<td>$(“:radio”)</td>
+<td>所有 <code>type=&quot;radio&quot;</code> 的 <code>&lt;input&gt;</code> 元素       </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jquery/selector_input_checkbox.asp" title="jQuery :checkbox 选择器" target="_blank" rel="noopener">:checkbox</a></td>
+<td>$(“:checkbox”)</td>
+<td>所有 <code>type=&quot;checkbox&quot;</code> 的 <code>&lt;input&gt;</code> 元素    </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jquery/selector_input_submit.asp" title="jQuery :submit 选择器" target="_blank" rel="noopener">:submit</a></td>
+<td>$(“:submit”)</td>
+<td>所有 <code>type=&quot;submit&quot;</code> 的 <code>&lt;input&gt;</code> 元素      </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jquery/selector_input_reset.asp" title="jQuery :reset 选择器" target="_blank" rel="noopener">:reset</a></td>
+<td>$(“:reset”)</td>
+<td>所有 <code>type=&quot;reset&quot;</code> 的 <code>&lt;input&gt;</code> 元素       </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jquery/selector_input_button.asp" title="jQuery :button 选择器" target="_blank" rel="noopener">:button</a></td>
+<td>$(“:button”)</td>
+<td>所有 <code>type=&quot;button&quot;</code> 的 <code>&lt;input&gt;</code> 元素      </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jquery/selector_input_image.asp" title="jQuery :image 选择器" target="_blank" rel="noopener">:image</a></td>
+<td>$(“:image”)</td>
+<td>所有 <code>type=&quot;image&quot;</code> 的 <code>&lt;input&gt;</code> 元素       </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jquery/selector_input_file.asp" title="jQuery :file 选择器" target="_blank" rel="noopener">:file</a></td>
+<td>$(“:file”)</td>
+<td>所有 <code>type=&quot;file&quot;</code> 的 <code>&lt;input&gt;</code> 元素        </td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jquery/selector_input_enabled.asp" title="jQuery :enabled 选择器" target="_blank" rel="noopener">:enabled</a></td>
+<td>$(“:enabled”)</td>
+<td>所有激活的 <code>input</code> 元素                     </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jquery/selector_input_disabled.asp" title="jQuery :disabled 选择器" target="_blank" rel="noopener">:disabled</a></td>
+<td>$(“:disabled”)</td>
+<td>所有禁用的 <code>input</code> 元素                     </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jquery/selector_input_selected.asp" title="jQuery :selected 选择器" target="_blank" rel="noopener">:selected</a></td>
+<td>$(“:selected”)</td>
+<td>所有被选取的 <code>input</code> 元素                    </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jquery/selector_input_checked.asp" title="jQuery :checked 选择器" target="_blank" rel="noopener">:checked</a></td>
+<td>$(“:checked”)</td>
+<td>所有被选中的 <code>input</code> 元素                    </td>
+</tr>
+</tbody>
+</table>
+<p><br><strong>本文作者</strong>：王永杰<br><strong>本文地址</strong>： <a href="http://wangyongjie.top/blog/28461/">http://wangyongjie.top/blog/28461/</a> <br><strong>版权声明</strong>：本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！</p>
+
+    </div>
+    
+        <div class="reward" ontouchstart>
+    <div class="reward-wrap">赏
+        <div class="reward-box">
+            
+                <span class="reward-type">
+                    <img class="alipay" src="http://gfs13.gomein.net.cn/T1u5AbBTZT1RCvBVdK.jpg"><b>支付宝打赏</b>
+                </span>
+            
+            
+                <span class="reward-type">
+                    <img class="wechat" src="http://gfs13.gomein.net.cn/T1I6EbBTJ_1RCvBVdK.jpg"><b>微信打赏</b>
+                </span>
+            
+        </div>
+    </div>
+    <p class="reward-tip">一分也是爱</p>
+</div>
+
+
+    
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 <a href="http://wangyongjie.top" target="_blank"> http://wangyongjie.top</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/blog/41393/" class="pre-post btn btn-default" title="CSS选择器参考手册">
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">CSS选择器参考手册</span>
+        </a>
+    
+    
+        <a href="/blog/10223/" class="next-post btn btn-default" title="js创建对象的几种方法及继承">
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">js创建对象的几种方法及继承</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zNDc5OS8xMTMzNg==">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+         if (typeof LivereTower === 'function') { return; }
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+</div>
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">文章目录</h3>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery-选择器"><span class="toc-text">jQuery 选择器</span></a></li></ol>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2019
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+</body>
+</html>

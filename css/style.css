@@ -1625,3 +1625,8 @@ pre .javascript .function {
 .post-media {
   display: none;
 }
+
+/* 表格hover背景 */
+table tbody tr:hover {
+  background: #c0ffb1 !important;
+}

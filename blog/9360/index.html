@@ -1,0 +1,523 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="王永杰的网络日志">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <!-- 自定义视频托管 -->
+    <script src="https://player.polyv.net/script/polyvplayer.min.js"></script>
+    <link rel="dns-prefetch" href="http://wangyongjie.top">
+    <!--SEO-->
+
+    <meta name="keywords" content="JavaScript">
+
+
+    <meta name="description" content="String 对象String 对象用于处理文本（字符串）。
+创建 String 对象的语法：
+new String(_s_);
+String(_s_);
+
+
+参数参数 _s_ 是要存储在 St...">
+
+
+
+<meta name="robots" content="all">
+<meta name="google" content="all">
+<meta name="googlebot" content="all">
+<meta name="verify" content="all">
+
+    <!--Title-->
+
+
+<title>String对象参考手册 | 王永杰的网络日志</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="王永杰的网络日志" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?f42ffe5fed856accbf91820f137dab46";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+
+    
+
+</head>
+
+</html>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header" style="background-image:url(http://snippet.shenliyang.com/img/banner.jpg)">
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="wangyongjie">
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> 我是谁 我在哪 我在做什么 </h2>
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://wangyongjie.top">王永杰的网络日志</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/前端/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/后端/"><i class="fa "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/工具/"><i class="fa "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/webnav/"><i class="fa "></i>导航</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/message/"><i class="fa "></i>留言板</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/生活/"><i class="fa "></i>生活</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/about/"><i class="fa "></i>关于</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="String对象参考手册">
+            
+	            String对象参考手册
+            
+        </h1>
+        <div class="post-meta">
+    
+        <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+            <a class="category-link" href="/categories/常用手册/">常用手册</a>
+        </span>
+    
+
+    
+        <span class="fa-wrap">
+            <i class="fa fa-tags"></i>
+            <span class="tags-meta">
+                
+                    <a class="tag-link" href="/tags/JavaScript/">JavaScript</a>
+                
+            </span>
+        </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2018/11/30</span>
+        </span>
+        
+    
+</div>
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h2 id="String-对象"><a href="#String-对象" class="headerlink" title="String 对象"></a>String 对象</h2><p>String 对象用于处理文本（字符串）。</p>
+<h3 id="创建-String-对象的语法："><a href="#创建-String-对象的语法：" class="headerlink" title="创建 String 对象的语法："></a>创建 String 对象的语法：</h3><pre>
+new String(_s_);
+String(_s_);
+</pre>
+
+<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><p>参数 _s_ 是要存储在 String 对象中或转换成原始字符串的值。</p>
+<h3 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h3><p>当 String() 和运算符 new 一起作为构造函数使用时，它返回一个新创建的 String 对象，存放的是字符串 _s_ 或 _s_ 的字符串表示。</p>
+<p>当不用 new 运算符调用 String() 时，它只把 _s_ 转换成原始的字符串，并返回转换后的值。</p>
+<h2 id="String-对象属性"><a href="#String-对象属性" class="headerlink" title="String 对象属性"></a>String 对象属性</h2><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述           </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>constructor</td>
+<td>对创建该对象的函数的引用 </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_length_string.asp" target="_blank" rel="noopener">length</a></td>
+<td>字符串的长度       </td>
+</tr>
+<tr>
+<td>prototype</td>
+<td>允许您向对象添加属性和方法</td>
+</tr>
+</tbody>
+</table>
+<h2 id="String-对象方法"><a href="#String-对象方法" class="headerlink" title="String 对象方法"></a>String 对象方法</h2><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述                        </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_anchor.asp" target="_blank" rel="noopener">anchor()</a></td>
+<td>创建 HTML 锚。                </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_big.asp" target="_blank" rel="noopener">big()</a></td>
+<td>用大号字体显示字符串。               </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_blink.asp" target="_blank" rel="noopener">blink()</a></td>
+<td>显示闪动字符串。                  </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_bold.asp" target="_blank" rel="noopener">bold()</a></td>
+<td>使用粗体显示字符串。                </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_charAt.asp" target="_blank" rel="noopener">charAt()</a></td>
+<td>返回在指定位置的字符。               </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_charCodeAt.asp" target="_blank" rel="noopener">charCodeAt()</a></td>
+<td>返回在指定的位置的字符的 Unicode 编码。  </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_concat_string.asp" target="_blank" rel="noopener">concat()</a></td>
+<td>连接字符串。                    </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_fixed.asp" target="_blank" rel="noopener">fixed()</a></td>
+<td>以打字机文本显示字符串。              </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_fontcolor.asp" target="_blank" rel="noopener">fontcolor()</a></td>
+<td>使用指定的颜色来显示字符串。            </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_fontsize.asp" target="_blank" rel="noopener">fontsize()</a></td>
+<td>使用指定的尺寸来显示字符串。            </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_fromCharCode.asp" target="_blank" rel="noopener">fromCharCode()</a></td>
+<td>从字符编码创建一个字符串。             </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_indexOf.asp" target="_blank" rel="noopener">indexOf()</a></td>
+<td>检索字符串。                    </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_italics.asp" target="_blank" rel="noopener">italics()</a></td>
+<td>使用斜体显示字符串。                </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_lastIndexOf.asp" target="_blank" rel="noopener">lastIndexOf()</a></td>
+<td>从后向前搜索字符串。                </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_link.asp" target="_blank" rel="noopener">link()</a></td>
+<td>将字符串显示为链接。                </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_localeCompare.asp" target="_blank" rel="noopener">localeCompare()</a></td>
+<td>用本地特定的顺序来比较两个字符串。         </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_match.asp" target="_blank" rel="noopener">match()</a></td>
+<td>找到一个或多个正则表达式的匹配。          </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_replace.asp" target="_blank" rel="noopener">replace()</a></td>
+<td>替换与正则表达式匹配的子串。            </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_search.asp" target="_blank" rel="noopener">search()</a></td>
+<td>检索与正则表达式相匹配的值。            </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_slice_string.asp" target="_blank" rel="noopener">slice()</a></td>
+<td>提取字符串的片断，并在新的字符串中返回被提取的部分。</td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_small.asp" target="_blank" rel="noopener">small()</a></td>
+<td>使用小字号来显示字符串。              </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_split.asp" target="_blank" rel="noopener">split()</a></td>
+<td>把字符串分割为字符串数组。             </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_strike.asp" target="_blank" rel="noopener">strike()</a></td>
+<td>使用删除线来显示字符串。              </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_sub.asp" target="_blank" rel="noopener">sub()</a></td>
+<td>把字符串显示为下标。                </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_substr.asp" target="_blank" rel="noopener">substr()</a></td>
+<td>从起始索引号提取字符串中指定数目的字符。      </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_substring.asp" target="_blank" rel="noopener">substring()</a></td>
+<td>提取字符串中两个指定的索引号之间的字符。      </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_sup.asp" target="_blank" rel="noopener">sup()</a></td>
+<td>把字符串显示为上标。                </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_toLocaleLowerCase.asp" target="_blank" rel="noopener">toLocaleLowerCase()</a></td>
+<td>把字符串转换为小写。                </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_toLocaleUpperCase.asp" target="_blank" rel="noopener">toLocaleUpperCase()</a></td>
+<td>把字符串转换为大写。                </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_toLowerCase.asp" target="_blank" rel="noopener">toLowerCase()</a></td>
+<td>把字符串转换为小写。                </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_toUpperCase.asp" target="_blank" rel="noopener">toUpperCase()</a></td>
+<td>把字符串转换为大写。                </td>
+</tr>
+<tr>
+<td>toSource()</td>
+<td>代表对象的源代码。                 </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_toString_string.asp" target="_blank" rel="noopener">toString()</a></td>
+<td>返回字符串。                    </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_valueOf_string.asp" target="_blank" rel="noopener">valueOf()</a></td>
+<td>返回某个字符串对象的原始值。            </td>
+</tr>
+</tbody>
+</table>
+<h2 id="String-对象描述"><a href="#String-对象描述" class="headerlink" title="String 对象描述"></a>String 对象描述</h2><p>字符串是 JavaScript 的一种基本的数据类型。</p>
+<p>String 对象的 length 属性声明了该字符串中的字符数。</p>
+<p>String 类定义了大量操作字符串的方法，例如从字符串中提取字符或子串，或者检索字符或子串。</p>
+<p>需要注意的是，JavaScript 的字符串是不可变的（immutable），String 类定义的方法都不能改变字符串的内容。像 String.toUpperCase() 这样的方法，返回的是全新的字符串，而不是修改原始字符串。</p>
+<p>在较早的 Netscape 代码基的 JavaScript 实现中（例如 Firefox 实现中），字符串的行为就像只读的字符数组。例如，从字符串 s 中提取第三个字符，可以用 s[2] 代替更加标准的 s.charAt(2)。此外，对字符串应用 for/in 循环时，它将枚举字符串中每个字符的数组下标（但要注意，ECMAScript 标准规定，不能枚举 length 属性）。因为字符串的数组行为不标准，所以应该避免使用它。</p>
+<p><br><strong>本文作者</strong>：王永杰<br><strong>本文地址</strong>： <a href="http://wangyongjie.top/blog/9360/">http://wangyongjie.top/blog/9360/</a> <br><strong>版权声明</strong>：本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！</p>
+
+    </div>
+    
+        <div class="reward" ontouchstart>
+    <div class="reward-wrap">赏
+        <div class="reward-box">
+            
+                <span class="reward-type">
+                    <img class="alipay" src="http://gfs13.gomein.net.cn/T1u5AbBTZT1RCvBVdK.jpg"><b>支付宝打赏</b>
+                </span>
+            
+            
+                <span class="reward-type">
+                    <img class="wechat" src="http://gfs13.gomein.net.cn/T1I6EbBTJ_1RCvBVdK.jpg"><b>微信打赏</b>
+                </span>
+            
+        </div>
+    </div>
+    <p class="reward-tip">一分也是爱</p>
+</div>
+
+
+    
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 <a href="http://wangyongjie.top" target="_blank"> http://wangyongjie.top</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/blog/47263/" class="pre-post btn btn-default" title="驾照已拿到❤️">
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">驾照已拿到❤️</span>
+        </a>
+    
+    
+        <a href="/blog/47525/" class="next-post btn btn-default" title="Date对象参考手册">
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">Date对象参考手册</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zNDc5OS8xMTMzNg==">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+         if (typeof LivereTower === 'function') { return; }
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+</div>
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">文章目录</h3>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#String-对象"><span class="toc-text">String 对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建-String-对象的语法："><span class="toc-text">创建 String 对象的语法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参数"><span class="toc-text">参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#返回值"><span class="toc-text">返回值</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#String-对象属性"><span class="toc-text">String 对象属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#String-对象方法"><span class="toc-text">String 对象方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#String-对象描述"><span class="toc-text">String 对象描述</span></a></li></ol>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2019
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+</body>
+</html>

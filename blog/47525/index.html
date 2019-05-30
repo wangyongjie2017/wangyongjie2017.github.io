@@ -1,0 +1,567 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!--Setting-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta name="apple-mobile-web-app-capable" content="王永杰的网络日志">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no,adress=no">
+    <meta name="browsermode" content="application">
+    <meta name="screen-orientation" content="portrait">
+    <!-- 自定义视频托管 -->
+    <script src="https://player.polyv.net/script/polyvplayer.min.js"></script>
+    <link rel="dns-prefetch" href="http://wangyongjie.top">
+    <!--SEO-->
+
+    <meta name="keywords" content="JavaScript">
+
+
+    <meta name="description" content="Date 对象Date 对象用于处理日期和时间。
+创建 Date 对象的语法：
+var myDate=new Date()
+
+
+注释：Date 对象会自动把当前日期和时间保存为其初始值。
+Dat...">
+
+
+
+<meta name="robots" content="all">
+<meta name="google" content="all">
+<meta name="googlebot" content="all">
+<meta name="verify" content="all">
+
+    <!--Title-->
+
+
+<title>Date对象参考手册 | 王永杰的网络日志</title>
+
+
+    <link rel="alternate" href="/atom.xml" title="王永杰的网络日志" type="application/atom+xml">
+
+
+    <link rel="icon" href="/favicon.ico">
+
+    
+
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css?rev=3.3.7">
+<link rel="stylesheet" href="/css/font-awesome.min.css?rev=4.5.0">
+<link rel="stylesheet" href="/css/style.css?rev=@@hash">
+
+
+
+
+    
+
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?f42ffe5fed856accbf91820f137dab46";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
+
+    
+
+</head>
+
+</html>
+<!--[if lte IE 8]>
+<style>
+    html{ font-size: 1em }
+</style>
+<![endif]-->
+<!--[if lte IE 9]>
+<div style="ie">你使用的浏览器版本过低，为了你更好的阅读体验，请更新浏览器的版本或者使用其他现代浏览器，比如Chrome、Firefox、Safari等。</div>
+<![endif]-->
+
+<body>
+    <header class="main-header" style="background-image:url(http://snippet.shenliyang.com/img/banner.jpg)">
+    <div class="main-header-box">
+        <a class="header-avatar" href="/" title="wangyongjie">
+            <img src="/img/avatar.jpg" alt="logo头像" class="img-responsive center-block">
+        </a>
+        <div class="branding">
+        	<!--<h2 class="text-hide">Snippet主题,从未如此简单有趣</h2>-->
+            
+                <h2> 我是谁 我在哪 我在做什么 </h2>
+            
+    	</div>
+    </div>
+</header>
+    <nav class="main-navigation">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="navbar-header"><span class="nav-toggle-button collapsed pull-right" data-toggle="collapse" data-target="#main-menu" id="mnav">
+                    <span class="sr-only"></span>
+                        <i class="fa fa-bars"></i>
+                    </span>
+                    <a class="navbar-brand" href="http://wangyongjie.top">王永杰的网络日志</a>
+                </div>
+                <div class="collapse navbar-collapse" id="main-menu">
+                    <ul class="menu">
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/"><i class="fa "></i>首页</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/前端/"><i class="fa "></i>前端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/后端/"><i class="fa "></i>后端</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/工具/"><i class="fa "></i>工具</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/webnav/"><i class="fa "></i>导航</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/archives/"><i class="fa "></i>时间轴</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/message/"><i class="fa "></i>留言板</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/categories/生活/"><i class="fa "></i>生活</a>
+                            </li>
+                        
+                            <li role="presentation" class="text-center">
+                                <a href="/about/"><i class="fa "></i>关于</a>
+                            </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="content-wrap">
+        <div class="container">
+            <div class="row">
+                <main class="col-md-8 main-content m-post">
+                    <p id="process"></p>
+<article class="post">
+    <div class="post-head">
+        <h1 id="Date对象参考手册">
+            
+	            Date对象参考手册
+            
+        </h1>
+        <div class="post-meta">
+    
+        <span class="categories-meta fa-wrap">
+            <i class="fa fa-folder-open-o"></i>
+            <a class="category-link" href="/categories/常用手册/">常用手册</a>
+        </span>
+    
+
+    
+        <span class="fa-wrap">
+            <i class="fa fa-tags"></i>
+            <span class="tags-meta">
+                
+                    <a class="tag-link" href="/tags/JavaScript/">JavaScript</a>
+                
+            </span>
+        </span>
+    
+
+    
+        
+        <span class="fa-wrap">
+            <i class="fa fa-clock-o"></i>
+            <span class="date-meta">2018/11/10</span>
+        </span>
+        
+    
+</div>
+            
+            
+    </div>
+    
+    <div class="post-body post-content">
+        <h2 id="Date-对象"><a href="#Date-对象" class="headerlink" title="Date 对象"></a>Date 对象</h2><p>Date 对象用于处理日期和时间。</p>
+<h3 id="创建-Date-对象的语法："><a href="#创建-Date-对象的语法：" class="headerlink" title="创建 Date 对象的语法："></a>创建 Date 对象的语法：</h3><pre>
+var myDate=new Date()
+</pre>
+
+<p>注释：Date 对象会自动把当前日期和时间保存为其初始值。</p>
+<h2 id="Date-对象属性"><a href="#Date-对象属性" class="headerlink" title="Date 对象属性"></a>Date 对象属性</h2><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述                   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_constructor_date.asp" target="_blank" rel="noopener">constructor</a></td>
+<td>返回对创建此对象的 Date 函数的引用。</td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_prototype_date.asp" target="_blank" rel="noopener">prototype</a></td>
+<td>使您有能力向对象添加属性和方法。     </td>
+</tr>
+</tbody>
+</table>
+<h2 id="Date-对象方法"><a href="#Date-对象方法" class="headerlink" title="Date 对象方法"></a>Date 对象方法</h2><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述                               </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_Date.asp" target="_blank" rel="noopener">Date()</a></td>
+<td>返回当日的日期和时间。                      </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_getDate.asp" target="_blank" rel="noopener">getDate()</a></td>
+<td>从 Date 对象返回一个月中的某一天 (1 ~ 31)。    </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_getDay.asp" target="_blank" rel="noopener">getDay()</a></td>
+<td>从 Date 对象返回一周中的某一天 (0 ~ 6)。      </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_getMonth.asp" target="_blank" rel="noopener">getMonth()</a></td>
+<td>从 Date 对象返回月份 (0 ~ 11)。          </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_getFullYear.asp" target="_blank" rel="noopener">getFullYear()</a></td>
+<td>从 Date 对象以四位数字返回年份。              </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_getYear.asp" target="_blank" rel="noopener">getYear()</a></td>
+<td>请使用 getFullYear() 方法代替。          </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_getHours.asp" target="_blank" rel="noopener">getHours()</a></td>
+<td>返回 Date 对象的小时 (0 ~ 23)。          </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_getMinutes.asp" target="_blank" rel="noopener">getMinutes()</a></td>
+<td>返回 Date 对象的分钟 (0 ~ 59)。          </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_getSeconds.asp" target="_blank" rel="noopener">getSeconds()</a></td>
+<td>返回 Date 对象的秒数 (0 ~ 59)。          </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_getMilliseconds.asp" target="_blank" rel="noopener">getMilliseconds()</a></td>
+<td>返回 Date 对象的毫秒(0 ~ 999)。          </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_getTime.asp" target="_blank" rel="noopener">getTime()</a></td>
+<td>返回 1970 年 1 月 1 日至今的毫秒数。         </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_getTimezoneOffset.asp" target="_blank" rel="noopener">getTimezoneOffset()</a></td>
+<td>返回本地时间与格林威治标准时间 (GMT) 的分钟差。      </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_getUTCDate.asp" target="_blank" rel="noopener">getUTCDate()</a></td>
+<td>根据世界时从 Date 对象返回月中的一天 (1 ~ 31)。  </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_getUTCDay.asp" target="_blank" rel="noopener">getUTCDay()</a></td>
+<td>根据世界时从 Date 对象返回周中的一天 (0 ~ 6)。   </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_getUTCMonth.asp" target="_blank" rel="noopener">getUTCMonth()</a></td>
+<td>根据世界时从 Date 对象返回月份 (0 ~ 11)。     </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_getUTCFullYear.asp" target="_blank" rel="noopener">getUTCFullYear()</a></td>
+<td>根据世界时从 Date 对象返回四位数的年份。          </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_getUTCHours.asp" target="_blank" rel="noopener">getUTCHours()</a></td>
+<td>根据世界时返回 Date 对象的小时 (0 ~ 23)。     </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_getUTCMinutes.asp" target="_blank" rel="noopener">getUTCMinutes()</a></td>
+<td>根据世界时返回 Date 对象的分钟 (0 ~ 59)。     </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_getUTCSeconds.asp" target="_blank" rel="noopener">getUTCSeconds()</a></td>
+<td>根据世界时返回 Date 对象的秒钟 (0 ~ 59)。     </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_getUTCMilliseconds.asp" target="_blank" rel="noopener">getUTCMilliseconds()</a></td>
+<td>根据世界时返回 Date 对象的毫秒(0 ~ 999)。     </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_parse.asp" target="_blank" rel="noopener">parse()</a></td>
+<td>返回1970年1月1日午夜到指定日期（字符串）的毫秒数。     </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_setDate.asp" target="_blank" rel="noopener">setDate()</a></td>
+<td>设置 Date 对象中月的某一天 (1 ~ 31)。       </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_setMonth.asp" target="_blank" rel="noopener">setMonth()</a></td>
+<td>设置 Date 对象中月份 (0 ~ 11)。          </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_setFullYear.asp" target="_blank" rel="noopener">setFullYear()</a></td>
+<td>设置 Date 对象中的年份（四位数字）。            </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_setYear.asp" target="_blank" rel="noopener">setYear()</a></td>
+<td>请使用 setFullYear() 方法代替。          </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_setHours.asp" target="_blank" rel="noopener">setHours()</a></td>
+<td>设置 Date 对象中的小时 (0 ~ 23)。         </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_setMinutes.asp" target="_blank" rel="noopener">setMinutes()</a></td>
+<td>设置 Date 对象中的分钟 (0 ~ 59)。         </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_setSeconds.asp" target="_blank" rel="noopener">setSeconds()</a></td>
+<td>设置 Date 对象中的秒钟 (0 ~ 59)。         </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_setMilliseconds.asp" target="_blank" rel="noopener">setMilliseconds()</a></td>
+<td>设置 Date 对象中的毫秒 (0 ~ 999)。        </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_setTime.asp" target="_blank" rel="noopener">setTime()</a></td>
+<td>以毫秒设置 Date 对象。                   </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_setUTCDate.asp" target="_blank" rel="noopener">setUTCDate()</a></td>
+<td>根据世界时设置 Date 对象中月份的一天 (1 ~ 31)。  </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_setUTCMonth.asp" target="_blank" rel="noopener">setUTCMonth()</a></td>
+<td>根据世界时设置 Date 对象中的月份 (0 ~ 11)。    </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_setUTCFullYear.asp" target="_blank" rel="noopener">setUTCFullYear()</a></td>
+<td>根据世界时设置 Date 对象中的年份（四位数字）。       </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_setutchours.asp" target="_blank" rel="noopener">setUTCHours()</a></td>
+<td>根据世界时设置 Date 对象中的小时 (0 ~ 23)。    </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_setUTCMinutes.asp" target="_blank" rel="noopener">setUTCMinutes()</a></td>
+<td>根据世界时设置 Date 对象中的分钟 (0 ~ 59)。    </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_setUTCSeconds.asp" target="_blank" rel="noopener">setUTCSeconds()</a></td>
+<td>根据世界时设置 Date 对象中的秒钟 (0 ~ 59)。    </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_setUTCMilliseconds.asp" target="_blank" rel="noopener">setUTCMilliseconds()</a></td>
+<td>根据世界时设置 Date 对象中的毫秒 (0 ~ 999)。   </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_tosource_boolean.asp" target="_blank" rel="noopener">toSource()</a></td>
+<td>返回该对象的源代码。                       </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_toString_date.asp" target="_blank" rel="noopener">toString()</a></td>
+<td>把 Date 对象转换为字符串。                 </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_toTimeString.asp" target="_blank" rel="noopener">toTimeString()</a></td>
+<td>把 Date 对象的时间部分转换为字符串。            </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_toDateString.asp" target="_blank" rel="noopener">toDateString()</a></td>
+<td>把 Date 对象的日期部分转换为字符串。            </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_toGMTString.asp" target="_blank" rel="noopener">toGMTString()</a></td>
+<td>请使用 toUTCString() 方法代替。          </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_toUTCString.asp" target="_blank" rel="noopener">toUTCString()</a></td>
+<td>根据世界时，把 Date 对象转换为字符串。           </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_toLocaleString.asp" target="_blank" rel="noopener">toLocaleString()</a></td>
+<td>根据本地时间格式，把 Date 对象转换为字符串。        </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_toLocaleTimeString.asp" target="_blank" rel="noopener">toLocaleTimeString()</a></td>
+<td>根据本地时间格式，把 Date 对象的时间部分转换为字符串。   </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_toLocaleDateString.asp" target="_blank" rel="noopener">toLocaleDateString()</a></td>
+<td>根据本地时间格式，把 Date 对象的日期部分转换为字符串。   </td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_utc.asp" target="_blank" rel="noopener">UTC()</a></td>
+<td>根据世界时返回 1970 年 1 月 1 日 到指定日期的毫秒数。</td>
+</tr>
+<tr>
+<td><a href="http://www.w3school.com.cn/jsref/jsref_valueOf_date.asp" target="_blank" rel="noopener">valueOf()</a></td>
+<td>返回 Date 对象的原始值。                  </td>
+</tr>
+</tbody>
+</table>
+<p><br><strong>本文作者</strong>：王永杰<br><strong>本文地址</strong>： <a href="http://wangyongjie.top/blog/47525/">http://wangyongjie.top/blog/47525/</a> <br><strong>版权声明</strong>：本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 CN</a> 许可协议。转载请注明出处！</p>
+
+    </div>
+    
+        <div class="reward" ontouchstart>
+    <div class="reward-wrap">赏
+        <div class="reward-box">
+            
+                <span class="reward-type">
+                    <img class="alipay" src="http://gfs13.gomein.net.cn/T1u5AbBTZT1RCvBVdK.jpg"><b>支付宝打赏</b>
+                </span>
+            
+            
+                <span class="reward-type">
+                    <img class="wechat" src="http://gfs13.gomein.net.cn/T1I6EbBTJ_1RCvBVdK.jpg"><b>微信打赏</b>
+                </span>
+            
+        </div>
+    </div>
+    <p class="reward-tip">一分也是爱</p>
+</div>
+
+
+    
+    <div class="post-footer">
+        <div>
+            
+                转载声明：商业转载请联系作者获得授权,非商业转载请注明出处 <a href="http://wangyongjie.top" target="_blank"> http://wangyongjie.top</a>
+            
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</article>
+
+<div class="article-nav prev-next-wrap clearfix">
+    
+        <a href="/blog/9360/" class="pre-post btn btn-default" title="String对象参考手册">
+            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
+            <span class="hidden-xs">String对象参考手册</span>
+        </a>
+    
+    
+        <a href="/blog/58219/" class="next-post btn btn-default" title="Boolean对象参考手册">
+            <span class="hidden-lg">下一篇</span>
+            <span class="hidden-xs">Boolean对象参考手册</span><i class="fa fa-angle-right fa-fw"></i>
+        </a>
+    
+</div>
+
+
+    <div id="comments">
+        
+	
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zNDc5OS8xMTMzNg==">
+  <script type="text/javascript">
+     (function(d, s) {
+         var j, e = d.getElementsByTagName(s)[0];
+         if (typeof LivereTower === 'function') { return; }
+         j = d.createElement(s);
+         j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+         j.async = true;
+         e.parentNode.insertBefore(j, e);
+     })(document, 'script');
+  </script>
+</div>
+
+
+    </div>
+
+
+
+
+
+                </main>
+                
+                    <aside id="article-toc" role="navigation" class="col-md-4">
+    <div class="widget">
+        <h3 class="title">文章目录</h3>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Date-对象"><span class="toc-text">Date 对象</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#创建-Date-对象的语法："><span class="toc-text">创建 Date 对象的语法：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Date-对象属性"><span class="toc-text">Date 对象属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Date-对象方法"><span class="toc-text">Date 对象方法</span></a></li></ol>
+        
+    </div>
+</aside>
+
+                
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+</footer>
+
+<a id="back-to-top" class="icon-btn hide">
+	<i class="fa fa-chevron-up"></i>
+</a>
+
+
+
+
+    <div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="busuanzi">
+    
+</div>
+
+            </div>
+            <div class="col-sm-12">
+                <span>Copyright &copy; 2019
+                </span> |
+                <span>
+                    Powered by <a href="//hexo.io" class="copyright-links" target="_blank" rel="nofollow">Hexo</a>
+                </span> |
+                <span>
+                    Theme by <a href="//github.com/shenliyang/hexo-theme-snippet.git" class="copyright-links" target="_blank" rel="nofollow">Snippet</a>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="/js/app.js?rev=@@hash"></script>
+
+</body>
+</html>
