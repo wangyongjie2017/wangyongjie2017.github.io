@@ -1630,3 +1630,9 @@ pre .javascript .function {
 table tbody tr:hover {
   background: #c0ffb1 !important;
 }
+
+/* 隐藏导航中的生活模块 */
+.main-navigation .menu li:nth-child(8){
+            display: none !important;
+            opacity: 0 !important;
+        }
