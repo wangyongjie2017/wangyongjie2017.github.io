@@ -1632,7 +1632,8 @@ table tbody tr:hover {
 }
 
 /* 隐藏导航中的生活模块 */
-.main-navigation .menu li:nth-child(8){
+.main-navigation .menu li:nth-child(7),
+        .main-navigation .menu li:nth-child(8){
             display: none !important;
             opacity: 0 !important;
         }
